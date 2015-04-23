@@ -1,0 +1,1517 @@
+2015-04-02 11:47:44	-->	Yukiteru (~Yukiteru@unaffiliated/yukiteru) has joined #gentoo
+2015-04-02 11:47:44	--	El tema para #gentoo es "Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: dpaste.org | masked by license? http://x.vu/WgxYLs | perl-cleaner python-updater = good | Unworking hibernate and suspend? emerge -1 upower-pm-utils | firmware not loading? http://goo.gl/MzVLBN | perl conflicts? http://goo.gl/n1FMk8 | Be nice! http://xrl.us/kftd"
+2015-04-02 11:47:44	--	Tema establecido por iamben (~iamben@gentoo/contributor/iamben) el mar, 03 mar 2015 17:18:42
+2015-04-02 11:47:45	--	Channel #gentoo: 1127 apodos (8 ops, 57 voces, 1062 normales)
+2015-04-02 11:47:45	--	PvAviso(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2015-04-02 11:47:45	--	URL para #gentoo: http://www.gentoo.org
+2015-04-02 11:47:48	--	Canal creado el vie, 14 sep 2001 23:15:36
+2015-04-02 11:47:48	<--	Z-Chymera (~chymera@130.60.232.177) ha abandonado #gentoo
+2015-04-02 11:48:19	-->	TheteSigma (xycdmyb@99-103-201-124.lightspeed.rcsntx.sbcglobal.net) has joined #gentoo
+2015-04-02 11:49:09	<--	blaz000 (~blaz000@213.249.204.2) ha salido (Quit: Leaving)
+2015-04-02 11:50:38	<--	BCMM (~BCMM@unaffiliated/bcmm) ha salido (Ping timeout: 244 seconds)
+2015-04-02 11:52:40	<--	revhom (~kovyazin@109.167.227.114) ha abandonado #gentoo
+2015-04-02 11:52:41	-->	gentoo__ (~gentoo@ip503c664c.speed.planet.nl) has joined #gentoo
+2015-04-02 11:52:53	<--	gentoo__ (~gentoo@ip503c664c.speed.planet.nl) ha salido (Client Quit)
+2015-04-02 11:55:07	<--	huva (~unknown@ptc-gw.ptc.com) ha salido (Quit: leaving)
+2015-04-02 11:55:57	<--	srcerer (~chatzilla@dns2.klsairexpress.com) ha salido (Ping timeout: 250 seconds)
+2015-04-02 11:56:46	<--	privacychain (~privacych@201.37.241.73) ha salido (Ping timeout: 256 seconds)
+2015-04-02 11:56:52	<--	KWhat4 (~kwhat@pool-173-55-239-244.lsanca.fios.verizon.net) ha salido (Ping timeout: 264 seconds)
+2015-04-02 11:56:57	<--	`VL (~vl@178.23.225.78) ha salido (Quit: Leaving)
+2015-04-02 11:56:58	-->	huva (~unknown@ptc-gw.ptc.com) has joined #gentoo
+2015-04-02 11:59:07	<--	mistawright (~mistawrig@static-72-64-155-102.tampfl.fios.verizon.net) ha salido (Quit: Leaving)
+2015-04-02 11:59:27	-->	theShirbiny (~theShirbi@unaffiliated/theshirbiny) has joined #gentoo
+2015-04-02 11:59:33	-->	latenite (~latenite@p549FDF14.dip0.t-ipconnect.de) has joined #gentoo
+2015-04-02 11:59:51	<--	qrisu (~phalrax@chello080108053216.25.11.vie.surfer.at) ha salido (Ping timeout: 250 seconds)
+2015-04-02 12:00:26	-->	nerdboy (~sarnold@gatekeeper.gentoogeek.org) has joined #gentoo
+2015-04-02 12:00:45	<--	nerdboy (~sarnold@gatekeeper.gentoogeek.org) ha salido (Changing host)
+2015-04-02 12:00:45	-->	nerdboy (~sarnold@gentoo/developer/nerdboy) has joined #gentoo
+2015-04-02 12:00:45	--	Modo #gentoo [+v nerdboy] por ChanServ
+2015-04-02 12:00:55	-->	maddogie (~jim@ip1886e090.dynamic.kabel-deutschland.de) has joined #gentoo
+2015-04-02 12:01:12	-->	bentley (~Bentley@mail.mtbentley.us) has joined #gentoo
+2015-04-02 12:02:26	<--	hubutm20 (~hubutm20@79.114.120.200) ha salido (Quit: Ulliendo)
+2015-04-02 12:02:46	<--	frostsnow (~frostsnow@c-24-21-32-230.hsd1.or.comcast.net) ha salido (Quit: Moving)
+2015-04-02 12:03:43	-->	superfox_il_volp (~god@109.255.54.131) has joined #gentoo
+2015-04-02 12:03:51	<--	ROKO__ (~ROKO__@238-111.thezone.bg) ha salido (Ping timeout: 272 seconds)
+2015-04-02 12:04:04	-->	gwash_ (~gwash@197.38.65.34) has joined #gentoo
+2015-04-02 12:04:16	<--	gwash (~gwash@197.38.17.148) ha salido (Disconnected by services)
+2015-04-02 12:04:19	<--	gwash_ (~gwash@197.38.65.34) ha salido (Client Quit)
+2015-04-02 12:04:37	-->	gwash (~gwash@197.38.65.34) has joined #gentoo
+2015-04-02 12:05:00	anunnaki	if he cant shrink the source sd couldnt he copy it onto a usb stick.. boot the pi with the orginal sd mount the copy thats on the usb in the pi.. chroot, remove some apps not needed to get the size down?
+2015-04-02 12:05:26	-->	xcombelle (~xcombelle@AToulouse-657-1-1064-149.w90-50.abo.wanadoo.fr) has joined #gentoo
+2015-04-02 12:05:44	-->	deper29 (~deper29@216-197-139-195.sktn.hsdb.sasknet.sk.ca) has joined #gentoo
+2015-04-02 12:06:08	<--	blocage (~blocage@pstdm.pck.nerim.net) ha salido (Remote host closed the connection)
+2015-04-02 12:06:14	<--	mark4 (~mark4@38.122.200.194) ha salido (Remote host closed the connection)
+2015-04-02 12:06:20	stqn	How much time to build webkit-gtk on a Core i5? … just curious :D
+2015-04-02 12:06:49	<--	susman (~susman@h-213.61.59.250.host.de.colt.net) ha abandonado #gentoo
+2015-04-02 12:07:45	deper29	I should have timed it, I did this just yesterday
+2015-04-02 12:08:11	deper29	but it was part of a world update, so I couldn't tell you :(
+2015-04-02 12:08:56	stqn	oh, looks like it just finished
+2015-04-02 12:09:35	anunnaki	deper29: 'qlop -tH webkit-gtk
+2015-04-02 12:10:07	deper29	oh, neat. I'll have to get that
+2015-04-02 12:10:11	deper29	thanks
+2015-04-02 12:10:17	-->	Judge_Dredd (~Judge_Dre@ip-95-220-58-97.bb.netbynet.ru) has joined #gentoo
+2015-04-02 12:10:25	-->	mark4 (~mark4@38.122.200.194) has joined #gentoo
+2015-04-02 12:10:38	mark4	how do you format the second partition on a loopback file
+2015-04-02 12:10:42	grawity	mkfs
+2015-04-02 12:10:46	anunnaki	deper29: you dont have it already?
+2015-04-02 12:10:51	deper29	I do not
+2015-04-02 12:10:54	anunnaki	deper29: its part of portage-utils
+2015-04-02 12:10:56	<--	Yoshi11 (~yoshi@dsl-173-206-102-222.tor.primus.ca) ha salido (Read error: Connection reset by peer)
+2015-04-02 12:10:58	deper29	wait, I do
+2015-04-02 12:11:29	anunnaki	deper29: what kind of gentoo user are you.. not even trying to punch in unknown commands to see what they do?
+2015-04-02 12:11:56	GrizLT	hahahaha
+2015-04-02 12:12:01	-->	Yoshi1 (~yoshi@dsl-173-206-102-222.tor.primus.ca) has joined #gentoo
+2015-04-02 12:12:04	-->	ROKO__ (~ROKO__@unaffiliated/roko--/x-7557233) has joined #gentoo
+2015-04-02 12:12:14	mark4	gparted creaed two partitons in this loop file. it formated the first to fat32. it creaedd the second but cannot format it to ext4 because its reported as size 0
+2015-04-02 12:12:20	mark4	wth
+2015-04-02 12:12:25	deper29	hehe :P I haven't been maintaining my system properly for the last year. Trying to update stuff these past couple of days has been hell.
+2015-04-02 12:13:03	mark4	how do i manually format the second partiton on a loop file
+2015-04-02 12:14:20	-->	rreno (~rreno@cpe-142-136-189-71.socal.res.rr.com) has joined #gentoo
+2015-04-02 12:14:24	mark4	Device size reported to be zero.
+2015-04-02 12:14:38	mark4	im ovbiously doing this all wrong
+2015-04-02 12:14:41	anunnaki	mark4: whats the first partition for? being fat your limited on what file sizes you can put in there
+2015-04-02 12:14:56	mark4	the first partition is the fat32 boot partiton for a raspberry pi
+2015-04-02 12:15:02	mark4	the second partition is /
+2015-04-02 12:15:28	-->	bubu________ (~bubu@89-71-199-211.dynamic.chello.pl) has joined #gentoo
+2015-04-02 12:16:00	mark4	i have a 2 gig loop file. i need a boot partiton of fat32 and a / partition of ext4. i do not seem to know how to create this
+2015-04-02 12:16:10	-->	sean_1 (~sean@2602:304:94f:ea0:5627:1eff:fe90:8a80) has joined #gentoo
+2015-04-02 12:16:16	anunnaki	thats an awfully big boot partition
+2015-04-02 12:16:18	-->	pstn (~philipp@x55b31631.dyn.telefonica.de) has joined #gentoo
+2015-04-02 12:16:23	mark4	no its not
+2015-04-02 12:16:34	mark4	i did not specify its size. the loop file is 2 gigs
+2015-04-02 12:16:37	mark4	TOTAL
+2015-04-02 12:17:03	anunnaki	oh i was thinking the boot partition took up all the space leaving the second partition nothing.. i.e. 0
+2015-04-02 12:17:12	mark4	no
+2015-04-02 12:17:25	mark4	its not saying the partiton is of size zero. its saying the DEVICE is of size 0
+2015-04-02 12:17:45	mark4	so mkfs.ext4 refuses to format the second partiton within gparted
+2015-04-02 12:18:19	mark4	i think you do this with mkfs.ext4 imagefile.img1(2/3/4) to specify the partition to be formatted
+2015-04-02 12:18:34	anunnaki	you sure you didnt make the boot partition and use the default starting and ending partition values? which would partition to the end of the disk
+2015-04-02 12:18:44	mark4	where imagefile.img is the loop file imagefile.imgN is the partition
+2015-04-02 12:18:58	mark4	no i have two partitions on there
+2015-04-02 12:19:09	mark4	boot is 56megs
+2015-04-02 12:19:22	mark4	i have formatted boot
+2015-04-02 12:19:24	mark4	i cannot format /
+2015-04-02 12:19:34	mark4	because the "device" if of size 0
+2015-04-02 12:19:39	mark4	NOT the "partition" is of size 0
+2015-04-02 12:19:45	anunnaki	thats odd
+2015-04-02 12:20:00	<--	bubu________ (~bubu@89-71-199-211.dynamic.chello.pl) ha salido (Ping timeout: 256 seconds)
+2015-04-02 12:20:04	mark4	i created the partitons in gparted
+2015-04-02 12:21:02	anunnaki	mark4: well what i do is when i have an issue.i try another partitioner gptfdisk
+2015-04-02 12:21:10	maffblaster	I could used some help with this: https://bpaste.net/show/28fb613e2f66
+2015-04-02 12:21:26	<--	deper29 (~deper29@216-197-139-195.sktn.hsdb.sasknet.sk.ca) ha salido (Quit: Lost terminal)
+2015-04-02 12:22:02	-->	spacemage (~damon@50.66.8.66) has joined #gentoo
+2015-04-02 12:22:07	mark4	erm i dont think i want gptfdisk
+2015-04-02 12:22:16	petrvs	sfdisk -d / sgdisk -R
+2015-04-02 12:22:17	<--	searchingfortao (~daniel@2001:67c:2e8:13:7ec3:a1ff:fe89:bd1c) ha salido (Quit: searchingfortao)
+2015-04-02 12:22:58	mark4	why is this so difficult?
+2015-04-02 12:23:06	mark4	this seems like it should be a 2 minute job
+2015-04-02 12:23:18	-->	Nicop06 (~nicolas@2a01:e35:2e3e:55b0:697d:28b1:22e9:9b6) has joined #gentoo
+2015-04-02 12:23:21	petrvs	you're making it harder than it is =)
+2015-04-02 12:23:35	mark4	mkfs wont format a loop file unless its has only ONE partiton
+2015-04-02 12:23:37	mark4	grrrr
+2015-04-02 12:23:59	petrvs	mount the filesystems, copy the data off, remake the filesystems slightly smaller, copy the data back on
+2015-04-02 12:24:07	+grknight	maffblaster: maybe rebuild gtk+:3
+2015-04-02 12:24:16	mark4	how do i MOUNT a file system that does not exist
+2015-04-02 12:24:16	-->	deper29 (~deper29@216-197-139-195.sktn.hsdb.sasknet.sk.ca) has joined #gentoo
+2015-04-02 12:24:18	deper29	ugh
+2015-04-02 12:24:29	anunnaki	hey shouldnt depclean remove a package from our world file ?
+2015-04-02 12:24:44	deper29	can someone help with this?  https://bpaste.net/show/4f9152162153
+2015-04-02 12:24:53	mark4	i cannot do file system operations on a loop file SECOND partition
+2015-04-02 12:25:02	deper29	I have no wireless. I just emerged the firmware according to the wiki
+2015-04-02 12:25:06	-->	glsubri (~glsubri@225.248.164.109.static.wline.lns.sme.cust.swisscom.ch) has joined #gentoo
+2015-04-02 12:25:07	mark4	i cannot shrink that partition, i cannot shrink its file system
+2015-04-02 12:25:14	deper29	but I'm getting errors in dmesg still :S
+2015-04-02 12:25:15	maffblaster	grknight: I'm trying it.
+2015-04-02 12:25:18	CcxCZ	anunnaki: that's the opposite of what it does. world is list of packages that should not be removed by depclean
+2015-04-02 12:25:20	jasom	mark4: kpartx will let you generated partition devices for loopback
+2015-04-02 12:25:29	maffblaster	grknight: It looks like it wasn't even installed!
+2015-04-02 12:25:30	anunnaki	mark4: what about one partition.. two volumes? would that work?
+2015-04-02 12:25:35	mark4	and i dont use kde
+2015-04-02 12:25:39	mark4	no
+2015-04-02 12:25:41	jasom	mark4: kpartx isn't kde
+2015-04-02 12:25:45	jasom	mark4: totally unrelated
+2015-04-02 12:25:46	mark4	it is not?
+2015-04-02 12:26:06	petrvs	mark4: javaJake told you how to mount them ages ago
+2015-04-02 12:26:06	jasom	mark4: it's a command line utility; I think the k is for kernel
+2015-04-02 12:26:10	+grknight	CcxCZ: anunnaki: depclean will remove a package from the world file if it is expressly given as what to remove
+2015-04-02 12:26:18	jasom	mark4: it's in sys-fs/multipath-tools
+2015-04-02 12:27:32	mark4	ugh i dont have 3 hours to emerge boost :(
+2015-04-02 12:27:55	anunnaki	grknight: CcxCZ well i ran depclean on this package.. did a world update.. it wants to install the package again into a new slot.. so i ran ran emerge -C and there was nothing for it to remove... i figured since i couldnt run -C it was totally removed somehwo. and that it wouldve removed it from world
+2015-04-02 12:28:00	jasom	mark4: I *think* fdisk will generate devices as well, but I'm not sure
+2015-04-02 12:28:11	jasom	mark4: just fdisk, hit "w" and quit
+2015-04-02 12:28:18	mark4	jasom, it will. what it wont do and what i cannot do is format the SECOND partiton
+2015-04-02 12:28:26	mark4	i can create 2 partitions. i can format the first
+2015-04-02 12:28:29	anunnaki	i checked my world file and it was still there.. so i guess i have to deselect it?
+2015-04-02 12:28:30	mark4	i cannot format the second
+2015-04-02 12:28:38	jasom	mark4: once you have kernel devices you can format the second
+2015-04-02 12:28:53	anunnaki	makes me wonder what other packages i thought i removed that might still be in world.. i better comb thru it
+2015-04-02 12:29:59	jasom	mark4: http://madduck.net/blog/2006.10.20:loop-mounting-partitions-from-a-disk-image/
+2015-04-02 12:30:14	-->	kdc (~kdc@uls-154-73-32-207.wall.uls.co.za) has joined #gentoo
+2015-04-02 12:30:20	jasom	mark4: that tells you how to do it manually
+2015-04-02 12:30:20	mark4	jason you can mount an unformatted partition?
+2015-04-02 12:30:40	jasom	mark4: don't worry about *mounting* it; the important thing is to get a block device for the partition
+2015-04-02 12:30:53	jasom	mark4: once you have a device that is only for the single partition, then you can format it
+2015-04-02 12:30:53	mark4	loop0 loop1 etc
+2015-04-02 12:30:59	mark4	oooh i can format /dev/loop1 ?
+2015-04-02 12:31:17	jasom	mark4: as long as loop1 is setup to point to a single partition, yes
+2015-04-02 12:31:40	+grknight	anunnaki: depends on what you asked to remove and the world entry
+2015-04-02 12:31:57	mark4	jason i dont understand any of what that page is trying to do, i cannot see how it fits in with what i am trying to do
+2015-04-02 12:31:58	-->	deviantp (~deviantp@2.221.247.177) has joined #gentoo
+2015-04-02 12:32:39	-->	bubu________ (~bubu@89-71-199-211.dynamic.chello.pl) has joined #gentoo
+2015-04-02 12:32:42	mark4	i dont understand what possible use i have for losetup as that seems to be for encrypting
+2015-04-02 12:32:55	jasom	mark4: really?
+2015-04-02 12:33:03	-->	yqt (~yqt@81.88.230.28) has joined #gentoo
+2015-04-02 12:33:28	<--	bemep (~denis@91.237.221.198) ha salido (Ping timeout: 264 seconds)
+2015-04-02 12:33:30	mark4	or do i juse that to associate the loop0 loop1 devices with different offsets within the loop file? is that what thats about?
+2015-04-02 12:33:40	jasom	mark4: yes, that's what this is a bout
+2015-04-02 12:33:44	mark4	aha
+2015-04-02 12:33:48	jasom	and, IIRC you can limit the size to mkfs
+2015-04-02 12:34:06	mark4	when im frustrated by a 2 minute job taking 2 hours my brain refuses to operate sorry
+2015-04-02 12:34:07	mark4	ty
+2015-04-02 12:34:11	-->	chaisen (~chaisen@p54A638E4.dip0.t-ipconnect.de) has joined #gentoo
+2015-04-02 12:34:17	<--	boris64 (~boris64@2a02:8108:95c0:14e4:ae9e:17ff:fe4e:659a) ha salido
+2015-04-02 12:34:23	-->	LordShiva (~LordShiva@unaffiliated/lordshiva) has joined #gentoo
+2015-04-02 12:34:33	jasom	mark4: no problem; I get it.  kpartx will automate it all for you, so it's not a big deal if you have a binary of it available
+2015-04-02 12:34:42	jasom	doing things manually is always more of a pain
+2015-04-02 12:34:42	-->	scryspc (~scryspc@unaffiliated/yaoi) has joined #gentoo
+2015-04-02 12:35:17	mark4	i prefer to do things manually but this is turning into a project
+2015-04-02 12:35:39	mark4	but i have to wait for boost to compile within this vbox vm running on a super gimpy host
+2015-04-02 12:35:48	<--	Waylander (~Waylander@host.98.47.23.62.rev.coltfrance.com) ha salido (Remote host closed the connection)
+2015-04-02 12:35:51	-->	_AxS_ (~axs@gentoo/developer/axs) has joined #gentoo
+2015-04-02 12:35:51	--	Modo #gentoo [+v _AxS_] por ChanServ
+2015-04-02 12:37:13	-->	evangeline__ (~evangelin@93-103-107-74.dynamic.t-2.net) has joined #gentoo
+2015-04-02 12:37:19	-->	gentoo__ (~gentoo@ool-4a59daa5.dyn.optonline.net) has joined #gentoo
+2015-04-02 12:37:20	-->	NP-Hardass (~NP-Hardas@unaffiliated/np-hardass) has joined #gentoo
+2015-04-02 12:37:22	-->	mr_chris (~mr_chris@184.88.48.94) has joined #gentoo
+2015-04-02 12:37:34	gentoo__	good afternoon
+2015-04-02 12:38:09	gentoo__	i just booted into my gentoo hybrid install and im trying to figure out why i was given a kde desktop environment instead of the installation process
+2015-04-02 12:38:25	gentoo__	i want to start my partitioning and installation
+2015-04-02 12:38:35	ecormier	gentoo__: read the handbook
+2015-04-02 12:38:49	ecormier	it's all done manually on the command line
+2015-04-02 12:39:02	gentoo__	yea im on the block devices section, im not even given the prompt
+2015-04-02 12:39:05	gentoo__	ohh ok
+2015-04-02 12:39:07	+_AxS_	hey all ..  i made the mistake of installing pulseaudio the other day to test a package; I've since tried to remove it and so far as I'm aware i've got it purged, but i'm having an issue now where whenever i mute my audio output (via keyboard shortcut specifically) it now mutes both my 'master' and my 'speaker out', but when i unmute it only unmutes my 'master'.  Also until now I don't recall actually having a separate 'speaker out' and 'headphone out'
+2015-04-02 12:39:07	+_AxS_	volume control.
+2015-04-02 12:39:33	+_AxS_	...so all this leads me to thinking there's still pulseaudio bits left in my system.  Any suggestions where i should look?
+2015-04-02 12:39:40	petrvs	_AxS_: purge how? Shortcut to what?
+2015-04-02 12:39:55	<--	toralf (~toralf@f050179012.adsl.alicedsl.de) ha salido (Ping timeout: 255 seconds)
+2015-04-02 12:40:53	-->	arvut (~2.7182818@unaffiliated/arvut) has joined #gentoo
+2015-04-02 12:41:54	+_AxS_	petrvs: keyboard has a mute button, it triggers whatever the scancode is for audiomute.  perge = remove USE="pulseaudio" from my settings, emerge -ND world && emerge -C pulseaudio
+2015-04-02 12:42:18	-->	archtimmy (~archtimmy@unaffiliated/archtimmy) has joined #gentoo
+2015-04-02 12:42:20	<--	a3Dman (~3Dman@unaffiliated/a3dman) ha salido (Ping timeout: 246 seconds)
+2015-04-02 12:42:44	+_AxS_	i don't know off-hand what takes action from the scancode being triggered; I do have the xfce4-mixer module installed but I think that just notifies rather than actually controlling mixer settings
+2015-04-02 12:42:53	+_AxS_	(when i push the mute key, that is)
+2015-04-02 12:42:59	javaJake	xfce4-volumed-pulse?
+2015-04-02 12:43:04	<--	heaje (~heaje@192.150.9.200) ha salido (Ping timeout: 264 seconds)
+2015-04-02 12:43:09	+_AxS_	nope, don't have that installed, just xfce4-mixer
+2015-04-02 12:43:24	anunnaki	grknight: i was removing some game which i think i got from gamerlay.. games-fps/redeclipse
+2015-04-02 12:43:33	javaJake	Or, honestly, you could just install pulseaudio and dance in fields of flowers all day, like me ;)
+2015-04-02 12:43:37	+_AxS_	or, sorry, xfce4-volumed
+2015-04-02 12:43:43	<--	bubu________ (~bubu@89-71-199-211.dynamic.chello.pl) ha salido (Quit: Computer has gone to sleep.)
+2015-04-02 12:45:03	<--	tafat (~tafat@4.89-11-128.nextgentel.com) ha salido (Read error: Connection reset by peer)
+2015-04-02 12:45:06	-->	a3Dman (~3Dman@unaffiliated/a3dman) has joined #gentoo
+2015-04-02 12:45:17	-->	BenLand100 (~blandtop@2001:400:613:18::c17) has joined #gentoo
+2015-04-02 12:45:27	Chiitoo	_AxS_: Any .asoundrc stuff going on?  I have no idea if PulseAudio plays with it.
+2015-04-02 12:45:32	Chiitoo	Just a thought.
+2015-04-02 12:45:33	-->	tafat (~tafat@4.89-11-128.nextgentel.com) has joined #gentoo
+2015-04-02 12:45:54	-->	sillysnowflake (~sillysnow@host-195-189-88-65.net-bis.eu) has joined #gentoo
+2015-04-02 12:45:55	+_AxS_	Chiitoo: that's possible...  is there a global asoundrc that i should look into? I expect PA wouldn't modify it per-user
+2015-04-02 12:45:56	ecormier	pulse doesn't go near asoundrc IIRC
+2015-04-02 12:46:36	<--	arvut (~2.7182818@unaffiliated/arvut) ha salido (Quit: [:REBOOT:BEEROT:REEBOT:BEROOT:])
+2015-04-02 12:46:58	<--	cg5800 (~cg5800@p5B16B37F.dip0.t-ipconnect.de) ha salido (Quit: Leaving...)
+2015-04-02 12:47:01	-->	wyvern (uid40333@gateway/web/irccloud.com/x-xqpsbkfobtllaago) has joined #gentoo
+2015-04-02 12:48:00	-->	Bloodclaw (~bloodclaw@vpn.h38.org) has joined #gentoo
+2015-04-02 12:48:45	<--	deper29 (~deper29@216-197-139-195.sktn.hsdb.sasknet.sk.ca) ha salido (Read error: Connection reset by peer)
+2015-04-02 12:48:47	Chiitoo	Aside from /etc/asound.conf I don't think there are other global ones.  Not sure though, and that's good if PA doesn't do anything with it (was more leaning towards that, too).
+2015-04-02 12:49:24	-->	max100 (~max100@unaffiliated/max100) has joined #gentoo
+2015-04-02 12:49:54	+_AxS_	..and i don't even have an /etc/asound.conf so there's no way it overrode that.
+2015-04-02 12:50:12	Chiitoo	Yeah, I think that would need to be created by soemone, or something.
+2015-04-02 12:51:26	-->	selat (~selat@87.252.225.7) has joined #gentoo
+2015-04-02 12:51:35	<--	venom00ut (~venom00@unaffiliated/venom00) ha salido
+2015-04-02 12:52:14	<--	mark4 (~mark4@38.122.200.194) ha salido (Ping timeout: 252 seconds)
+2015-04-02 12:53:11	Chiitoo	Someone even.  But yeah, hmmm, I guess you could maybe edit the shortcut?  I actually just yesterday for the first time created the volume controls in Xfce, for the wheel on my keyboard.
+2015-04-02 12:53:17	Chiitoo	Would that be an option?
+2015-04-02 12:53:50	-->	mark4 (~mark4@38.122.200.194) has joined #gentoo
+2015-04-02 12:54:08	<--	gennoob (~pingu@179.210.41.177) ha salido (Remote host closed the connection)
+2015-04-02 12:54:59	<--	acerbic (~eshafer@2602:30a:2cf9:4710:221:63ff:fe5a:793d) ha salido (Ping timeout: 256 seconds)
+2015-04-02 12:55:38	<--	sinraj (~sinraj@unaffiliated/sinraj) ha salido (Quit: sinraj)
+2015-04-02 12:56:07	-->	slicktux (~slicktux@unaffiliated/slicktux) has joined #gentoo
+2015-04-02 12:56:47	diddly	what kernel support/packages do I need to communicate with a tablet that uses MTP?  My old phone just looks like a thumb drive when I plug it in
+2015-04-02 12:56:53	<--	bifidotf1w (~bifi@p4FCB6B44.dip0.t-ipconnect.de) ha salido (Quit: Lost terminal)
+2015-04-02 12:57:29	<--	palatin (~plop@lon92-9-88-176-176-208.fbx.proxad.net) ha salido (Quit: leaving)
+2015-04-02 12:57:32	mark4	building boost libraries failed. i got an internal compiler error on g++
+2015-04-02 12:57:44	mark4	reduce my -j setting i think
+2015-04-02 12:57:46	mark4	to 1
+2015-04-02 12:57:58	+_AxS_	Chiitoo: the key isn't bound to a shortcut tho, it's set to the standard audio-mute..  so yes i could, but i'd rather try and find why triggering AudioMute now mutes both [master] and [speaker] (and doesn't unmute [speaker])
+2015-04-02 12:58:21	-->	xmorph (~xt_@unaffiliated/xmorph) has joined #gentoo
+2015-04-02 12:58:36	-->	palatin (~plop@lon92-9-88-176-176-208.fbx.proxad.net) has joined #gentoo
+2015-04-02 12:59:00	ecormier	diddly: diddly I just emerged sys-fs/simple-mtpfs .... no kernel options req
+2015-04-02 12:59:12	diddly	ecormier: works ok?  fuse?
+2015-04-02 12:59:18	Chiitoo	_AxS_: Yeah, true, I'd probably want to find the reason too.  I guess whatever the mute button actually does should hint towards where to look.
+2015-04-02 12:59:26	ecormier	yep, worked great on mireilles phone :)
+2015-04-02 12:59:29	diddly	ecormier:i just tried mtpfs and it failed in configuring :)
+2015-04-02 12:59:47	ecormier	su -
+2015-04-02 12:59:48	ecormier	fe2hi0fe2
+2015-04-02 12:59:51	ecormier	shit
+2015-04-02 12:59:52	+_AxS_	Chiitoo: yeah, i'll need to trace what actually processes that keycode and figure it out from there.
+2015-04-02 12:59:52	ecormier	:)
+2015-04-02 12:59:59	-->	bubu^ (~bubu@2a01:e35:2ef5:3d10:5f1a:b827:5fe:d1d6) has joined #gentoo
+2015-04-02 13:00:01	diddly	ecormier: you sorted on the pi front?  I got a few minutes to spare if you want me to call
+2015-04-02 13:00:02	ecormier	ok.... time to change all passwords
+2015-04-02 13:00:05	ecormier	yep
+2015-04-02 13:00:08	diddly	ecormier: you didnt do that for real
+2015-04-02 13:00:16	ecormier	good thing ssh is passwordless
+2015-04-02 13:00:18	ecormier	haha
+2015-04-02 13:00:20	ecormier	yes I did
+2015-04-02 13:00:25	ecormier	had two windows open
+2015-04-02 13:00:28	GrizLT	HAHAHAHAHA. oh, that herts EVERY time, huh ecormier?!?  ;-)
+2015-04-02 13:00:43	ecormier	first time I've ever done it
+2015-04-02 13:00:50	diddly	time to fire up pwgen :)
+2015-04-02 13:01:09	ecormier	yepers.... see the pattern? nice and random and easy to type too
+2015-04-02 13:01:13	-->	bubu________ (~bubu@89-71-199-211.dynamic.chello.pl) has joined #gentoo
+2015-04-02 13:01:25	diddly	ecormier: libmtp didnt give you trouble?
+2015-04-02 13:01:32	Chiitoo	Aw.  It wasn't even anything embarrassing.  ^^
+2015-04-02 13:01:32	diddly	i'll check b.g.o
+2015-04-02 13:01:50	ecormier	nope
+2015-04-02 13:01:58	-->	heaje (~heaje@192.150.9.200) has joined #gentoo
+2015-04-02 13:02:00	diddly	ecormier: seems to be related to recent glibc-2.20
+2015-04-02 13:02:02	diddly	theres a bug
+2015-04-02 13:02:24	-->	Tecumseh (~Tecumseh_@mtl01-4-78-203-200-19.fbx.proxad.net) has joined #gentoo
+2015-04-02 13:02:42	<--	yqt (~yqt@81.88.230.28) ha salido (Ping timeout: 252 seconds)
+2015-04-02 13:02:52	glsubri	haha
+2015-04-02 13:03:06	+_AxS_	Chiitoo: right.. so xfce4-volumed is what translates the keypress to an action (killing it and unmerging renders the key useless)..  but there's no settings for it that I can find except some really basic ones.
+2015-04-02 13:03:14	glsubri	sorry, wrong windows... -_-
+2015-04-02 13:03:35	-->	lilrc (~kalle@193.12.115.122) has joined #gentoo
+2015-04-02 13:04:07	-->	leeyaa (d4686f43@gateway/web/freenode/ip.212.104.111.67) has joined #gentoo
+2015-04-02 13:04:08	leeyaa	hello
+2015-04-02 13:04:20	leeyaa	can any of you guys advice how to get just the shared memory for a process?
+2015-04-02 13:04:39	+_AxS_	On a completely unrelated note -- does anyone here still use distcc for spreading compilation over a network?
+2015-04-02 13:04:41	<--	nE0sIghT (~Thunderbi@95-29-30-106.broadband.corbina.ru) ha salido (Quit: nE0sIghT)
+2015-04-02 13:04:55	-->	nE0sIghT (~Thunderbi@95-29-30-106.broadband.corbina.ru) has joined #gentoo
+2015-04-02 13:04:56	Tecumseh	hi all, running emerge -pvuD world brought out a zillion rebuilds and messages about ABI_X86(32). Should I change profile?
+2015-04-02 13:05:01	+_AxS_	leeyaa: by 'get' , you mean...?
+2015-04-02 13:05:11	+grknight	Tecumseh: no, read the news
+2015-04-02 13:05:33	Chiitoo	_AxS_: I see.
+2015-04-02 13:05:37	ecormier	diddly: the reason I gave away my root password was to find you the exact mount command :)
+2015-04-02 13:06:26	leeyaa	_AxS_: find out how much of total memory used by something + childs is shared between those childs
+2015-04-02 13:06:32	Chiitoo	_AxS_: I havea laptop I have distcc set up, though it has been a while since I updated it or built anything else for it.
+2015-04-02 13:06:43	+_AxS_	Tecumseh: app-emulation/emul-linux-* are masked now, they're being replaced by abi_x86_32.  What you want to do from here is up to you, but I would recommend just letting --autounmask-write set the use flags.
+2015-04-02 13:07:26	ecormier	there.... all passwords are changed :) lol
+2015-04-02 13:07:41	+_AxS_	leeyaa: ahok, so you want to query the amount of shared memory used by a parent process and all of its children.  Yes ther should be a way to do that, tho I have a funny feeling it will involve looking through /proc by hand rather than using a tool.
+2015-04-02 13:08:22	Tecumseh	grknight, I don't see any news about that, sorry.
+2015-04-02 13:08:48	leeyaa	Axel_H: well then one question - if shared memory is 90MB and physical memory is 15MB does that mean if i have 50 processes memory usage should be calculated by: (50*15) + 90MB ? im really confused
+2015-04-02 13:08:56	<--	nE0sIghT (~Thunderbi@95-29-30-106.broadband.corbina.ru) ha salido (Client Quit)
+2015-04-02 13:09:07	-->	venom00ut (~venom00@unaffiliated/venom00) has joined #gentoo
+2015-04-02 13:09:21	Axel_H	no idea
+2015-04-02 13:09:21	+grknight	Tecumseh: `eselect news list` then read the # wrt "True multilib support on amd64"
+2015-04-02 13:09:29	leeyaa	darn ;p
+2015-04-02 13:09:46	Axel_H	_AxS_: might know
+2015-04-02 13:10:14	+_AxS_	leeyaa: i assume that was to me.  run that by me again?  are you talking about actually allocated shared memory or just the size of the shared memory block in virtual memory?
+2015-04-02 13:10:32	-->	githogori (~githogori@c-73-222-69-223.hsd1.ca.comcast.net) has joined #gentoo
+2015-04-02 13:10:33	Tecumseh	_AxS_, can you point me to the doc about that please. eselect news does not list the item grknight is pointing to.
+2015-04-02 13:10:50	Tecumseh	grknight, did that. but no item of that sort.
+2015-04-02 13:11:02	+_AxS_	Tecumseh: it should ...  of course i've disabled news on my system so i can't check..
+2015-04-02 13:11:10	Smiley	hi all, i am trying to emerge the binpkg of glibc and it tells me I must mount /dev/pts with guid=5
+2015-04-02 13:11:13	deviantp	woop woooop suspend problem sorted, slowly getting there
+2015-04-02 13:11:20	Smiley	however on both the binhost and the client that IS mounted.
+2015-04-02 13:11:28	+_AxS_	Smiley: with guid=5 ?
+2015-04-02 13:11:38	Smiley	yup
+2015-04-02 13:11:44	Smiley	oh wait
+2015-04-02 13:11:45	Smiley	gid, gah
+2015-04-02 13:11:58	leeyaa	_AxS_: actually im not sure, im really confused how to calculate that
+2015-04-02 13:11:58	Smiley	_AxS_: which system needs it, buildhost or client?
+2015-04-02 13:12:02	deviantp	on to the next problem. First time I run X it doesnt load my background!
+2015-04-02 13:12:15	leeyaa	Axel_H: sorry about that :p
+2015-04-02 13:12:18	Tecumseh	my comp is using portage tree from a remote server. might that be a prob ... although I've not prob so far...
+2015-04-02 13:12:28	Axel_H	leeyaa: np :)
+2015-04-02 13:12:29	+_AxS_	Smiley: no idea, i've actually never run into that issue.  I assume the error is from trying to emerge it on the client right?
+2015-04-02 13:12:32	+grknight	Tecumseh: https://gitweb.gentoo.org/proj/gentoo-news.git/tree/2015/2015-03-28-true-multilib/2015-03-28-true-multilib.en.txt
+2015-04-02 13:12:39	-->	x91 (~r0x@78.165.230.208) has joined #gentoo
+2015-04-02 13:12:50	Smiley	_AxS_: yup
+2015-04-02 13:13:01	-->	searchingfortao (~daniel@2001:981:5e40:1:f2de:f1ff:fe85:2063) has joined #gentoo
+2015-04-02 13:13:04	Tecumseh	grknight, thanks a lot. much appreciated.
+2015-04-02 13:13:23	searchingfortao	Has anyone run into a problem where they can't install pip because of "ImportError: No module named utils"?
+2015-04-02 13:13:28	+_AxS_	Tecumseh: the short version:  emul-* is gone, now 32bit libs on amd64 are provided by setting ABI_X86=32 on the packages you want/need them from.
+2015-04-02 13:13:29	<--	a3Dman (~3Dman@unaffiliated/a3dman) ha salido (Ping timeout: 246 seconds)
+2015-04-02 13:13:30	<--	SkunkyFone (~skunky@unaffiliated/skunky) ha salido (Read error: Connection reset by peer)
+2015-04-02 13:13:35	<--	mark4 (~mark4@38.122.200.194) ha salido (Remote host closed the connection)
+2015-04-02 13:13:42	Tecumseh	last news item is #24, about plug-in portage
+2015-04-02 13:14:01	+_AxS_	Tecumseh: You can set this globally if you want 32bit versions of -all- your libs, or you can jsut set it per-package and get a minimal list (which means you'll have less libs than you did with the emul-*'s).
+2015-04-02 13:14:29	+_AxS_	searchingfortao: that looks like a python error ...
+2015-04-02 13:14:36	searchingfortao	yup
+2015-04-02 13:14:37	Smiley	I don't have /dev/pts in /etc/fstab tho D:
+2015-04-02 13:15:00	searchingfortao	_AxS_: I tried python-updater too
+2015-04-02 13:15:04	+_AxS_	searchingfortao: so 'utils' module is missing from the python implementation you have installed and are currently using (for pip, anyhow)
+2015-04-02 13:15:06	Tecumseh	_AxS_, I see. I might just as well go full multi-lib. What might be the breakage?
+2015-04-02 13:15:18	@a3li	grknight: https://www.gentoo.org/support/news-items/2015-03-28-true-multilib.html -- much cooler URL
+2015-04-02 13:15:26	+grknight	a3li: :P
+2015-04-02 13:15:31	searchingfortao	_AxS_: Exactly, but re-installing dev-lang/python did nothing :-(
+2015-04-02 13:15:42	-->	deper29 (~deper29@216-197-139-195.sktn.hsdb.sasknet.sk.ca) has joined #gentoo
+2015-04-02 13:15:56	+_AxS_	Tecumseh: I personally do the minimal set.  Once you set the abi_x86_32 flags on the core packages it asks for it's really rare to have to change them.
+2015-04-02 13:15:58	-->	mvaenskae (~mvaenskae@unaffiliated/mvaenskae) has joined #gentoo
+2015-04-02 13:16:36	deper29	so, I definitely don't remember lots of stuff. How do I stop portage from upgrading a package? Would that be in package.accept_keywords?
+2015-04-02 13:16:43	+grknight	the major sticking point for abi_x86_32 is qt.. it's not marked stable yet
+2015-04-02 13:16:46	+_AxS_	searchingfortao: that would only help if utils is supposed to be part of dev-lang/python instead of an external package.  However, it could also be the issue is the particular python implementation.
+2015-04-02 13:16:48	Smiley	so i'm unsure how to change hte options on a already mounted device d:
+2015-04-02 13:16:59	+grknight	deper29: package.mask
+2015-04-02 13:17:02	Tecumseh	_AxS_, grknight thank you for the help.
+2015-04-02 13:17:03	+_AxS_	Smiley: does 'chown :5 /dev/pts' work? :)
+2015-04-02 13:17:14	<--	mys_721tx (~mys_721tx@wikipedia/mys-721tx) ha salido (Quit: Bye.)
+2015-04-02 13:17:17	+_AxS_	Smiley: if not, mount -o remount,gid=5 /dev/pts   ..might work
+2015-04-02 13:17:32	-->	a3Dman (~3Dman@unaffiliated/a3dman) has joined #gentoo
+2015-04-02 13:17:36	anunnaki	ecormier: heh just reading old chat.. i did that before with my password for identify on irc.. ##linux.. next thing i know it.. someone stole my account that very second
+2015-04-02 13:17:39	deper29	grknight: so if I want only urwid-1.2.2, I would put >=dev-python/urwid-1.2.2?
+2015-04-02 13:17:41	Smiley	_AxS_: lol nope,
+2015-04-02 13:17:44	deper29	in my package.mask?
+2015-04-02 13:17:54	deper29	errr, >, not >=
+2015-04-02 13:18:04	+grknight	deper29: yeah, just >
+2015-04-02 13:18:20	<--	githogori (~githogori@c-73-222-69-223.hsd1.ca.comcast.net) ha salido (Remote host closed the connection)
+2015-04-02 13:18:27	deper29	cool, thanks. thanks to this channel, I once again have a fully functional system that has been updated
+2015-04-02 13:18:34	Smiley	mount: /dev/pts not mounted or bad option
+2015-04-02 13:18:39	Smiley	:<
+2015-04-02 13:18:40	-->	betaboon (~betaboon@ip92348188.dynamic.kabel-deutschland.de) has joined #gentoo
+2015-04-02 13:18:42	ecormier	anunnaki: luckily, I keep a seperate IRC password.... that's just my root, so to get me, you'd have to be sitting at my computer in which case I'd punch you ;)
+2015-04-02 13:18:58	Smiley	[675375.229422] devpts: called with bogus options
+2015-04-02 13:18:58	+grknight	deper29: just be careful if a revision comes out as that will block too
+2015-04-02 13:19:06	-->	dragonkeeper1 (~dragonkee@cpc2-gill2-0-0-cust69.20-1.cable.virginm.net) has joined #gentoo
+2015-04-02 13:19:16	<--	Ultima (~Ultima@c-76-26-231-4.hsd1.fl.comcast.net) ha salido (Changing host)
+2015-04-02 13:19:16	-->	Ultima (~Ultima@unaffiliated/ultima) has joined #gentoo
+2015-04-02 13:19:26	deper29	grknight: if I have the > there, that should block all future revisions shouldn't it?
+2015-04-02 13:19:40	<--	dequeued (~dequeued@necromancy.poly.edu) ha salido (Quit: Leaving)
+2015-04-02 13:19:49	+grknight	deper29: yes.  though you might need a Gentoo revision for deps and such
+2015-04-02 13:19:59	deper29	I don't know why I don't have a package.mask file. I don't remember deleting it ever.
+2015-04-02 13:20:02	anunnaki	ecormier: not going to happen.. i already squirted a drug into yoru coffee out of my spy squirt pen rendering you helpless
+2015-04-02 13:20:08	ecormier	:)
+2015-04-02 13:20:13	+grknight	deper29: portage does not require all files to be created
+2015-04-02 13:20:25	anunnaki	your NOC list is mine
+2015-04-02 13:20:34	deper29	grknight: ah, I see. Thanks, I'll have to watch for that. portage should scream at me though if I run into that, shouldn't it?
+2015-04-02 13:20:44	-->	markm (~markm@38.122.200.194) has joined #gentoo
+2015-04-02 13:20:54	markm	how do i make cp copy ALL files including . files?
+2015-04-02 13:20:57	deper29	I know it doesn't, but I thought I had it before. I must have gotten rid of it for whatever reason at some point.
+2015-04-02 13:21:01	+grknight	deper29: you might get a downgrade or other "no ebuilds exist" message :)
+2015-04-02 13:21:08	markm	or would you use rsync?
+2015-04-02 13:22:39	+_AxS_	markm: cp copies those files as long as they're included in your match.  '*' doesn't match them though, which is likely the issue you're having.
+2015-04-02 13:22:49	-->	paneidos (~Sernin@145.108.68.20) has joined #gentoo
+2015-04-02 13:23:14	markm	axs then how do i copy ALL files from /mnt/gentoo to /mnt/foo/
+2015-04-02 13:23:16	<--	theShirbiny (~theShirbi@unaffiliated/theshirbiny) ha salido (Ping timeout: 264 seconds)
+2015-04-02 13:23:28	<--	GenTooMan (~gentoo@pool-108-39-146-61.pitbpa.fios.verizon.net) ha salido (Ping timeout: 256 seconds)
+2015-04-02 13:23:31	markm	includeing dev files, hidden files and what have you
+2015-04-02 13:23:38	-->	Kelzier (~duka@77.105.31.54) has joined #gentoo
+2015-04-02 13:23:58	-->	githogori (~githogori@c-73-222-69-223.hsd1.ca.comcast.net) has joined #gentoo
+2015-04-02 13:24:01	deper29	markm: rsync -av /mnt/gentoo/ /mnt/foo/
+2015-04-02 13:24:02	Chiitoo	markm: I'd probably suggest rsync.
+2015-04-02 13:24:06	-->	Pryda (~t@host73-238.customer.mediateknik.net) has joined #gentoo
+2015-04-02 13:24:20	markm	no -L or -p on that rsync?
+2015-04-02 13:24:38	markm	or -r ?
+2015-04-02 13:24:52	+grknight	markm: -a includes -rlptgoD
+2015-04-02 13:24:53	Chiitoo	I usually use -savu
+2015-04-02 13:26:00	Chiitoo	Sometimes tossa a --progress in too.  ^^
+2015-04-02 13:26:21	markm	well i got rid of the v switch but the --progress wuld have been a good idea lol
+2015-04-02 13:26:23	+grknight	Chiitoo: well -s is no-op locally :)
+2015-04-02 13:27:00	<--	glsubri (~glsubri@225.248.164.109.static.wline.lns.sme.cust.swisscom.ch) ha salido (Quit: leaving)
+2015-04-02 13:27:24	anunnaki	im looking at steam-client, and i dont see alsa.. but pulseaudio.. steam only can use pulse? why is that and that they didnt make it support alsa?
+2015-04-02 13:27:24	<--	paneidos (~Sernin@145.108.68.20) ha salido (Client Quit)
+2015-04-02 13:27:47	+grknight	anunnaki: from what i looked it, it can do apluse
+2015-04-02 13:27:48	+_AxS_	markm: well there shoudn't be -any- .??* files in /mnt/gentoo itself, since that's a root dir.  But if there is, do a two-stage copy:  cp -a /mnt/gentoo/* /mnt/foo/ , cp -a /mnt/gentoo/.* /mnt/foo/   (or rsync as stated already)
+2015-04-02 13:28:12	stqn	anunnaki: works with with alsa on arch linux at least
+2015-04-02 13:28:12	<--	palmer (~palmer@dhcp-35-42.EECS.Berkeley.EDU) ha abandonado #gentoo ("Leaving")
+2015-04-02 13:28:24	stqn	well, Steam itself doesn’t need to make sounds… I think
+2015-04-02 13:28:49	markm	axs there should be . files in sub directories of /mnt/gentoo however :)
+2015-04-02 13:28:51	Chiitoo	grknight: Mmmh, I just like that 'savu' translates to 'smoke' in my native language.  D:
+2015-04-02 13:28:54	markm	trying the rsync
+2015-04-02 13:28:59	Chiitoo	(Probably why I remember it so well.)
+2015-04-02 13:29:17	+grknight	Chiitoo: in english, it almost looks like save
+2015-04-02 13:29:18	+_AxS_	Chiitoo: regarding distcc -- i've found since i switched to gcc-4.8.3 from 4.7 , even though i made sure all the hosts also have 4.8.3 and everything is as homogemeous as possible, all of my remote builds still fail.
+2015-04-02 13:29:30	Chiitoo	anunnaki: Steam (and games from it) definitely work without PulseAudio.
+2015-04-02 13:29:33	<--	skulls (~username@gateway/vpn/privateinternetaccess/skulls) ha salido (Ping timeout: 256 seconds)
+2015-04-02 13:29:36	Chiitoo	grknight: Ha, true.
+2015-04-02 13:29:55	+_AxS_	Chiitoo: i was just wondering if this is the same for everyone else..
+2015-04-02 13:29:56	anunnaki	grknight: ah good deal. didnt even know apulse existed.. now i can get rid of all my pulse use flag :)
+2015-04-02 13:30:04	markm	axs delete the /root/.distcc directory
+2015-04-02 13:30:12	<--	deper29 (~deper29@216-197-139-195.sktn.hsdb.sasknet.sk.ca) ha salido (Ping timeout: 252 seconds)
+2015-04-02 13:30:14	-->	aknm (~aknm@unaffiliated/aknm) has joined #gentoo
+2015-04-02 13:30:18	markm	there is also anbother such directory under var somewhere
+2015-04-02 13:30:21	anunnaki	stqn: arch linux? you referring to Steam on Linux?
+2015-04-02 13:30:27	Chiitoo	_AxS_: Oh.  I see.
+2015-04-02 13:30:42	+_AxS_	markm: 'k i'll check it out..
+2015-04-02 13:31:11	-->	kn0rki (~Kn0rki@dslb-092-072-179-232.092.072.pools.vodafone-ip.de) has joined #gentoo
+2015-04-02 13:31:21	anunnaki	Chiitoo: good to know thanks. im going to remove pulse now then
+2015-04-02 13:31:48	<--	Agent_Smith_BR (~Agent_Smi@unaffiliated/agent-smith-br/x-9903544) ha salido (Read error: Connection reset by peer)
+2015-04-02 13:31:55	<--	deuteriu_ (~deuterium@gw-rm.datenpark.ch) ha salido (Quit: zzZZZzzz..)
+2015-04-02 13:32:10	gentoo__	why am i getting a !! SELinux module not found. Please verify that it was installed when setting my locale during my gentoo install?
+2015-04-02 13:32:10	-->	deper29 (~deper29@216-197-139-195.sktn.hsdb.sasknet.sk.ca) has joined #gentoo
+2015-04-02 13:32:16	gentoo__	i ran source /etc/profile
+2015-04-02 13:32:27	--	aknm es conocido ahora como disap4n
+2015-04-02 13:32:31	+_AxS_	gentoo__: are you running a hardened system?
+2015-04-02 13:32:42	gentoo__	no
+2015-04-02 13:32:51	+_AxS_	gentoo__: is your profile a 'selinux' profile?
+2015-04-02 13:32:57	gentoo__	this is a regular stage 3 install from the hybrid iso
+2015-04-02 13:33:00	+grknight	gentoo__: did you choose a hardened profile by accident? or a hardened stage3?
+2015-04-02 13:33:05	gentoo__	i dont believe so
+2015-04-02 13:33:08	gentoo__	no
+2015-04-02 13:33:18	+_AxS_	gentoo__: eselect profile list ; what's selected?
+2015-04-02 13:33:19	gentoo__	i downloaded a stage 3 tarball from the mirror list
+2015-04-02 13:33:23	deper29	any reason why a microSD card in an adaptor won't mount, but a normal sdcard will? My dmesg output gives an error https://bpaste.net/show/b27f4e8b99d7
+2015-04-02 13:33:33	+_AxS_	gentoo__: what's the filename or url of that tarball?
+2015-04-02 13:33:40	gentoo__	oops
+2015-04-02 13:33:41	deper29	the hardware should support it. It mounts fine in Windows
+2015-04-02 13:33:45	gentoo__	its set to selinux
+2015-04-02 13:34:11	+_AxS_	gentoo__: problem solved.  :)
+2015-04-02 13:34:15	gentoo__	thanks guys
+2015-04-02 13:34:23	-->	theShirbiny (~theShirbi@unaffiliated/theshirbiny) has joined #gentoo
+2015-04-02 13:35:10	stqn	anunnaki: yes of course, Steam on Linux, what else?
+2015-04-02 13:35:13	--	disap4n es conocido ahora como disap4m
+2015-04-02 13:35:45	@a3li	gentoo__: um, where did you get that stage from?
+2015-04-02 13:35:58	deper29	could there be something different about a microsd that I'd have to configure in the kernel to get it to work?
+2015-04-02 13:36:10	-->	Agent_Smith_BR (~Agent_Smi@unaffiliated/agent-smith-br/x-9903544) has joined #gentoo
+2015-04-02 13:36:28	javaJake	deper29: it depends on the card reader, usually
+2015-04-02 13:37:04	javaJake	deper29: not on the card
+2015-04-02 13:37:28	deper29	javaJake: how so? MicroSD in adaptor in Windows = fine, sdcard in Windows = fine, sdcard in Gentoo = fine, microsd in adaptor in Gentoo != fine
+2015-04-02 13:38:03	<--	pstn (~philipp@x55b31631.dyn.telefonica.de) ha salido (Ping timeout: 256 seconds)
+2015-04-02 13:38:15	deper29	it's just a built in card reader on my laptop
+2015-04-02 13:38:20	<--	Ptolemarch (~ptolemarc@50.252.93.91) ha salido (Remote host closed the connection)
+2015-04-02 13:39:57	<--	byfrost (~byfrost@ip-208-109-239-64.ip.secureserver.net) ha salido (Ping timeout: 250 seconds)
+2015-04-02 13:40:39	javaJake	deper29: do you get any kernel messages when the microsd is inserted?
+2015-04-02 13:40:54	deviantp	I use eval `cat ~/.fehbg` in ~/.xinitrc to set the background, but it never works first time i startx from boot, any ideas?
+2015-04-02 13:40:55	deper29	javaJake: just what I put in my dmesg above.
+2015-04-02 13:41:19	-->	Ptolemarch (~ptolemarc@50.252.93.91) has joined #gentoo
+2015-04-02 13:41:25	deper29	In that dmesg I have the messages from when I insert and remove a normal SD, then the error is when I put in the micro
+2015-04-02 13:41:46	<--	davispuh (~quassel@212.93.114.132) ha salido (Read error: Connection reset by peer)
+2015-04-02 13:42:20	<--	Adbray (~Adbtay@2001:470:1f11:def:2887:71f5:479a:3857) ha salido (Quit: Adbray)
+2015-04-02 13:42:20	Belliash	hello
+2015-04-02 13:42:41	Belliash	Could you take a look at https://forums.gentoo.org/viewtopic-t-1013648.html please? :-)
+2015-04-02 13:42:44	<--	knivers (~knivey@2001:470:1f11:201::dead:c0de) ha salido (Remote host closed the connection)
+2015-04-02 13:43:29	-->	skulls (~username@gateway/vpn/privateinternetaccess/skulls) has joined #gentoo
+2015-04-02 13:43:47	+grknight	Belliash: `emerge -1 qtcore` to reset the dep
+2015-04-02 13:44:17	<--	fling (~fling@fsf/member/fling) ha salido (Ping timeout: 246 seconds)
+2015-04-02 13:44:32	Belliash	grknight: i will give it a try, thanks
+2015-04-02 13:45:01	-->	qewzee (mojo@2605:6400:1:fed5:22:e7b6:75ad:6011) has joined #gentoo
+2015-04-02 13:45:06	-->	AL_ (~al@unaffiliated/al-/x-5135750) has joined #gentoo
+2015-04-02 13:45:47	-->	yqt (~yqt@81.88.230.28) has joined #gentoo
+2015-04-02 13:46:19	<--	theShirbiny (~theShirbi@unaffiliated/theshirbiny) ha salido (Ping timeout: 245 seconds)
+2015-04-02 13:46:31	javaJake	deper29: might be a bug in the kernel driver, perhaps.
+2015-04-02 13:46:38	-->	davispuh (~quassel@212.93.114.132) has joined #gentoo
+2015-04-02 13:46:53	-->	Vindex17 (~Vindex17@host171-66-dynamic.20-79-r.retail.telecomitalia.it) has joined #gentoo
+2015-04-02 13:47:22	<--	Vindex17 (~Vindex17@host171-66-dynamic.20-79-r.retail.telecomitalia.it) ha salido (Client Quit)
+2015-04-02 13:47:44	-->	mijenix (~mijenix@212-51-146-200.fiber7.init7.net) has joined #gentoo
+2015-04-02 13:49:25	-->	Cust0sL1men (~CustosLim@unaffiliated/cust0slim3n) has joined #gentoo
+2015-04-02 13:49:27	<--	reavertm (~reavertm@gentoo/developer/reavertm) ha salido (Remote host closed the connection)
+2015-04-02 13:49:59	<--	jfmcarreira (~joaoc@digitallifespan.ac.uk) ha salido (Ping timeout: 244 seconds)
+2015-04-02 13:50:02	dcmwai	hello there
+2015-04-02 13:50:07	<--	sean_1 (~sean@2602:304:94f:ea0:5627:1eff:fe90:8a80) ha salido (Quit: Konversation terminated!)
+2015-04-02 13:50:16	dcmwai	need some help on the following
+2015-04-02 13:50:27	dcmwai	I've change some scsi adaptor on my vm
+2015-04-02 13:50:40	dcmwai	and now ... sdb and sda are reverse
+2015-04-02 13:50:48	dcmwai	anything I can do to correct that?
+2015-04-02 13:51:39	-->	fling (~fling@fsf/member/fling) has joined #gentoo
+2015-04-02 13:51:44	-->	knivers (~knivey@2001:470:1f11:201::dead:c0de) has joined #gentoo
+2015-04-02 13:51:45	BtbN	Configure your VM so it doesn't care
+2015-04-02 13:51:51	<--	hafs (~hsilva@62.28.81.118) ha salido (Remote host closed the connection)
+2015-04-02 13:52:28	dcmwai	BtbN, har?
+2015-04-02 13:52:38	dcmwai	BtbN, what do you meant by that?
+2015-04-02 13:52:49	deper29	javaJake: weird. Kind of a bummer
+2015-04-02 13:53:06	BtbN	Use UUIDs for everything
+2015-04-02 13:53:10	javaJake	deper29: yep. I did some digging. Apparently the -84 error was fixed for some cases in 3.1.
+2015-04-02 13:53:22	dcmwai	BtbN, hum...
+2015-04-02 13:53:30	-->	DeadlyAssassin (~marcel@xdslgb105.osnanet.de) has joined #gentoo
+2015-04-02 13:53:42	deper29	javaJake: not all cases though?
+2015-04-02 13:53:52	javaJake	deper29: obviously if you're still seeing it :)
+2015-04-02 13:53:59	deper29	heheh, :P
+2015-04-02 13:54:12	deper29	I wondered if I was maybe missing a driver or something somewhere
+2015-04-02 13:54:15	dcmwai	anyway to rescan the scai adaptor so that sda will be sda back?
+2015-04-02 13:54:33	javaJake	deper29: https://community.freescale.com/thread/277327
+2015-04-02 13:54:46	javaJake	deper29: there we go, someone managed to parse the kernel code
+2015-04-02 13:54:51	javaJake	The kernel code is a mess. :/
+2015-04-02 13:55:37	deper29	oh whoa
+2015-04-02 13:56:39	-->	grot (~grot@50.111.33.231) has joined #gentoo
+2015-04-02 13:57:42	BtbN	dcmwai, the order of disks is basicaly random. That's why you use UUIDs or Labels nowdays.
+2015-04-02 13:58:10	javaJake	deper29: so yea, I don't know why you're getting a CRC error, so that may not be the solution, but it sounds like a good hint
+2015-04-02 13:58:33	jasom	deper29: also try different readers; I have a USB SD card reader that is super flaky when using a uSD in an SD card adapter, and another that works fine
+2015-04-02 13:59:14	deper29	I'll give my usb reader a go right now
+2015-04-02 14:00:16	deper29	strange. Using the USB reader is just fine
+2015-04-02 14:00:22	deper29	using the built in sdcard slot is not
+2015-04-02 14:00:27	deper29	but just with this adaptor
+2015-04-02 14:00:40	<--	OCCASVS (uid20593@gateway/web/irccloud.com/x-pmzwzdzfsvecaasa) ha salido (Quit: Connection closed for inactivity)
+2015-04-02 14:00:55	-->	mistawright (~mistawrig@static-72-64-155-102.tampfl.fios.verizon.net) has joined #gentoo
+2015-04-02 14:00:56	<--	markm (~markm@38.122.200.194) ha salido (Read error: No route to host)
+2015-04-02 14:01:21	<--	Pryda (~t@host73-238.customer.mediateknik.net) ha salido (Quit: Hey!  Where'd my controlling terminal go?)
+2015-04-02 14:01:42	--	Jaw_ es conocido ahora como Jawmare
+2015-04-02 14:02:08	deper29	I guess I'll get a new microsd adapter and see if that resolves the issue
+2015-04-02 14:02:25	deper29	I don't like that it works fine in windows and not linux though :(
+2015-04-02 14:02:27	-->	nE0sIghT (~Thunderbi@95-29-30-106.broadband.corbina.ru) has joined #gentoo
+2015-04-02 14:03:24	jasom	deper29: there's a lot going on electrically there, and the sdhci code is a bit sketch
+2015-04-02 14:03:56	jasom	one thing windows does really well is gracefully fallback to lower-speed options in its storage drivers
+2015-04-02 14:03:59	+_AxS_	there aren't any protocol or data differences between sd and microsd is there?  it's just physical form factor right?
+2015-04-02 14:04:15	 *	jasom even had a dying DVD drive drop down to PIO mode on windows
+2015-04-02 14:04:17	earendil	sure looks like it, as they're interchangeable with adapters
+2015-04-02 14:04:27	--	silverfox_ es conocido ahora como silverf0x
+2015-04-02 14:04:27	<--	silverf0x (silver@os.brasucas.net) ha salido (Changing host)
+2015-04-02 14:04:27	-->	silverf0x (silver@unaffiliated/silverf0x) has joined #gentoo
+2015-04-02 14:04:52	jasom	_AxS_: that's right; but with things like DDR, then a not-perfect connection, or a difference in trace length can really mess things up
+2015-04-02 14:05:14	deper29	_AxS_: I believe it's just form factor
+2015-04-02 14:05:37	jasom	_AxS_: windows will fallback all the way to SPI mode on SD Cards (I don't recall if SDHC support SPI mode)
+2015-04-02 14:05:52	jasom	the linux driver tends to just hang there in such cases
+2015-04-02 14:05:54	+_AxS_	...is there a way to force that mode via /sys , i wonder...
+2015-04-02 14:05:58	jasom	or spit out weird errors
+2015-04-02 14:06:02	<--	LordShiva (~LordShiva@unaffiliated/lordshiva) ha salido (Remote host closed the connection)
+2015-04-02 14:06:03	javaJake	It doesn't help that most readers and sd cards are junk to begin with
+2015-04-02 14:06:53	javaJake	Or at least vulnerable to their environment.
+2015-04-02 14:07:00	<--	rhonabwy (~rhonabwy@2001:4c50:16f:6500:ec:61d7:568a:4967) ha salido (Read error: Connection reset by peer)
+2015-04-02 14:07:20	javaJake	My experience is not scientific. They do seem to like to break though. :)
+2015-04-02 14:07:44	<--	superfox_il_volp (~god@109.255.54.131) ha salido (Quit: Konversation terminated!)
+2015-04-02 14:08:17	-->	rhonabwy (~rhonabwy@2001:4c50:16f:6500:dc80:1e62:ae5:eb86) has joined #gentoo
+2015-04-02 14:08:26	<--	nE0sIghT (~Thunderbi@95-29-30-106.broadband.corbina.ru) ha salido (Changing host)
+2015-04-02 14:08:28	-->	nE0sIghT (~Thunderbi@unaffiliated/ne0sight) has joined #gentoo
+2015-04-02 14:09:08	--	silverf0x es conocido ahora como silverfox_
+2015-04-02 14:09:16	--	silverfox_ es conocido ahora como silverf0x
+2015-04-02 14:12:01	deper29	so the solution is simple...I have to learn how to fix the kernel driver?
+2015-04-02 14:12:13	-->	BCMM (~BCMM@unaffiliated/bcmm) has joined #gentoo
+2015-04-02 14:13:35	jasom	deper29: well, ideally, it would start backing off on speed and bells and whistles when timeouts and errors happen.  Or you can just use your USB reader.
+2015-04-02 14:13:38	<--	flavi0 (~flavi0@ip-37-24-115-129.hsi14.unitymediagroup.de) ha salido (Quit: leaving)
+2015-04-02 14:14:22	<--	deper29 (~deper29@216-197-139-195.sktn.hsdb.sasknet.sk.ca) ha salido (Read error: Connection reset by peer)
+2015-04-02 14:14:31	-->	zizkovak (~smoofy@81.100.broadband6.iol.cz) has joined #gentoo
+2015-04-02 14:14:32	-->	deper29 (~deper29@216-197-139-195.sktn.hsdb.sasknet.sk.ca) has joined #gentoo
+2015-04-02 14:14:36	Tecumseh	are there any precautions to take before moving from multi-lib to no-multilib?
+2015-04-02 14:14:43	<--	zizkovak (~smoofy@81.100.broadband6.iol.cz) ha abandonado #gentoo
+2015-04-02 14:14:56	-->	qrisu (~phalrax@chello080108053216.25.11.vie.surfer.at) has joined #gentoo
+2015-04-02 14:15:16	deper29	whoah, javaJake , I got it
+2015-04-02 14:15:19	jasom	deper29: you could also just dial down all of those settings a bunch (turn down .max_clk, get rid of everything in .caps other than MMC_CAP_4_BIT_DATA) and see if that helps
+2015-04-02 14:15:39	jasom	deper29: that will significantly degrade all SD card performance though
+2015-04-02 14:16:01	-->	metts (~Linger@catv-80-99-188-61.catv.broadband.hu) has joined #gentoo
+2015-04-02 14:16:30	yerodin	Let's say one wants to take a look at the new kde 5.x stuff, how could he easily?
+2015-04-02 14:16:32	deper29	jasom: I had to enable the Ricoh MMC Controller Disable
+2015-04-02 14:17:03	CrustY	hi everyone
+2015-04-02 14:17:10	<--	shentino (~shentino@gentoo/contributor/shentino) ha salido (Remote host closed the connection)
+2015-04-02 14:17:13	+kensington	yerodin: there are some (non-gentoo) livecds around, or here's an upgrade guide: https://wiki.gentoo.org/wiki/KDE/Plasma_5_upgrade
+2015-04-02 14:17:18	deper29	because the Gentoo way of doing things is not only blindly punching in commands when you have no idea of the outcome, but also modifying your kernel with no idea what you're doing and booting with that.
+2015-04-02 14:17:23	CrustY	is it possible to tell layman which branch to fetch?
+2015-04-02 14:17:34	yerodin	kensington: It's the gentoo way I prefer. Thanks. :)
+2015-04-02 14:18:00	petrvs	_AxS_: sorry I got caught up in something, you get your mute thing sorted?
+2015-04-02 14:18:08	petrvs	CrustY: branch?
+2015-04-02 14:18:17	CrustY	ye
+2015-04-02 14:18:23	petrvs	CrustY: overlay name?
+2015-04-02 14:18:23	jasom	deper29: ah, so it wasn't the problem I thought it was; interesting
+2015-04-02 14:18:28	<--	yqt (~yqt@81.88.230.28) ha salido (Ping timeout: 264 seconds)
+2015-04-02 14:18:31	CrustY	https://github.com/saintdev/obs-studio-overlay
+2015-04-02 14:18:32	jasom	deper29: though, to be fair, the default value for that option is Y
+2015-04-02 14:18:33	<--	apus (~tux@p200300422C331018BEAEC5FFFE6B0505.dip0.t-ipconnect.de) ha salido (Quit: Konversation terminated!)
+2015-04-02 14:18:36	CrustY	petrvs: this one
+2015-04-02 14:18:54	petrvs	CrustY: you can specify a specific overlay like so: emerge -foo package::overlayName
+2015-04-02 14:18:57	deper29	jasom: so I must have disabled it at some point?
+2015-04-02 14:19:00	deviantp	I genuinely think I should have a job naming things, I just came up with "dhcSpython" for my latest project. Pretty proud of that one
+2015-04-02 14:19:04	CrustY	you can find the description of problem here https://github.com/saintdev/obs-studio-overlay/issues/7
+2015-04-02 14:19:05	-->	chris_99 (~chris_99@unaffiliated/chris-99/x-3062929) has joined #gentoo
+2015-04-02 14:19:07	<--	lg188 (~lg188@91.176.164.153) ha salido (Remote host closed the connection)
+2015-04-02 14:19:08	petrvs	CrustY: this should work most anywhere you can use package atoms
+2015-04-02 14:19:16	petrvs	CrustY: oh like VCS branch?
+2015-04-02 14:19:24	CrustY	ye
+2015-04-02 14:19:26	CrustY	exactly
+2015-04-02 14:19:28	jasom	deper29: my guess is you said "N" when doing a makeoldconfig
+2015-04-02 14:19:34	petrvs	CrustY: yeah you can do that, you might have to modify the ebuild
+2015-04-02 14:19:47	jasom	deper29: though that doesn't make sense, since it's fairly old (2.6)
+2015-04-02 14:19:53	CrustY	in github or locally?
+2015-04-02 14:20:05	CrustY	or maybe smth from layman.conf?
+2015-04-02 14:20:15	petrvs	CrustY: I think there's a built-in, 'EGIT_BRANCH'
+2015-04-02 14:20:23	petrvs	CrustY: see #gentoo-dev-help for more informed assistance
+2015-04-02 14:20:46	petrvs	etc.: https://forums.gentoo.org/viewtopic-t-845839.html
+2015-04-02 14:20:48	CrustY	petrvs: ty
+2015-04-02 14:22:59	+_AxS_	petrvs: nah, moved onto other things; i'll look into it more later.
+2015-04-02 14:23:18	+_AxS_	petrvs: i -think- it must have something to do with xfce4-volumed tho, just don't know what.
+2015-04-02 14:23:21	-->	`VL (~vl@broadband-46-188-31-14.2com.net) has joined #gentoo
+2015-04-02 14:24:04	petrvs	_AxS_: I'd just use a custom command
+2015-04-02 14:24:15	petrvs	_AxS_: amixer sset Master toggle
+2015-04-02 14:24:20	<--	mistawright (~mistawrig@static-72-64-155-102.tampfl.fios.verizon.net) ha salido (Quit: Leaving)
+2015-04-02 14:24:20	<--	FreezingCold (~FreezingC@135.0.41.14) ha salido (Read error: Connection reset by peer)
+2015-04-02 14:24:21	petrvs	no magic involved
+2015-04-02 14:24:41	-->	FreezingCold (~FreezingC@135.0.41.14) has joined #gentoo
+2015-04-02 14:24:42	-->	Linger_ (~Linger@catv-80-99-188-184.catv.broadband.hu) has joined #gentoo
+2015-04-02 14:25:09	petrvs	I have seen a few odd bugs with xfce4-volumed, though
+2015-04-02 14:25:15	petrvs	not quite what you've described, however
+2015-04-02 14:25:26	petrvs	it's nice when it works, which is most of the time
+2015-04-02 14:25:43	petrvs	although a simple script and libaosd can be just as good and better :)
+2015-04-02 14:25:43	<--	DeadlyAssassin (~marcel@xdslgb105.osnanet.de) ha salido (Ping timeout: 252 seconds)
+2015-04-02 14:26:25	-->	bad_milo (~bad_milo@cpc9-nrte27-2-0-cust572.8-4.cable.virginm.net) has joined #gentoo
+2015-04-02 14:27:01	<--	gimiki (~gimiki@host25-25-dynamic.51-79-r.retail.telecomitalia.it) ha salido (Ping timeout: 246 seconds)
+2015-04-02 14:27:04	-->	lg188 (~lg188@91.176.164.153) has joined #gentoo
+2015-04-02 14:27:27	<--	metts (~Linger@catv-80-99-188-61.catv.broadband.hu) ha salido (Ping timeout: 253 seconds)
+2015-04-02 14:28:02	lg188	what's a good tool to find big files or folders trough the terminal?
+2015-04-02 14:28:27	maffblaster	ncdu
+2015-04-02 14:28:33	maffblaster	lg188: ncdu
+2015-04-02 14:28:34	bad_milo	Hello, im trying to install bouncy-castle-java but portage complaints about ruby_targets_jruby,
+2015-04-02 14:28:55	petrvs	lg188: I start with find start/dir/ -type f -size +1G or the like
+2015-04-02 14:29:05	petrvs	lg188: and usually give up after I find the hugest, most absurd offenders
+2015-04-02 14:29:22	<--	petrvs (~petrvs@cpe-98-145-144-223.natnow.res.rr.com) ha abandonado #gentoo ("quit")
+2015-04-02 14:29:24	-->	petrvs (~petrvs@cpe-98-145-144-223.natnow.res.rr.com) has joined #gentoo
+2015-04-02 14:29:32	maffblaster	lg188: I agree ^ find is good too
+2015-04-02 14:29:34	petrvs	find start/dir/ -type f -size +1G -exec du -hs {} \; | sort -h
+2015-04-02 14:29:40	<--	tuxtor (~tuxtor@unaffiliated/tuxtor) ha salido (Ping timeout: 248 seconds)
+2015-04-02 14:29:49	lg188	I have a lot of large files, I just need to have an overview to select the least important
+2015-04-02 14:29:49	bad_milo	i even added RUBY_TARGETS="jruby" to my make.conf with no result
+2015-04-02 14:30:12	petrvs	that last command will find all the ones 1GB or higher, and sort them in reverse size (largest nearest bottom of terminal)
+2015-04-02 14:30:27	petrvs	start with any size you like, 10? =P
+2015-04-02 14:30:37	ecormier	+1 for ncdu
+2015-04-02 14:31:03	bad_milo	any ideas?
+2015-04-02 14:31:32	njsg	any hints about what packages to use for development for commodore machines in a gentoo system, other than vice?
+2015-04-02 14:31:35	petrvs	bad_milo: what result do you want?
+2015-04-02 14:31:47	petrvs	njsg: you could buy a commodore
+2015-04-02 14:31:58	bad_milo	i want to install bouncy-castle-java
+2015-04-02 14:32:18	njsg	petrvs: I don't think that's good if you code in C and/or assembly
+2015-04-02 14:32:28	deviantp	njsg: everything is up and running now! :) you've been super helpful, thanks very much
+2015-04-02 14:32:42	njsg	deviantp: nice!
+2015-04-02 14:32:54	petrvs	njsg: well if thinking is your goal, why're you developing for a commodore? =) (j/k, mostly)
+2015-04-02 14:33:16	njsg	also, I've looked into the code for the ld.bfd bug, and it seems that the problem is that gcc-4.8 allows a different syntax
+2015-04-02 14:33:30	njsg	so people using the newest gcc probably don't see these problems
+2015-04-02 14:33:48	njsg	I wonder... I guess that for gentoo it may be better to just use the newest gcc, if people aren't testing it with older gccs...
+2015-04-02 14:33:49	petrvs	>=4.8?
+2015-04-02 14:34:01	petrvs	4.9 is in testing now, that's nice
+2015-04-02 14:34:09	 *	petrvs goes for lunch
+2015-04-02 14:34:32	njsg	it's not nice to change the compiler all the time. it can lead to breakage and differences in implementation-dependent behaviour
+2015-04-02 14:34:46	njsg	and some packages may just fail to compile with newer gccs
+2015-04-02 14:35:03	<--	mr_kyd (~Einherjer@unaffiliated/mr-kyd/x-4253709) ha salido (Ping timeout: 245 seconds)
+2015-04-02 14:35:25	maffblaster	Geh
+2015-04-02 14:37:15	maffblaster	Can anyone explain this to me?
+2015-04-02 14:37:29	maffblaster	https://bugs.gentoo.org/show_bug.cgi?id=41124
+2015-04-02 14:37:37	<--	luke_penn (~luke_penn@147.162.183.190) ha salido (Remote host closed the connection)
+2015-04-02 14:37:52	-->	fergus_ (~sergei@mail.55h.by) has joined #gentoo
+2015-04-02 14:38:03	+kensington	maffblaster: all those people didn't run perl-cleaner
+2015-04-02 14:38:07	maffblaster	grknight: https://bugs.gentoo.org/show_bug.cgi?id=41124
+2015-04-02 14:38:20	maffblaster	kensington: Really?
+2015-04-02 14:38:24	<--	fergus (~sergei@mail.55h.by) ha salido (Ping timeout: 252 seconds)
+2015-04-02 14:38:39	+kensington	yep
+2015-04-02 14:38:42	maffblaster	I'm running into the same issue....
+2015-04-02 14:38:48	maffblaster	I haven't tried perl-cleaner, yet, though
+2015-04-02 14:38:53	+kensington	did you run perl-cleaner?
+2015-04-02 14:38:58	maffblaster	I'll try it.
+2015-04-02 14:39:03	+kensington	it's highly recommended ;)
+2015-04-02 14:39:06	maffblaster	This is, basically, on a new install.
+2015-04-02 14:39:16	-->	yqt (~yqt@81.88.230.28) has joined #gentoo
+2015-04-02 14:39:18	maffblaster	I have a build script that builds a specific system for me.
+2015-04-02 14:39:30	maffblaster	And it'll get stuck.
+2015-04-02 14:40:26	maffblaster	Thanks, kensington.
+2015-04-02 14:40:31	<--	dcmwai (~dcmwai@175.139.107.157) ha salido (Ping timeout: 255 seconds)
+2015-04-02 14:40:38	maffblaster	I'll research and come back if that doesn't fix it.
+2015-04-02 14:40:50	njsg	kensington: perhaps it would be a good idea to make sure that the entire "YOU NEED TO RUN perl-cleaner" appears in the summary
+2015-04-02 14:41:00	njsg	which leads to the question: why is bugzilla doing that?
+2015-04-02 14:41:11	<--	Judge_Dredd (~Judge_Dre@ip-95-220-58-97.bb.netbynet.ru) ha salido (Remote host closed the connection)
+2015-04-02 14:41:17	njsg	this is the normal view of the bug, wouldn't it make more sense to see the full summary here?
+2015-04-02 14:41:23	<--	meeba (~lamer@c-75-71-23-204.hsd1.co.comcast.net) ha salido (Remote host closed the connection)
+2015-04-02 14:41:24	maffblaster	"YOU NEED TO RUN perl-cleaner --all RIGHT NOW!!!
+2015-04-02 14:41:31	njsg	fun
+2015-04-02 14:41:34	-->	dcmwai (~dcmwai@175.139.107.157) has joined #gentoo
+2015-04-02 14:41:38	njsg	last time I had perl issues people kept saying that
+2015-04-02 14:41:41	+kensington	i see it in the summary there
+2015-04-02 14:41:41	njsg	and it didn't help
+2015-04-02 14:42:32	maffblaster	Could it break something if perl-cleaner be ran automatically
+2015-04-02 14:42:32	maffblaster	?
+2015-04-02 14:42:33	njsg	kensington: well, I don't http://iki.fi/njsg/tmp/bug.png
+2015-04-02 14:43:23	+kensington	need moar landscape space
+2015-04-02 14:43:24	maffblaster	Maybe I'm not understanding exactly how perl-cleaner works
+2015-04-02 14:43:43	maffblaster	njsg: kensington is right.
+2015-04-02 14:43:58	njsg	ever heard of word wrapping?
+2015-04-02 14:44:12	maffblaster	njsg: The exact title is: "Bug 41124 - (xml-parser-not-found) configure: error: XML::Parser perl module is required for [...] - YOU NEED TO RUN `perl-cleaner'"
+2015-04-02 14:44:14	njsg	there's no reason to say the user is who has to buy a larger screen if the page could , say, simply not cut it!
+2015-04-02 14:44:18	-->	blocage (~blocage@gol06-1-82-242-162-120.fbx.proxad.net) has joined #gentoo
+2015-04-02 14:44:27	<--	Code_Bleu (~Code_Bleu@unaffiliated/code-bleu/x-0197753) ha salido (Ping timeout: 252 seconds)
+2015-04-02 14:44:28	njsg	maffblaster: look at the picture I just linked
+2015-04-02 14:45:08	maffblaster	kensington: Do you know much about perl-cleaner?
+2015-04-02 14:45:11	njsg	if now you need to be rich enough to buy widescreen wall displays to run gentoo on, then I guess I'm out.
+2015-04-02 14:45:25	+kensington	maffblaster: it rebuilds necessary perl modules
+2015-04-02 14:45:34	maffblaster	Can't it run automatically?
+2015-04-02 14:45:37	-->	meeba (~lamer@c-75-71-23-204.hsd1.co.comcast.net) has joined #gentoo
+2015-04-02 14:45:43	maffblaster	Can it detect if something is out of date, and then run?
+2015-04-02 14:45:57	maffblaster	"perl-cleaner -- Find & rebuild packages and Perl header files broken due to a perl upgrade"
+2015-04-02 14:46:02	<--	bubu________ (~bubu@89-71-199-211.dynamic.chello.pl) ha salido (Quit: Computer has gone to sleep.)
+2015-04-02 14:46:19	njsg	kensington: full screen across two displays does not change anything, so I think adding more landscape is not working.
+2015-04-02 14:46:23	maffblaster	kensington: There were about 30 packages that were out of date.
+2015-04-02 14:46:27	maffblaster	(on my system)
+2015-04-02 14:46:42	+kensington	njsg: probably there is some room for template improvement
+2015-04-02 14:46:48	maffblaster	^
+2015-04-02 14:47:03	-->	[Gentoo] (~Gentoo@2001:470:681e::dead) has joined #gentoo
+2015-04-02 14:47:11	maffblaster	njsg: Bugzilla re-work is sort of on hold for now; at least that's what I'm told.
+2015-04-02 14:47:50	<--	DogHackit (~doghackit@2605:e000:1100:25:3ea9:f4ff:fe29:a4d8) ha salido (Quit: Konversation terminated!)
+2015-04-02 14:48:37	-->	Ordog_by (~ordog@37.44.98.75) has joined #gentoo
+2015-04-02 14:49:01	xmorph	portage has unmasked Qt 4.8.6-r1 and now i can't install KDE.
+2015-04-02 14:49:12	+kensington	xmorph: please pastebin portage output
+2015-04-02 14:49:28	-->	commanderkeen (~commander@nat-165-91-13-42.tamulink.tamu.edu) has joined #gentoo
+2015-04-02 14:51:23	xmorph	kensington, when i remove qt entries from package.accept_keywords and do emerge -uDNav @world i get this https://bpaste.net/show/973d189d2478
+2015-04-02 14:51:33	-->	eshiffob (~cefkamcau@afdo173.neoplus.adsl.tpnet.pl) has joined #gentoo
+2015-04-02 14:52:12	<--	a3Dman (~3Dman@unaffiliated/a3dman) ha salido (Ping timeout: 246 seconds)
+2015-04-02 14:52:36	+kensington	xmorph: you need  qt-4.8.6 for multilib
+2015-04-02 14:52:37	xmorph	that qt unmask was at applying abi_x86_32 changes...
+2015-04-02 14:52:56	xmorph	kensington, ok, but how i can install KDE now ? I get blocks...
+2015-04-02 14:53:09	+kensington	i don't see anything kde-related in that output
+2015-04-02 14:53:19	-->	a3Dman (~3Dman@unaffiliated/a3dman) has joined #gentoo
+2015-04-02 14:53:22	<--	cefkamcau (~cefkamcau@afer4.neoplus.adsl.tpnet.pl) ha salido (Ping timeout: 250 seconds)
+2015-04-02 14:53:24	<--	dcmwai (~dcmwai@175.139.107.157) ha salido (Ping timeout: 264 seconds)
+2015-04-02 14:53:31	xmorph	kensington, that is just try to downgrade qt to stable. i'll do kde stuff, wait for a sec.
+2015-04-02 14:54:05	-->	DogHackit (~doghackit@2605:e000:1100:25:3ea9:f4ff:fe29:a4d8) has joined #gentoo
+2015-04-02 14:54:05	njsg	I have a few multilib use changes that are commented only as dependencies of other qt packages, is this just an incomplete dependency chain, or could it mean I have some qt package in /var/lib/portage/world? but it doesn't even say "required by world"...
+2015-04-02 14:54:54	-->	joey18 (~joey@89-92-154-88.hfc.dyn.abo.bbox.fr) has joined #gentoo
+2015-04-02 14:55:12	<--	[Gentoo] (~Gentoo@2001:470:681e::dead) ha abandonado #gentoo
+2015-04-02 14:55:29	<--	Stels (~stels@95.104.238.211) ha salido (Quit: Konversation terminated! kernel panic error, the system go to reboot)
+2015-04-02 14:55:32	+kensington	njsg: need portage output ;)
+2015-04-02 14:57:05	-->	dcmwai (~dcmwai@175.139.107.157) has joined #gentoo
+2015-04-02 14:57:36	<--	sibyfi (~sibyfi@99-171-142-39.lightspeed.tukrga.sbcglobal.net) ha salido (Quit: leaving)
+2015-04-02 14:57:47	-->	Stels (~stels@95.104.224.8) has joined #gentoo
+2015-04-02 14:57:48	-->	Code_Bleu (~Code_Bleu@64-191-149-154.service.qx.net) has joined #gentoo
+2015-04-02 14:58:33	-->	gihywd (~jappi@dslb-088-074-248-079.088.074.pools.vodafone-ip.de) has joined #gentoo
+2015-04-02 14:58:39	-->	pstn (~philipp@f049248120.adsl.alicedsl.de) has joined #gentoo
+2015-04-02 15:00:17	<--	Code_Bleu (~Code_Bleu@64-191-149-154.service.qx.net) ha salido (Changing host)
+2015-04-02 15:00:18	-->	Code_Bleu (~Code_Bleu@unaffiliated/code-bleu/x-0197753) has joined #gentoo
+2015-04-02 15:00:28	stqn	I’m a little lost as to what to do to resolve an issue related to the nvidia driver and emul-linux-x86… emerge tells me to emerge @preserved-rebuild but it doesn’t change anything. https://dpaste.de/QUGD . I have already done emerge -C emul-linux-x86* …
+2015-04-02 15:01:40	<--	commanderkeen (~commander@nat-165-91-13-42.tamulink.tamu.edu) ha salido (Ping timeout: 264 seconds)
+2015-04-02 15:01:43	-->	shiznix (nobody@155.143.96.190) has joined #gentoo
+2015-04-02 15:01:43	<--	shiznix (nobody@155.143.96.190) ha salido (Changing host)
+2015-04-02 15:01:43	-->	shiznix (nobody@gentoo/user/shiznix) has joined #gentoo
+2015-04-02 15:01:47	<--	Bloodclaw (~bloodclaw@vpn.h38.org) ha salido (Quit: Leaving)
+2015-04-02 15:03:26	xmorph	kensington, https://bpaste.net/show/8fbdac3fbd94
+2015-04-02 15:03:37	njsg	1121 lines of portage output
+2015-04-02 15:03:52	njsg	I think it is telling me I need to remove emul- packages manually
+2015-04-02 15:04:12	njsg	or perhaps I need to update skype and eagle at the same time, that'd make sense
+2015-04-02 15:04:33	<--	Tecumseh (~Tecumseh_@mtl01-4-78-203-200-19.fbx.proxad.net) ha salido (Quit: Leaving)
+2015-04-02 15:04:48	+_AxS_	njsg: do you have an emul-* package in @world?
+2015-04-02 15:05:00	+kensington	xmorph: you unkeyworded qt-4.8.6, but it's needed by some packages (skype)
+2015-04-02 15:05:19	xmorph	kensington, i have skype...
+2015-04-02 15:05:20	+_AxS_	njsg: also, you'll need to keyword qt-4.8.6-r1 because it hasn't gone stable yet.
+2015-04-02 15:05:46	+kensington	xmorph: yeah, and it requires qt-4.8.6
+2015-04-02 15:05:47	 *	_AxS_ thinks we should've made qt go stable before masking the emul-*'s
+2015-04-02 15:05:50	njsg	_AxS_: ... isn't that a bit bad, I mean, shouldn't this, erm, nice change have been postponed until that qt had gone stable?
+2015-04-02 15:06:07	+kensington	_AxS_: it's overdue but there's still a few regressions
+2015-04-02 15:06:10	<--	dcmwai (~dcmwai@175.139.107.157) ha salido (Ping timeout: 255 seconds)
+2015-04-02 15:06:26	xmorph	kensington, so i can't have kde and skype in same time ?
+2015-04-02 15:06:46	+_AxS_	njsg: maybe..  but no, it's not bad to keyword qt-4.8.6
+2015-04-02 15:06:52	+kensington	xmorph: you need to keyword qt-4.8.6 again
+2015-04-02 15:07:05	-->	dcmwai (~dcmwai@175.139.107.157) has joined #gentoo
+2015-04-02 15:07:14	njsg	_AxS_: please tell me there's a one-liner to keyword qt-4.8.6...
+2015-04-02 15:07:14	xmorph	kensington, wait! it's keyworded in that last output
+2015-04-02 15:08:07	+kensington	xmorph: qtchooser too?
+2015-04-02 15:08:19	xmorph	=dev-qt/qtchooser-0_p20150102 ~amd64
+2015-04-02 15:08:37	<--	Smiley (~Smiley@cpc23-cove12-2-0-cust135.3-1.cable.virginm.net) ha salido (Quit: http://www.milkme.co.uk - You'll never understand.)
+2015-04-02 15:08:39	-->	greenbagels (~gb@cpe-65-25-124-183.neo.res.rr.com) has joined #gentoo
+2015-04-02 15:08:47	<--	vinegret (~vinegret@nat2-vitebsk-pool-46-53-214-254.telecom.by) ha salido (Ping timeout: 250 seconds)
+2015-04-02 15:09:06	+kensington	something's trying to downgrade it, and it's usually one of the random qt libs not keyworded
+2015-04-02 15:09:09	njsg	*this* maybe shouldn't have been postponed...
+2015-04-02 15:09:13	njsg	er, should have
+2015-04-02 15:09:23	-->	Smiley (~Smiley@cpc23-cove12-2-0-cust135.3-1.cable.virginm.net) has joined #gentoo
+2015-04-02 15:09:34	<--	dhbiker (~dhbiker@APN-122-208-79-gprs.simobil.net) ha salido (Quit: Going!)
+2015-04-02 15:09:49	-->	pstn_ (~philipp@f048248045.adsl.alicedsl.de) has joined #gentoo
+2015-04-02 15:09:52	+_AxS_	njsg: ls /usr/portage/dev-qt/qt* -d |sed -e 's/^.*dev-qt/~dev-qt/g' -e 's/$/-4.8.6:4/g' >>/etc/portage/package.keywords/qt486
+2015-04-02 15:09:55	xmorph	kensington, i'll try to find out what trying to downgrade qt...
+2015-04-02 15:10:10	+_AxS_	njsg: ...guarantees it's all keyworded.
+2015-04-02 15:10:29	njsg	well, I meant one-liner for package.keywords :-)
+2015-04-02 15:10:40	njsg	I just added lines based on autounmask
+2015-04-02 15:10:44	njsg	which probably means it's wrong
+2015-04-02 15:11:20	+_AxS_	njsg: Oh, no afaik there isn't.  but i hope your package.accept_keywords is a directory, in which case you can just do what I did there to make a specific file with all the packages in it.
+2015-04-02 15:11:37	xmorph	kensington, i only see that kde want to pull qt 4.8.5
+2015-04-02 15:11:57	+kensington	xmorph: it doesn't
+2015-04-02 15:12:01	<--	pstn (~philipp@f049248120.adsl.alicedsl.de) ha salido (Ping timeout: 255 seconds)
+2015-04-02 15:12:14	+kensington	can you pastebin your qt keyword file?
+2015-04-02 15:12:56	xmorph	kensington, https://bpaste.net/show/be2ba7f7f3aa
+2015-04-02 15:13:12	<--	Lucretia (~laguest@pdpc/supporter/active/lucretia) ha salido (Ping timeout: 246 seconds)
+2015-04-02 15:13:15	+kensington	xmorph: you need all qt, not just some
+2015-04-02 15:13:24	njsg	_AxS_: I'm adding groups of lines to package.keywords (which is a file), so far this looks more maintainable than autounmask lines
+2015-04-02 15:13:37	<--	disap4m (~aknm@unaffiliated/aknm) ha salido (Read error: Connection reset by peer)
+2015-04-02 15:13:38	xmorph	kensington, that is added by portage... thanks.
+2015-04-02 15:13:46	njsg	and package.use, of course
+2015-04-02 15:13:52	-->	aknm (~aknm@105-237-106-130.access.mtnbusiness.co.za) has joined #gentoo
+2015-04-02 15:13:52	<--	aknm (~aknm@105-237-106-130.access.mtnbusiness.co.za) ha salido (Changing host)
+2015-04-02 15:13:52	-->	aknm (~aknm@unaffiliated/aknm) has joined #gentoo
+2015-04-02 15:13:54	<--	Vaevictus (~vae@kesq-10-215.dsl.netins.net) ha abandonado #gentoo
+2015-04-02 15:13:58	-->	Lucretia (~laguest@pdpc/supporter/active/lucretia) has joined #gentoo
+2015-04-02 15:14:05	+kensington	xmorph: yeah, the autothingy isn't perfect
+2015-04-02 15:14:33	xmorph	kensington, :)
+2015-04-02 15:14:33	<--	x91 (~r0x@78.165.230.208) ha salido (Quit: x91 has no reason)
+2015-04-02 15:15:09	+kensington	i hope we can stable it soon, it will save a lot of grief
+2015-04-02 15:15:09	xmorph	kensington, it works now! :)
+2015-04-02 15:15:35	bad_milo	can someone really help me on this http://pastebin.com/vSZqAQPE i really dont understand what portage means with this
+2015-04-02 15:15:40	-->	dev1990 (~dev@dynamic-78-8-103-20.ssp.dialog.net.pl) has joined #gentoo
+2015-04-02 15:15:55	njsg	kensington: what's keeping it back?
+2015-04-02 15:16:15	<--	sdfg (~nope@149.255.110.10) ha salido (Quit: No Ping reply in 60 seconds.)
+2015-04-02 15:16:15	petrvs	bad_milo: it's saying you have to enable a ruby_target
+2015-04-02 15:16:21	petrvs	RUBY_TARGETS, even
+2015-04-02 15:16:26	+kensington	njsg: check out the blockers of bug #530238
+2015-04-02 15:16:28	willikins	kensington: https://bugs.gentoo.org/530238 "Qt 4.8.6-r1 stable request"; Gentoo Linux, Keywording and Stabilization; CONF; mgorny:qt
+2015-04-02 15:16:31	-->	bubu________ (~bubu@89-71-199-211.dynamic.chello.pl) has joined #gentoo
+2015-04-02 15:16:41	petrvs	bad_milo: you can add RUBY_TARGETS="jruby" to  make.conf, or dev-ruby/bouncy-castle-java ruby_targets_jruby to package.use
+2015-04-02 15:16:53	bad_milo	i did that but it still complaints
+2015-04-02 15:17:01	gnos	Hi all.
+2015-04-02 15:17:01	bad_milo	on make.conf
+2015-04-02 15:17:02	petrvs	bad_milo: what'd you do exactly?
+2015-04-02 15:17:08	petrvs	gnos: hi
+2015-04-02 15:17:20	bad_milo	RUBY_TARGETS="jruby" on make.conf
+2015-04-02 15:17:46	petrvs	bad_milo: send this in HexChat: /exec -o grep RUBY_TARGETS /etc/make.conf | tail -1
+2015-04-02 15:17:56	<--	deper29 (~deper29@216-197-139-195.sktn.hsdb.sasknet.sk.ca) ha salido (Ping timeout: 256 seconds)
+2015-04-02 15:18:10	petrvs	bad_milo: or /etc/portage/make.conf =)
+2015-04-02 15:18:21	gnos	I just finished my updating world, perl-cleaner says everything is consistent, python-updater says everything is consistent, emerge @preserved-rebuild has nothing to emerge, and revdep-rebuild says everything is consistent. When I try to launch urxvt I get this: urxvt: symbol lookup error: urxvt: undefined symbol: PL_unitcheckav
+2015-04-02 15:18:29	gnos	What do I do about this?
+2015-04-02 15:18:31	<--	curfont (~gt@modularaviation.com) ha salido (Quit: No Ping reply in 180 seconds.)
+2015-04-02 15:18:38	petrvs	gnos: rebuild urxvt?
+2015-04-02 15:19:01	-->	sdfg (~nope@149.255.110.10) has joined #gentoo
+2015-04-02 15:19:02	gnos	petrvs, but I'd like to fix anything else that's broken because of that library also
+2015-04-02 15:19:05	lg188	i compiled samba with a client and used it as a share, but I can't connect to share in my network
+2015-04-02 15:19:06	-->	notis (~notis@77.49.172.52.dsl.dyn.forthnet.gr) has joined #gentoo
+2015-04-02 15:19:06	njsg	sounds like a case of "you must update world to avoid the blockers", no? https://bpaste.net/raw/0f8a70ac263a
+2015-04-02 15:19:11	lg188	I have the client use flag
+2015-04-02 15:19:12	<--	nE0sIghT (~Thunderbi@unaffiliated/ne0sight) ha salido (Quit: nE0sIghT)
+2015-04-02 15:19:23	+_AxS_	njsg: the best system i've found is to make package.{use,keywords} a directory, have my own files in it, and one file named 'zzzz_autounmask'; i let autounmask do its thing and then usually move the atoms over to my custom file(s) if i plan to keep them long-term
+2015-04-02 15:19:36	bad_milo	exec invalid option?
+2015-04-02 15:19:37	-->	nE0sIghT (~Thunderbi@unaffiliated/ne0sight) has joined #gentoo
+2015-04-02 15:19:41	<--	nE0sIghT (~Thunderbi@unaffiliated/ne0sight) ha salido (Client Quit)
+2015-04-02 15:19:41	gnos	A google search makes it look like it is a function in zlib, but ldd `which urxvt` doesn't show it to be linked to zlib.
+2015-04-02 15:19:42	petrvs	_AxS_: uses last one, does it?
+2015-04-02 15:19:45	+_AxS_	njsg: --autounmask always uses the lexicographycally last file
+2015-04-02 15:19:56	<--	maffblaster (~mmarchese@67.137.21.130) ha salido (Read error: Connection timed out)
+2015-04-02 15:19:58	petrvs	mmm
+2015-04-02 15:20:01	-->	curfont (~gt@modularaviation.com) has joined #gentoo
+2015-04-02 15:20:03	petrvs	shame its output is so ugly =)
+2015-04-02 15:20:22	petrvs	someone should make a template it can follow
+2015-04-02 15:20:31	--	aknm es conocido ahora como disap4m
+2015-04-02 15:20:41	-->	maffblaster (~mmarchese@67.137.21.130) has joined #gentoo
+2015-04-02 15:20:42	petrvs	gnos: how do you update world?
+2015-04-02 15:20:56	gnos	emerge -auNDv world
+2015-04-02 15:20:58	-->	nE0sIghT (~Thunderbi@unaffiliated/ne0sight) has joined #gentoo
+2015-04-02 15:21:06	petrvs	bad_milo: /exec -o grep RUBY_TARGETS /etc/portage/make.conf | tail -1
+2015-04-02 15:21:34	gnos	Oh, it does link to libz.so.1, and that's part of zlib. I guess I'll try that.
+2015-04-02 15:22:15	<--	nE0sIghT (~Thunderbi@unaffiliated/ne0sight) ha salido (Client Quit)
+2015-04-02 15:22:27	bad_milo	http://pastebin.com/3mJcp9rD make.conf
+2015-04-02 15:22:43	-->	krajo1 (~krajo1@host146.nwt.cz) has joined #gentoo
+2015-04-02 15:22:43	@a3li	bad_milo: the jruby flag is masked as support for it is being phased out
+2015-04-02 15:22:49	<--	bubu________ (~bubu@89-71-199-211.dynamic.chello.pl) ha salido (Ping timeout: 255 seconds)
+2015-04-02 15:24:33	petrvs	aren't they usually parenthesized?
+2015-04-02 15:24:44	njsg	petrvs: not just the output, but also the result
+2015-04-02 15:24:54	-->	jsubl2 (~jsubl2@159-118-63-131.cpe.cableone.net) has joined #gentoo
+2015-04-02 15:25:15	petrvs	njsg: haven't had any trouble with the result, but I admit I haven't used it much
+2015-04-02 15:25:16	njsg	petrvs: I was saying it a couple days ago, and I still say, we need something that avoids spitting out a bunch of comments for every line when everything is because of the same package
+2015-04-02 15:25:40	njsg	petrvs: stuff like this abi change can easily result in hundreds of lines, I guess, if you just blindly accept autounmask
+2015-04-02 15:25:44	petrvs	I don't think it'd take an average joe so much time to patch it to do these things
+2015-04-02 15:25:52	gnos	petrvs, I guess I'm going to run revdep-rebuild --library /lib64/libz.so.1 and hope for the best. Is there a reason why urxvt would have been missed during the update?
+2015-04-02 15:25:53	petrvs	but for me personally, I don't even use it, so I have no motivation
+2015-04-02 15:25:54	njsg	also, I think emerge -avDuN world is working here now!
+2015-04-02 15:26:24	<--	dcmwai (~dcmwai@175.139.107.157) ha salido (Ping timeout: 264 seconds)
+2015-04-02 15:26:26	petrvs	gnos: dunno, might ask the channel if that proves to have been the issue
+2015-04-02 15:26:43	-->	acerbic (~eshafer@2602:30a:2cf9:4710:221:63ff:fe5a:793d) has joined #gentoo
+2015-04-02 15:26:59	gnos	ok
+2015-04-02 15:27:14	<--	TheteSigma (xycdmyb@99-103-201-124.lightspeed.rcsntx.sbcglobal.net) ha salido (Quit: I will be back!)
+2015-04-02 15:27:45	-->	crack3r (~crack3r@unaffiliated/crack3r) has joined #gentoo
+2015-04-02 15:28:29	njsg	oh come on
+2015-04-02 15:28:33	njsg	"these three changes are needed"
+2015-04-02 15:28:34	njsg	ok
+2015-04-02 15:28:47	njsg	next time -> autounmask wants to add more than a screenful of things
+2015-04-02 15:29:06	<--	dragonkeeper1 (~dragonkee@cpc2-gill2-0-0-cust69.20-1.cable.virginm.net) ha salido (Quit: WeeChat 1.0.1)
+2015-04-02 15:29:22	-->	Dragonkeeper (~dragonkee@cpc2-gill2-0-0-cust69.20-1.cable.virginm.net) has joined #gentoo
+2015-04-02 15:29:25	anunnaki	i just up'd compiler from gcc-4.8.3 to the 4.9.2.. i noticed portage kept 4.8.3 around. Is there any reason to keep it around?
+2015-04-02 15:29:37	njsg	anunnaki: they're slotted, that's normal
+2015-04-02 15:29:43	njsg	anunnaki: portage does that to slotted packages
+2015-04-02 15:29:51	petrvs	anunnaki: https://wiki.gentoo.org/wiki/Upgrading_GCC
+2015-04-02 15:29:53	njsg	anunnaki: as for a good reason: some packages may need older versions of gcc to compile
+2015-04-02 15:30:03	njsg	anunnaki: and gcc upgrades can break a lot of things
+2015-04-02 15:30:06	anunnaki	njsg: ahh hence why there in slots. lol
+2015-04-02 15:30:07	<--	maddogie (~jim@ip1886e090.dynamic.kabel-deutschland.de) ha salido (Remote host closed the connection)
+2015-04-02 15:30:07	-->	dcmwai (~dcmwai@175.139.107.157) has joined #gentoo
+2015-04-02 15:30:08	njsg	more in the past, but still
+2015-04-02 15:30:09	javaJake	petrvs, njsg: there's a patch underway for portage that allows users to limit or remove number of --autounmask comment lines.
+2015-04-02 15:30:14	anunnaki	theyre
+2015-04-02 15:30:33	anunnaki	njsg: ok thats all i neeeded to know
+2015-04-02 15:30:35	njsg	the amount of things to change because of the new multilib is insane. and portage can't give it out at once
+2015-04-02 15:30:43	njsg	seriously, please bring emul-* back.
+2015-04-02 15:30:48	anunnaki	petrvs: thanks i was using that for my upgrade guide.. already rebuilt libtool
+2015-04-02 15:30:57	njsg	or at least something as easy as that.
+2015-04-02 15:31:00	petrvs	njsg: nobody makes you upgrade =)
+2015-04-02 15:31:20	petrvs	anunnaki: worst case you get an old gcc binary and fix it
+2015-04-02 15:31:28	javaJake	njsg: you can go the lazy route and enable multilib on all packages: https://www.gentoo.org/support/news-items/2015-03-28-true-multilib.html
+2015-04-02 15:31:37	njsg	petrvs: that's beautiful, but there are a bunch of people whose only occupation in life is to blame your lack of up-to-dateness for whatever problems you're having
+2015-04-02 15:31:39	javaJake	njsg: */* abi_x86_32
+2015-04-02 15:31:59	anunnaki	petrvs: well space isnt an issue.. was just wondering if it would be smart to keep it around.. i guess i can always keep it to test bugs
+2015-04-02 15:32:04	<--	frostwork (~frostwork@p57B2EED6.dip0.t-ipconnect.de) ha salido (Quit: Leaving)
+2015-04-02 15:32:10	<--	HeXiLeD (~H3X@69.196.165.41) ha salido (Ping timeout: 265 seconds)
+2015-04-02 15:32:20	petrvs	anunnaki: nah, it's just another package, either something needs it, or not
+2015-04-02 15:32:48	petrvs	if you do a lot of compiling in your personal life, it might be wise to keep around an older version
+2015-04-02 15:32:52	-->	HeXiLeD (~H3X@69.196.165.41) has joined #gentoo
+2015-04-02 15:32:55	anunnaki	petrvs: hate to have to sit there and build it again if i needed it
+2015-04-02 15:32:55	petrvs	till you're sure the new one does all that you expect the same way
+2015-04-02 15:33:00	petrvs	but other than that, just another package
+2015-04-02 15:33:06	petrvs	anunnaki: quickpkg it
+2015-04-02 15:33:35	-->	donkey_boy (~sdfg@85-76-178-116-nat.elisa-mobile.fi) has joined #gentoo
+2015-04-02 15:33:38	donkey_boy	ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU
+2015-04-02 15:33:38	donkey_boy	AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR ALLAHU AKHBAR
+2015-04-02 15:33:42	donkey_boy	DEATH TO INFIDELS
+2015-04-02 15:33:44	donkey_boy	ALLAHU AKHBAR
+2015-04-02 15:33:45	petrvs	donkey_boy: =)
+2015-04-02 15:33:46	donkey_boy	BURN ALL JEWS IN OVEN
+2015-04-02 15:33:54	+grknight	a3li: ^^^
+2015-04-02 15:33:56	<--	donkey_boy (~sdfg@85-76-178-116-nat.elisa-mobile.fi) ha abandonado #gentoo (requested by a3li (blergh))
+2015-04-02 15:34:02	anunnaki	petrvs: its been a while since i use quickpkg.. have the dust off the manual.. i think the only problem with quickpkg that i could remember was not knowing where it put the binary afterwards
+2015-04-02 15:34:20	anunnaki	lol
+2015-04-02 15:34:22	<--	leeyaa (d4686f43@gateway/web/freenode/ip.212.104.111.67) ha salido (Ping timeout: 246 seconds)
+2015-04-02 15:34:40	 *	anunnaki waves his ak-47 in the air and fires off a burst
+2015-04-02 15:34:59	-->	mistawright (~mistawrig@static-72-64-155-102.tampfl.fios.verizon.net) has joined #gentoo
+2015-04-02 15:35:01	njsg	shalom
+2015-04-02 15:35:05	brian|lfs	from far away I thought all that crap in the chat was UUIDs lol
+2015-04-02 15:35:12	-->	nE0sIghT (~Thunderbi@unaffiliated/ne0sight) has joined #gentoo
+2015-04-02 15:35:13	petrvs	anunnaki: emerge --info | grep -i pkgdir
+2015-04-02 15:35:25	anunnaki	brian|lfs: lmao so did i
+2015-04-02 15:35:28	petrvs	anunnaki: think it defaults to /usr/portage/packages
+2015-04-02 15:35:32	saintdev	petrvs: CrustY was asking about using a different branch for the overlay, not the package source
+2015-04-02 15:35:48	njsg	I guess that after watching homeland, I'll for sure not forget "allahu akhbar" for some time, but well. you must be lacking imagination if you decide to spam #gentoo with messages of "hail god"
+2015-04-02 15:36:05	petrvs	saintdev: oh yeah? Figured it out?
+2015-04-02 15:36:46	petrvs	njsg: even moreso considering Islam and Judaism share the same god =) but that's for another channel, heh
+2015-04-02 15:36:46	anunnaki	njsg: we all know he was just another #sabayon user trying to get revenge
+2015-04-02 15:37:02	petrvs	now now, some Sabayon users are nice chaps =)
+2015-04-02 15:37:16	-->	vinegret (~vinegret@nat2-vitebsk-pool-46-53-214-254.telecom.by) has joined #gentoo
+2015-04-02 15:37:24	josef64	petrvs: portageq envvar PKGDIR
+2015-04-02 15:37:29	anunnaki	petrvs: considering theyre all sons of abraham. so they shoudl have daddy issues if anything
+2015-04-02 15:37:39	njsg	anunnaki: why would sabayon users need to get revenge on us? isn't the abi mess pain enough?
+2015-04-02 15:37:40	saintdev	petrvs: don't know. He wanted to know if there was a way to do that with layman. I don't use layman at all.
+2015-04-02 15:37:59	njsg	anunnaki: incest. the bible is like the lion king, it's all incest.
+2015-04-02 15:38:13	petrvs	josef64: it's anunnaki
+2015-04-02 15:38:23	<--	rreno (~rreno@cpe-142-136-189-71.socal.res.rr.com) ha abandonado #gentoo
+2015-04-02 15:38:32	petrvs	saintdev: k... not sure why you're telling me =)
+2015-04-02 15:38:59	anunnaki	njsg: because we try to seek support in here and get sent on their way
+2015-04-02 15:39:05	<--	gerhard7 (~gerhard7@77-172-82-111.ip.telfort.nl) ha salido (Quit: Leaving)
+2015-04-02 15:39:27	anunnaki	njsg: err not we.. they try to seek support.. what a typo that was
+2015-04-02 15:39:55	njsg	it made me wonder
+2015-04-02 15:40:19	<--	lilrc (~kalle@193.12.115.122) ha salido (Quit: Leaving.)
+2015-04-02 15:40:55	-->	superfox_il_volp (~god@109.255.54.131) has joined #gentoo
+2015-04-02 15:41:08	njsg	I see emul- is not a perfect solution theoretically, but it let me use packages without having to recompile the entire system... now even in the future installing a new package from another arch will make the equivalent of emerge -e on the dependencies
+2015-04-02 15:41:26	njsg	I think that building 32 and 64 bit at the same time for everything is probably not a bad idea...
+2015-04-02 15:41:38	njsg	how does it work with compilation times, does it double?
+2015-04-02 15:42:34	CrustY	petrvs: anunnaki: ye idd
+2015-04-02 15:42:36	javaJake	petrvs: can I pm you?
+2015-04-02 15:42:37	CrustY	u r right
+2015-04-02 15:42:41	CrustY	I just failed a bit
+2015-04-02 15:42:46	petrvs	javaJake: course
+2015-04-02 15:42:50	CrustY	I want use another branch to sync from
+2015-04-02 15:42:53	CrustY	with layman
+2015-04-02 15:43:04	CrustY	where's layman.xml and stuff are placed
+2015-04-02 15:43:21	petrvs	layman has its own branches?
+2015-04-02 15:43:54	<--	shadowdaemon (shadowdaem@gateway/shell/anapnea.net/x-vkwtjriomphrwhjp) ha salido (Quit: Bye now.)
+2015-04-02 15:44:19	grot	where do I go to file a bug a against a specific package? i'm on the bugtracker for libevent, and it looks like bugs are filed against gentoo?
+2015-04-02 15:44:52	grot	https://bugs.gentoo.org/buglist.cgi?bug_status=UNCONFIRMED&bug_status=IN_PROGRESS&bug_status=CONFIRMED&list_id=2727332&short_desc=libevent&short_desc_type=allwords
+2015-04-02 15:45:05	brian|lfs	njsg, building for 2 arches is fine but if your system is fully built already it becomes a nightmare to uninstall crap and recompile lol
+2015-04-02 15:45:16	saintdev	petrvs: you were helping him earlier, and told him he would need to set EGIT_BRANCH, which isn't right for the _overlay_ branch
+2015-04-02 15:46:08	njsg	portage is unable to tell me what exactly is making things need abi x or y
+2015-04-02 15:46:24	njsg	so far it looks like qt needs all the metasubpackages to have the same abi
+2015-04-02 15:46:36	njsg	remind me again, what's the so big deal with having one big monolithic package for qt?
+2015-04-02 15:46:40	<--	Kelzier (~duka@77.105.31.54) ha salido (Ping timeout: 265 seconds)
+2015-04-02 15:46:58	petrvs	saintdev: don't know what an overlay branch is, but it's the solution for what he asked me
+2015-04-02 15:47:04	petrvs	saintdev: I think he can talk for himself, though, so it's no matter
+2015-04-02 15:47:10	brian|lfs	if your using skype for instance you would have to remove skype and all of kde and change your config files to install qt-4.8.6 or latter
+2015-04-02 15:47:14	-->	Kelzier (~duka@77.105.31.54) has joined #gentoo
+2015-04-02 15:47:19	brian|lfs	4.8.5 doesn't support multilib
+2015-04-02 15:47:34	brian|lfs	and qt
+2015-04-02 15:48:04	saintdev	Well, it's my overlay, so i would like to know if there is a way to do it also
+2015-04-02 15:48:06	<--	xmorph (~xt_@unaffiliated/xmorph) ha salido (Quit: xmorph)
+2015-04-02 15:48:52	petrvs	to do what, again?
+2015-04-02 15:49:07	petrvs	you have branches other than in git/hub?
+2015-04-02 15:49:25	<--	kon14 (~kon14@ppp-2-86-156-212.home.otenet.gr) ha salido (Quit: laters...)
+2015-04-02 15:49:30	+grknight	grot: The new bug screen walks you through the choices
+2015-04-02 15:49:38	njsg	brian|lfs: there's no kde that I know of
+2015-04-02 15:49:44	petrvs	new bug screen, oh my
+2015-04-02 15:50:03	njsg	oh no
+2015-04-02 15:51:05	+grknight	brian|lfs: one line to allow multilib qt is trivial
+2015-04-02 15:51:11	saintdev	petrvs: Pull a git branch other than master for an overlay with layman, or switch which branch layman pulls from
+2015-04-02 15:51:35	njsg	grknight: please do share
+2015-04-02 15:51:47	+grknight	njsg: dev-qt/*:4
+2015-04-02 15:52:04	<--	talvdav (~quassel@95.90.216.43) ha salido (Read error: Connection reset by peer)
+2015-04-02 15:52:12	-->	atrigent (~root@unaffiliated/atrigent) has joined #gentoo
+2015-04-02 15:52:21	njsg	the <censored>, I'll do that
+2015-04-02 15:52:47	atrigent	can anyone confirm problems with the RIT rsync mirror (rsync5.us.gentoo.org)? it doesn't seem to have been updated since March 25th
+2015-04-02 15:52:54	petrvs	saintdev: how does EGIT_BRANCH not help with that?
+2015-04-02 15:53:05	petrvs	you could apparently also use a portage env thingy
+2015-04-02 15:53:06	atrigent	err, 24th rather
+2015-04-02 15:53:11	petrvs	some dev mentioned, in that link
+2015-04-02 15:53:17	-->	krajo1_ (~krajo1@host36.nwt.cz) has joined #gentoo
+2015-04-02 15:53:17	-->	srcerer (~chatzilla@dns2.klsairexpress.com) has joined #gentoo
+2015-04-02 15:54:01	grot	grknight: thanks. I'm on that screen and following the wiki guide. just a bit surprised I can't file from the ebuild page itself
+2015-04-02 15:54:32	anunnaki	heh turns out i quickpkg'd qupzilla-1.6.6. wonder why i quickpkg that..mustve passed out on the keyboard
+2015-04-02 15:54:47	-->	krajo1__ (~krajo1@host146.nwt.cz) has joined #gentoo
+2015-04-02 15:54:49	+grknight	grot: each ebuild does not have a category.  it usually goes in the title otherwise we would have thousands of categories
+2015-04-02 15:55:32	saintdev	petrvs: that would be what branch an ebuild pulls from, not what branch layman pulls from.
+2015-04-02 15:55:43	-->	hellrazor (~hellrazor@37.120.115.115) has joined #gentoo
+2015-04-02 15:56:22	petrvs	saintdev: you're saying layman has some understanding of something it calls "branches"?
+2015-04-02 15:56:28	<--	krajo1 (~krajo1@host146.nwt.cz) ha salido (Ping timeout: 256 seconds)
+2015-04-02 15:56:34	petrvs	anunnaki: =)
+2015-04-02 15:57:26	petrvs	saintdev: I feel like you're describing something you want something to do to get something else you want, instead of just describing what you want
+2015-04-02 15:57:39	-->	talvdav (~quassel@95.90.216.43) has joined #gentoo
+2015-04-02 15:58:16	anunnaki	petrvs: 67MB  tar inside xz for gcc? does that sound about right? seems a little small for a compiler
+2015-04-02 15:58:28	petrvs	anunnaki: xz is plenty sick
+2015-04-02 15:58:35	petrvs	I didn't realize quickpkg did xz though
+2015-04-02 15:58:48	<--	krajo1_ (~krajo1@host36.nwt.cz) ha salido (Ping timeout: 264 seconds)
+2015-04-02 15:58:55	anunnaki	petrvs: i was just reading bonsaitten's blog about his benchmarking of all the compression methods
+2015-04-02 15:59:08	anunnaki	xz was fast.. but i forgot has a drawback
+2015-04-02 15:59:09	petrvs	anunnaki: qsize tells me my GCC is only 99MB
+2015-04-02 15:59:27	njsg	LZMA is quite powerful
+2015-04-02 15:59:28	petrvs	it's kind of slow to compress, but still fast to decompress
+2015-04-02 15:59:34	petrvs	it's good for long term storage/distribution
+2015-04-02 15:59:39	petrvs	or if you just have plenty of time
+2015-04-02 16:00:02	njsg	it's good for small size while not taking ages or requiring a lot of power to decompress (compared to bzip2, which is kind of infamous in that area)
+2015-04-02 16:00:05	petrvs	so does quickpkg do xz now?
+2015-04-02 16:00:11	njsg	whatever you do, it's almost always a bad idea to use bzip2
+2015-04-02 16:00:26	-->	victorx (~victorx@unaffiliated/victorx) has joined #gentoo
+2015-04-02 16:01:03	petrvs	a lot of that compressions is probably just tiny files and directory structures being squished
+2015-04-02 16:01:06	petrvs	compression*
+2015-04-02 16:02:58	saintdev	petrvs: I have an overlay in git with two branches 'master' and 'testing'. A user wants to pull the 'testing' branch of the overlay with layman
+2015-04-02 16:03:21	victorx	I can ayuadar with this? as it may appear https me 113 reinstatements: //bpaste.net/show/38840ad5619b
+2015-04-02 16:03:36	victorx	https://bpaste.net/show/38840ad5619b
+2015-04-02 16:03:39	anunnaki	petrvs: njsg ah.. he found out xz was teh slowest compression but can compress the best out of all of them..
+2015-04-02 16:03:46	-->	cero_ (~freak@pool-98-115-41-251.phlapa.fios.verizon.net) has joined #gentoo
+2015-04-02 16:03:56	njsg	even slower than bzip2?
+2015-04-02 16:04:04	njsg	slower *compressing*, I suppose?
+2015-04-02 16:04:17	njsg	because I doubt LZMA is slower than bzip2 decompressing :-)
+2015-04-02 16:04:30	cero_	hello, anyone recommend a password manager/generator?
+2015-04-02 16:04:42	anunnaki	petrvs: yeah after that test he did.. i think he was the one who had the change done in gentoo to use xz. he was trying to shave the size down off teh stage3 tarball.
+2015-04-02 16:04:48	gentoo__	im in my hybrid install, im currently configuring my kernel and when i do a make && make modules_install, it instantly gives me a make error saying cpu you selected does not support x86-64 instruction set
+2015-04-02 16:04:50	petrvs	it's pretty reasonable to expect more compression to take longer, isn't it? =)
+2015-04-02 16:04:59	njsg	cero_: apg
+2015-04-02 16:05:03	njsg	cero_: for the generator part
+2015-04-02 16:05:04	gentoo__	i went back to my kernel config, im sure i chose the right one from the list
+2015-04-02 16:05:13	anunnaki	njsg: petrvs  http://gentooexperimental.org/~patrick/weblog/
+2015-04-02 16:05:13	petrvs	gentoo__: what's a hybrid install?
+2015-04-02 16:05:15	anunnaki	good reading
+2015-04-02 16:05:17	<--	scryspc (~scryspc@unaffiliated/yaoi) ha salido (Quit: .)
+2015-04-02 16:05:17	<--	Darryl___ (uid29682@gateway/web/irccloud.com/x-iilyzmidjlpsuzkn) ha salido (Quit: Connection closed for inactivity)
+2015-04-02 16:05:34	+grknight	victorx: yes, that is normal. accept and enjoy
+2015-04-02 16:05:34	gentoo__	well im in my stage 3 install, i used the hybrid iso sorry
+2015-04-02 16:05:44	petrvs	I wonder how many people do compression comparisons daily, heh
+2015-04-02 16:06:05	falsom	gentoo sounds like you booted/chrooted into a 32bit environment with 32bit gcc, it wont compile for 64
+2015-04-02 16:06:06	<--	KingEdgar (~edgar@c-174-61-43-126.hsd1.fl.comcast.net) ha salido (Ping timeout: 256 seconds)
+2015-04-02 16:06:10	falsom	hum
+2015-04-02 16:06:12	anunnaki	xz was more than double of the slowness of bzip
+2015-04-02 16:06:31	petrvs	gentoo__: did you change the processor in the kernel?
+2015-04-02 16:06:52	-->	andrei (~user@30-47-158.dynamic.csail.mit.edu) has joined #gentoo
+2015-04-02 16:06:57	gentoo__	i deselected the option to install a 64bit kernel and install a 32 bit and now its compiling fine
+2015-04-02 16:06:58	petrvs	right, but you compress things to mean to keep long term, so it's worth it
+2015-04-02 16:07:04	gentoo__	however im sure i have a 64bit system
+2015-04-02 16:07:13	petrvs	gentoo__: what, in menuconfig?
+2015-04-02 16:07:17	+grknight	gentoo__: did you grab the amd64 stage3?
+2015-04-02 16:07:23	falsom	gentoo what does uname -a say?
+2015-04-02 16:07:49	petrvs	pretty sure he'd have gotten an error earlier if his live OS didn't match
+2015-04-02 16:07:52	gentoo__	1686 penntium(r) dual-core cpu t4300
+2015-04-02 16:08:10	gentoo__	its a sony vaio pcg-7418l laptop
+2015-04-02 16:08:13	falsom	looks like you booted a 32bit kernel
+2015-04-02 16:08:16	petrvs	gentoo__: answer grknight
+2015-04-02 16:08:27	cero_	I read gringotts is no longer maintained?
+2015-04-02 16:08:41	gentoo__	thats what uname -a says, im currently in my chrooted environment.. still in my install
+2015-04-02 16:08:49	gentoo__	i havent booted into a kernel as of yet
+2015-04-02 16:09:02	anunnaki	petrvs: hybrid iso is pretty sweet.. its basically a livecd for a usb stick
+2015-04-02 16:09:05	gentoo__	im on the kernel configuration section as we speak
+2015-04-02 16:09:18	petrvs	cero_: looks that way
+2015-04-02 16:09:27	gentoo__	grknight: no because i have an intel system
+2015-04-02 16:09:29	<--	superfox_il_volp (~god@109.255.54.131) ha salido (Quit: Konversation terminated!)
+2015-04-02 16:09:32	gentoo__	intel processor
+2015-04-02 16:09:35	falsom	but before this, the system which is hosting this chroot
+2015-04-02 16:09:43	falsom	when you booted the3 hybrid iso
+2015-04-02 16:09:46	+grknight	gentoo__: amd64 = x86_64.. works on both
+2015-04-02 16:10:15	petrvs	cero_: should still work, though, put it in an overlay if it's tree cleaned
+2015-04-02 16:10:18	victorx	but I want to uninstall many libraries you?
+2015-04-02 16:10:18	gentoo__	hmm so did i grab the wrong iso grknight?
+2015-04-02 16:10:39	+grknight	gentoo__: yes unless you want to keep 32bit only
+2015-04-02 16:10:47	petrvs	anunnaki: yeah, just not really relevant to installation, was confused
+2015-04-02 16:10:47	+grknight	which has limitations
+2015-04-02 16:10:52	gentoo__	darn it...
+2015-04-02 16:11:05	-->	Ivion (~ivion@m00m00.xs4all.nl) has joined #gentoo
+2015-04-02 16:11:08	gentoo__	so i have to reburn the right iso and do a reinstall
+2015-04-02 16:11:10	 *	njsg wonders if it's better to just use IA32 gentoo nowadays... 
+2015-04-02 16:11:21	njsg	is there anything that fails if the system is not amd64, like hardware?
+2015-04-02 16:11:36	petrvs	njsg: taste? =)
+2015-04-02 16:11:39	falsom	any ram over 4gigs will fail
+2015-04-02 16:11:45	grot	gentoo__: it's deceptive, but most all consumer 64 bit processors use the amd64 instruction set, I think it's called
+2015-04-02 16:11:46	falsom	well, not really actually..
+2015-04-02 16:11:47	njsg	falsom: alse.
+2015-04-02 16:11:49	njsg	*false
+2015-04-02 16:11:50	falsom	ya pae
+2015-04-02 16:12:02	gentoo__	didnt know to grab an amd64 iso when i have an intel system
+2015-04-02 16:12:05	grot	remember that for the future
+2015-04-02 16:12:05	+grknight	njsg: x86 is not tested as well these days.  also memory limits on processes
+2015-04-02 16:12:21	+grknight	gentoo__: it says it right  on https://www.gentoo.org/downloads/
+2015-04-02 16:12:30	njsg	gentoo__: well, people on amd 32 bit processors have been using x86/ *Intel* architecture-32bit and they don't complain
+2015-04-02 16:12:53	njsg	grknight: if x86 is better tested than amd64 stable, I think that's a go already...
+2015-04-02 16:13:03	-->	evangeline_ (~evangelin@93-103-107-74.dynamic.t-2.net) has joined #gentoo
+2015-04-02 16:13:22	+grknight	njsg: amd64 is more tested than x86
+2015-04-02 16:13:44	gentoo__	man, how did i miss that? so i have to redo all this. smh
+2015-04-02 16:14:04	cero_	lol
+2015-04-02 16:14:08	<--	evangeline__ (~evangelin@93-103-107-74.dynamic.t-2.net) ha salido (Ping timeout: 244 seconds)
+2015-04-02 16:14:10	njsg	gentoo__: it's not deceptive at all, they just use the name of whoever made the instruction set, because the whole point in AMD and Intel "consumer" products is to be compatible with the competitor's hardware
+2015-04-02 16:14:11	gentoo__	so my best bet is to use the amd64 iso, whats the big difference?
+2015-04-02 16:14:22	victorx	grknight: was not as simple as saying if and enjoy it? https://bpaste.net/show/d0ba663cc0ed
+2015-04-02 16:14:44	gentoo__	njsg: i understand now
+2015-04-02 16:15:15	njsg	gentoo__: there's also Intel Architecture - 64-bit, which is a different beast
+2015-04-02 16:15:26	gentoo__	amd64 aka x86_64...
+2015-04-02 16:15:33	gentoo__	right in my face
+2015-04-02 16:15:49	+grknight	victorx: do line 11
+2015-04-02 16:15:59	-->	gentoonoob (d9ff1ad4@gateway/web/freenode/ip.217.255.26.212) has joined #gentoo
+2015-04-02 16:16:03	njsg	the x86_64 is a name I've not seen in places other than linux (the kernel). I think parts of windows call it x64, gentoo calls it amd64
+2015-04-02 16:16:21	<--	dev1990 (~dev@dynamic-78-8-103-20.ssp.dialog.net.pl) ha salido (Quit: Konversation terminated!)
+2015-04-02 16:16:23	jasom	njsg: yes, it seems that every 10 years or so someone decides to try and make VLIW work on a general purpose processor
+2015-04-02 16:16:35	+grknight	gentoo__: reasoning.. amd64 came first including in the  kernel.  Gentoo adopted it this way.  it is much harder to change than just to inform people
+2015-04-02 16:16:47	gentoo__	hmm i downloaded the livedvd-x86-amd64-32ul-2014... iso
+2015-04-02 16:16:53	gentoo__	guess thats not it
+2015-04-02 16:17:15	<--	pstn_ (~philipp@f048248045.adsl.alicedsl.de) ha salido (Ping timeout: 246 seconds)
+2015-04-02 16:17:16	+grknight	gentoo__: grab the multilib one
+2015-04-02 16:17:33	victorx	grknight: emerge -uaND @world ?
+2015-04-02 16:17:34	gentoo__	hmm
+2015-04-02 16:17:53	+grknight	gentoo__: the first one *can* boot to 64 bit, but you have to ask it to
+2015-04-02 16:18:08	-->	pstn (~philipp@f055226146.adsl.alicedsl.de) has joined #gentoo
+2015-04-02 16:18:10	+grknight	iirc, gentoo64 at the isolinux prompt
+2015-04-02 16:18:28	gentoo__	can you give me the direct link grknight? i was almost done with my install.. have to start all over
+2015-04-02 16:18:54	cero_	 victorx echo "sys-libs/ncurses abi_x86_32" >> /etc/portage/package.use/ncurses
+2015-04-02 16:18:56	-->	bubu________ (~bubu@89-71-199-211.dynamic.chello.pl) has joined #gentoo
+2015-04-02 16:18:56	+grknight	gentoo__: http://distfiles.gentoo.org/releases/amd64/20140826/livedvd-amd64-multilib-20140826.iso
+2015-04-02 16:19:08	anunnaki	petrvs: just went to remove theat old qupzilla quickpkg. literally about to press enter and then it struck me.. why i made that. and its like hitting the lottery.. i made that to back up my bookmarks sicne at the time i had issues backing them up. heh
+2015-04-02 16:19:25	anunnaki	good thing   i didnt remove it.. sooo many good bookmarks
+2015-04-02 16:19:57	-->	KingEdgar (~edgar@c-174-61-43-126.hsd1.fl.comcast.net) has joined #gentoo
+2015-04-02 16:19:58	-->	GeHa (~GeHa@u152-34.static.grapesc.cz) has joined #gentoo
+2015-04-02 16:20:45	<--	duderonomy (~duderonom@c-24-7-50-110.hsd1.ca.comcast.net) ha salido (Ping timeout: 246 seconds)
+2015-04-02 16:20:45	-->	chimeno (~chimeno@81.172.115.203.dyn.user.ono.com) has joined #gentoo
+2015-04-02 16:21:48	<--	xcombelle (~xcombelle@AToulouse-657-1-1064-149.w90-50.abo.wanadoo.fr) ha salido (Ping timeout: 252 seconds)
+2015-04-02 16:21:55	njsg	... the entire X windows needs to be built with abi 32 because of this?
+2015-04-02 16:22:19	gentoo__	thank you guys
+2015-04-02 16:22:23	gentoo__	truly appreciated
+2015-04-02 16:22:29	GeHa	How to reload dvd device /dev/sr0 ? (mount: special device /dev/sr0 does not exist)
+2015-04-02 16:22:38	+grknight	njsg: if you have skype, yes
+2015-04-02 16:22:53	<--	nE0sIghT (~Thunderbi@unaffiliated/ne0sight) ha salido (Ping timeout: 250 seconds)
+2015-04-02 16:22:54	gentoo__	so redoing my installation is pretty much recommended? what are the added benefits?
+2015-04-02 16:22:55	<--	Nicop06 (~nicolas@2a01:e35:2e3e:55b0:697d:28b1:22e9:9b6) ha salido (Ping timeout: 265 seconds)
+2015-04-02 16:23:07	njsg	grknight: are there any plans to make this less painful? or is the idea to just drive off people who use skype?
+2015-04-02 16:23:15	falsom	gentoo__ practice makes perfect :)
+2015-04-02 16:23:21	-->	hasues (~hasues@108-236-232-243.lightspeed.knvltn.sbcglobal.net) has joined #gentoo
+2015-04-02 16:23:24	<--	bubu________ (~bubu@89-71-199-211.dynamic.chello.pl) ha salido (Ping timeout: 264 seconds)
+2015-04-02 16:23:29	stqn	pinentry doesn’t build because of a missing function in some Qt classes… any idea how to fix that? https://dpaste.de/AZiY
+2015-04-02 16:23:37	-->	sniper570 (~sniper@197.226.189.40) has joined #gentoo
+2015-04-02 16:23:38	njsg	fun thing, a couple days before this abi thing hit, I had just installed skype back again, because it was finally possible to use it without pa
+2015-04-02 16:23:42	+grknight	gentoo__: 32-bit is limited to 3GB memory. the kernel can see more, but processes cannot
+2015-04-02 16:24:14	+grknight	njsg: it's a one time thing to convert.  you won't see it too often
+2015-04-02 16:24:23	anunnaki	is wayland some new madatory use flag for mesa now? im having issues with mesa building.. complaining that there might be somethign sharing a .so file and its rebuildign because of an added wayland use flag that i dont have listed in make.conf nor package.use
+2015-04-02 16:24:37	gentoo__	falsom: lol indeed
+2015-04-02 16:24:41	petrvs	anunnaki: hrmmm, you sure qupzilla stores bookmarks somewhere where quickpkg would copy from?
+2015-04-02 16:24:42	njsg	grknight: no, it's not one time. every time a package needs things, the entire dependency tree will have to be rebuilt if it wasn't already built with 32 bit
+2015-04-02 16:24:44	gentoo__	grknight: i see
+2015-04-02 16:24:54	petrvs	anunnaki: that'd be odd, I think
+2015-04-02 16:25:04	njsg	grknight: *and* portage is pretty bad at guessing right away the *entire* list of dependencies that need abi-32
+2015-04-02 16:25:10	+grknight	njsg: only when there are 32-bit only programs
+2015-04-02 16:25:14	<--	kryptt (~kryptt@179.52.236.8) ha salido (Ping timeout: 250 seconds)
+2015-04-02 16:25:24	+grknight	read binary only
+2015-04-02 16:25:25	njsg	grknight: and all of this makes me wonder if there's already anything in place to cleanup the "after" when you remove something that required 32 bit
+2015-04-02 16:26:31	<--	hasues (~hasues@108-236-232-243.lightspeed.knvltn.sbcglobal.net) ha abandonado #gentoo
+2015-04-02 16:26:35	victorx	cero_: I think the command is incorrect, but thanks anyway.
+2015-04-02 16:26:52	<--	Kelzier (~duka@77.105.31.54) ha salido (Remote host closed the connection)
+2015-04-02 16:27:00	victorx	# echo "sys-libs/ncurses abi_x86_32" >> /etc/portage/package.use/ncurses bash: /etc/portage/package.use/ncurses: No es un directorio
+2015-04-02 16:27:05	-->	Kelzier (~duka@79.175.76.44) has joined #gentoo
+2015-04-02 16:27:28	<--	gentoo__ (~gentoo@ool-4a59daa5.dyn.optonline.net) ha salido (Quit: Konversation terminated!)
+2015-04-02 16:27:29	<--	chimeno (~chimeno@81.172.115.203.dyn.user.ono.com) ha salido (Remote host closed the connection)
+2015-04-02 16:28:00	-->	privacychain (~privacych@179.158.156.62) has joined #gentoo
+2015-04-02 16:28:01	-->	chimeno (~chimeno@81.172.115.203.dyn.user.ono.com) has joined #gentoo
+2015-04-02 16:28:12	cero_	victorx: you have package.use as a file, you can add the package and flag there or you can make package.use a directory and write individiual files for packages/flags
+2015-04-02 16:28:22	<--	bad_milo (~bad_milo@cpc9-nrte27-2-0-cust572.8-4.cable.virginm.net) ha salido (Quit: Leaving)
+2015-04-02 16:28:25	<--	jsubl2 (~jsubl2@159-118-63-131.cpe.cableone.net) ha salido (Quit: leaving)
+2015-04-02 16:28:29	cero_	victorx: probably
+2015-04-02 16:29:08	-->	troulouliou_dev (~troulouli@41.158.179.130) has joined #gentoo
+2015-04-02 16:29:14	cero_	I guess I'll go with keepass
+2015-04-02 16:29:28	victorx	cero_: if it is, I said only that the command was incorrect
+2015-04-02 16:29:43	<--	troulouliou_dev (~troulouli@41.158.179.130) ha salido (Changing host)
+2015-04-02 16:29:43	-->	troulouliou_dev (~troulouli@unaffiliated/troulouliou-dev/x-4757952) has joined #gentoo
+2015-04-02 16:29:54	cero_	victorx: works fine on my system
+2015-04-02 16:30:15	anunnaki	petrvs: its the only reason i can think of, of why i would quickpkg it.. probably when i got my new drive. qupzilla has issues with organizing bookmarks.. well on my system it does. so that was probably a last resort
+2015-04-02 16:30:19	<--	GeHa (~GeHa@u152-34.static.grapesc.cz) ha salido (Quit: Leaving)
+2015-04-02 16:30:54	<--	kirotawa (~kirotawa@177.204.183.16.dynamic.adsl.gvt.net.br) ha salido (Quit: meh, さようなら!)
+2015-04-02 16:31:02	victorx	cero_: It is very strange, you can repeat the command that you have placed please
+2015-04-02 16:31:05	-->	mr-kyd (~Einherjer@unaffiliated/mr-kyd/x-4253709) has joined #gentoo
+2015-04-02 16:31:26	<--	selat (~selat@87.252.225.7) ha salido (Quit: Lost terminal)
+2015-04-02 16:31:57	cero_	victorx: your pastebin says you should ad the abi flag to either of two packages, you can echo "esource for when you run into problems or have questions about Gentoo Linux.
+2015-04-02 16:32:07	cero_	victorx: discard that
+2015-04-02 16:32:14	<--	chimeno (~chimeno@81.172.115.203.dyn.user.ono.com) ha salido (Ping timeout: 252 seconds)
+2015-04-02 16:32:28	-->	byfrost (~byfrost@117.253.245.146) has joined #gentoo
+2015-04-02 16:32:42	cero_	victorx: echo "sys-libs/ncurses abi_x86_32" >> /etc/portage/package.use
+2015-04-02 16:33:02	<--	kntuzwow (~kntuzwow@81.202.27.155.dyn.user.ono.com) ha salido (Quit: Applet destroyed)
+2015-04-02 16:34:08	njsg	what do I need to do in order to make gentoo prefer emul-*?
+2015-04-02 16:34:25	BtbN	emul-* is gone.
+2015-04-02 16:34:26	njsg	package.unmask the culprits?
+2015-04-02 16:34:29	njsg	BtbN: no, it's not
+2015-04-02 16:34:32	maffblaster	I'm still having problems with this: https://bpaste.net/show/734cd78ece25
+2015-04-02 16:34:43	<--	FinboySlick (~shark@74.117.40.10) ha salido (Quit: Leaving.)
+2015-04-02 16:34:46	victorx	cero_: Esta Vez Parece Que El Comando si ha surgido efecto ...
+2015-04-02 16:34:47	petrvs	anunnaki: well, I doubt any bookmarks are in there :/ FYI
+2015-04-02 16:34:50	BtbN	It's hard masked and candidate for removal.
+2015-04-02 16:34:58	petrvs	that'd be a very odd thing for a package to do
+2015-04-02 16:35:01	-->	Nicop06 (~nicolas@2a01:e35:2e3e:55b0:f4ab:cfe9:166:531a) has joined #gentoo
+2015-04-02 16:35:05	njsg	BtbN: yes, that's not the same as "gone"
+2015-04-02 16:35:08	BtbN	It is
+2015-04-02 16:35:15	BtbN	There is no point in using them anymore.
+2015-04-02 16:35:27	cero_	victorx: el comando echo escribe lo que esta entre comillas a un file en este caso package.use
+2015-04-02 16:35:39	njsg	anyway, I'd like to know if putting emul-* in package.unmask is enough or if there's something that needs to be masked or set somewhere else
+2015-04-02 16:35:42	petrvs	it doesn't really matter, njsg can use them for eternity if he wants
+2015-04-02 16:35:47	njsg	as in, what makes portge prefer abi to emul-*
+2015-04-02 16:36:02	petrvs	njsg: I'd say you'd basically be bringing your updates to a halt until you get it sorted
+2015-04-02 16:36:03	+_AxS_	njsg: package.mask in profiles.
+2015-04-02 16:36:04	victorx	cero_: and finally a simple: emerge -uaND world   ?
+2015-04-02 16:36:15	+_AxS_	njsg: emul-* was just masked for removal.
+2015-04-02 16:36:27	deviantp	hmmm , is there a watch but based on inotify? or a tail -f that reprints the whole file when it's updated
+2015-04-02 16:36:43	-->	tuxtor (~tuxtor@unaffiliated/tuxtor) has joined #gentoo
+2015-04-02 16:36:51	<--	joey18 (~joey@89-92-154-88.hfc.dyn.abo.bbox.fr) ha salido (Quit: Konversation terminated!)
+2015-04-02 16:36:52	+_AxS_	deviantp: tail -f -n9999999999999 [file]
+2015-04-02 16:36:56	victorx	cero_: if you know, but the command was wrong before ...
+2015-04-02 16:36:59	petrvs	99999999999999999999999999
+2015-04-02 16:37:02	javaJake	njsg: staying with emul-linux is asking for trouble. You can keep the emul-linux package as it stands today, maybe, but they'll never get updated.
+2015-04-02 16:37:11	petrvs	less can follow, too
+2015-04-02 16:37:12	njsg	_AxS_: so package.unmask should be enough?
+2015-04-02 16:37:29	+_AxS_	njsg: yes, but it's masked -for removal- , so they will be dropped from the portage tree in a month
+2015-04-02 16:37:32	petrvs	or if your vim polls, you can use that
+2015-04-02 16:37:33	<--	cference (~cference@64.187.189.2) ha salido (Ping timeout: 245 seconds)
+2015-04-02 16:37:37	petrvs	or | vipe
+2015-04-02 16:37:52	stqn	Noone knows what to do with this? https://dpaste.de/QUGD  Apparently nvidia-drivers is forcing the use of emul-linux-x86*… Not sure… I’m a noob.
+2015-04-02 16:38:08	+_AxS_	stqn: likely you just need to keyword something.
+2015-04-02 16:38:36	deviantp	tail -f -n999999 doesn't clear the screen though
+2015-04-02 16:38:43	-->	flutterraven (~raven@ip68-12-42-109.ok.ok.cox.net) has joined #gentoo
+2015-04-02 16:38:48	-->	jepi (~quassel@87-205-234-28.adsl.inetia.pl) has joined #gentoo
+2015-04-02 16:38:57	petrvs	there is an inotify-based watch, though, too, IIRC
+2015-04-02 16:39:07	+_AxS_	stqn: those libGL files tho are part of mesa, i think
+2015-04-02 16:39:14	njsg	_AxS_: so "app-emulation/emul-linux-x86*" would be enough or are wildcards not allowed?
+2015-04-02 16:39:15	<--	sniper570 (~sniper@197.226.189.40) ha abandonado #gentoo ("Clicked on leave channel tab")
+2015-04-02 16:39:19	<--	_prime_ (c7a82cc0@gateway/web/freenode/ip.199.168.44.192) ha salido (Quit: Page closed)
+2015-04-02 16:39:32	petrvs	watchfolder? I know there are others
+2015-04-02 16:40:05	Chiitoo	stqn: I think one of the options the news item spoke was manually uninstalling the emul-linux-packages, then rebuilding from there, as needed.
+2015-04-02 16:40:13	+_AxS_	njsg: i think you will need the full ebuild names
+2015-04-02 16:40:21	+_AxS_	err, package names
+2015-04-02 16:40:28	njsg	it didn't complain about invalid atoms, at least
+2015-04-02 16:40:53	stqn	Chiitoo: yeah, I ran the command specified in that news item already, didn’t seem to help. (emerge -C 'app-emulation/emul-linux-x86*' IIRC)
+2015-04-02 16:40:57	cero_	emerge your world niiiceee
+2015-04-02 16:40:59	+_AxS_	deviantp: clear; tail -f -n9999999
+2015-04-02 16:41:06	+_AxS_	deviantp: :)
+2015-04-02 16:41:38	victorx	cero_: after continuum having the problem ... https: //bpaste.net/show/f48951ccc3bf
+2015-04-02 16:41:50	victorx	https://bpaste.net/show/f48951ccc3bf
+2015-04-02 16:41:54	Chiitoo	stqn: Oh so you removed them all already?
+2015-04-02 16:42:03	stqn	Chiitoo: I guess
+2015-04-02 16:42:14	<--	gihywd (~jappi@dslb-088-074-248-079.088.074.pools.vodafone-ip.de) ha salido
+2015-04-02 16:42:20	stqn	when I type that command again it returns nothing.
+2015-04-02 16:43:06	deviantp	I can just ust watch...
+2015-04-02 16:43:07	<--	andy_ (~andy@gentoo/contributor/andy-) ha salido (Remote host closed the connection)
+2015-04-02 16:43:12	deviantp	I'm just being picky
+2015-04-02 16:43:13	Chiitoo	stqn: Here  equery b /usr/lib32/libdrm.so.2  returns  x11-libs/libdrm-2.4.60
+2015-04-02 16:43:46	-->	andy_ (~andy@gentoo/contributor/andy-) has joined #gentoo
+2015-04-02 16:44:25	cero_	victorx: I really don't know what you were doing before your bpaste but if I were you I just add the abi_x86_32 flag to your make.conf
+2015-04-02 16:44:26	stqn	Chiitoo: here it just prints "Searching for…" then nothing.
+2015-04-02 16:44:35	<--	Ycarus (~ycarus@2a01:e34:eda7:b1f0:5e3d:ee40:8bba:20a1) ha salido (Quit: Ycarus)
+2015-04-02 16:44:42	-->	turmfalke (~turmfalke@p54A68C18.dip0.t-ipconnect.de) has joined #gentoo
+2015-04-02 16:45:21	<--	Ptolemarch (~ptolemarc@50.252.93.91) ha salido (Remote host closed the connection)
+2015-04-02 16:45:38	cero_	I have a laptop from 2003 and is 64bit... :)
+2015-04-02 16:46:23	Chiitoo	stqn: I guess that means you don't have libdrm 32-bit built indeed, and thus the mention of emul-linux... maybe.  Did you try doing a full world update yet?
+2015-04-02 16:46:39	stqn	Chiitoo: yes
+2015-04-02 16:46:45	+_AxS_	stqn: if you can do without for a few minutes, shutdown Xorg, emerge -C nvidia-drivers && emerge nvidia-drivers
+2015-04-02 16:47:18	stqn	_AxS_: I’ll try that, thanks. It’s in a virtual machine so I don’t need the driver yet…
+2015-04-02 16:47:27	+_AxS_	stqn: oh, well that makes it easy
+2015-04-02 16:48:13	maffblaster	Any ideas?
+2015-04-02 16:48:14	maffblaster	I'm still having problems with this: https://bpaste.net/show/734cd78ece25
+2015-04-02 16:48:19	victorx	cero_: because that is my file: make.conf: https://bpaste.net/show/c12a7bdbdf97
+2015-04-02 16:48:38	njsg	what happened to cedet?
+2015-04-02 16:49:02	+_AxS_	stqn: Chiitoo: preserved-libs works by keeping libs around that other installed libs need, in this particular case the libs (apparently) belong to emul-*, but its possible that nvidia-drivers (being the binary blob that it is) re-emerges itself in such a way that it 'links' to the preserved-libs version instead of the new mesa/libdrm version, thus never going away
+2015-04-02 16:49:22	maffblaster	https://bpaste.net/show/d585965b57c1
+2015-04-02 16:49:24	-->	Ptolemarch (~ptolemarc@50.252.93.91) has joined #gentoo
+2015-04-02 16:49:25	-->	philipp_ (~philipp@chello084113015143.2.12.vie.surfer.at) has joined #gentoo
+2015-04-02 16:49:29	victorx	cero_: even so must add the flag: abi_x86_32?
+2015-04-02 16:49:30	-->	iflema (~weechat@CPE-110-147-189-3.nhl8.cht.bigpond.net.au) has joined #gentoo
+2015-04-02 16:50:01	Chiitoo	_AxS_: Mmhm, but does nvidia-drivers even care for that?  As far as I understand, it makes no use of mesa.
+2015-04-02 16:50:31	maffblaster	Or emerge --info, if you'd rather: https://bpaste.net/show/d647d8c965e0
+2015-04-02 16:50:40	+_AxS_	victorx: if you already have ABI_X86="32 64" in your make.conf , then either portage isn't reading *that* make.conf, or ...well that's the only thing i can think of.  You shouldn't need to set any abi_x86_32 flags
+2015-04-02 16:50:55	+_AxS_	Chiitoo: yeah I expect it's entirely a portage-cleanup issue.
+2015-04-02 16:52:04	+_AxS_	victorx: can you pastebin your 'emerge --info' please?
+2015-04-02 16:52:25	victorx	AxSif not occurring, but is rather strange ...
+2015-04-02 16:52:31	<--	catpig (~catpig@p54BD78DD.dip0.t-ipconnect.de) ha salido (Quit: Leaving)
+2015-04-02 16:52:49	+_AxS_	victorx: make.conf is in /etc/portage/ ?  or /etc/ ?
+2015-04-02 16:54:12	victorx	https://bpaste.net/show/c2b788ed9b38
+2015-04-02 16:54:19	<--	Smiley (~Smiley@cpc23-cove12-2-0-cust135.3-1.cable.virginm.net) ha salido (Quit: HE'S BACCCCCK)
+2015-04-02 16:54:39	-->	Smiley (~Smiley@cpc23-cove12-2-0-cust135.3-1.cable.virginm.net) has joined #gentoo
+2015-04-02 16:54:42	<--	jtriley (~jtriley@65.112.10.221) ha salido (Ping timeout: 246 seconds)
+2015-04-02 16:54:53	+_AxS_	victorx: ABI_x86  <--  need a capital X
+2015-04-02 16:55:02	+_AxS_	victorx: fix that in make.conf and you're all done.
+2015-04-02 16:55:05	+_AxS_	gtg
+2015-04-02 16:55:06	<--	_AxS_ (~axs@gentoo/developer/axs) ha salido (Quit: gone)
+2015-04-02 16:55:18	<--	mijenix (~mijenix@212-51-146-200.fiber7.init7.net) ha salido (Quit: Leaving.)
+2015-04-02 16:55:29	victorx	# ABI_x86  <--  need a capital X bash: --: No existe el fichero o el directorio
+2015-04-02 16:55:55	njsg	wait, did you just paste that in the shell?
+2015-04-02 16:56:06	cero_	xD
+2015-04-02 16:56:22	njsg	victorx: he meant you need a capital X on that line in make.conf
+2015-04-02 16:56:38	cero_	victorx: you just need to change ABI_x86 to ABI_X86 in your make.conf
+2015-04-02 16:56:47	njsg	something like "sed -e 's.ABI_x86.ABI_X86.' -i /etc/make.conf" should fix it
+2015-04-02 16:56:49	victorx	and what happens with that above command? I undo? echo "sys-libs / ncurses abi_x86_32" >> /etc/portage/package.use
+2015-04-02 16:57:03	njsg	I don't think that was a command
+2015-04-02 16:57:04	<--	Zephyrus (~Zephyrus@unaffiliated/zephyrus) ha salido (Quit: Leaving...)
+2015-04-02 16:57:19	stqn	Chiitoo: _AxS_’s suggestion worked, removing/reinstalling nvidia-driver. Now the libdrm file is gone, so I guess it’s ok :)
+2015-04-02 16:57:30	Chiitoo	stqn: Cool.
+2015-04-02 16:57:50	<--	maffblaster (~mmarchese@67.137.21.130) ha salido (Quit: Leaving.)
+2015-04-02 16:58:03	victorx	but simply change ABI_x86 to ABI_X86 in your make.conf is the same right?
+2015-04-02 16:58:16	stqn	Now to make pinentry build…
+2015-04-02 16:58:20	-->	Vurtatoo (~Vurtatoo@178.121.209.225) has joined #gentoo
+2015-04-02 16:58:21	Chiitoo	victorx: That would be the goal, right.
+2015-04-02 16:58:39	<--	willikins (nobody@gentoo/bot/Willikins) ha salido (Ping timeout: 256 seconds)
+2015-04-02 16:59:57	-->	cference (~cference@142.137.44.177) has joined #gentoo
+2015-04-02 17:00:44	victorx	understand, then: I have to add X to that line in my make.conf file? ABI_x86 = "64 32" should be so? ABI_x86 = "32 X 64"
+2015-04-02 17:01:06	Chiitoo	victorx: No, they're saying you have a typographical error.
+2015-04-02 17:01:18	Chiitoo	The  ABI_x86  should be  ABI_X86
+2015-04-02 17:01:33	cero_	victorx: in your make.conf x86 should be capitalized to X86
+2015-04-02 17:01:39	victorx	where this error please ....
+2015-04-02 17:02:13	-->	_X_C_V_B_ (~XCVB@dur-dhcp-1-240.dsl.airstreamcomm.net) has joined #gentoo
+2015-04-02 17:02:16	<--	dcmwai (~dcmwai@175.139.107.157) ha salido (Ping timeout: 255 seconds)
+2015-04-02 17:02:25	Chiitoo	victorx: Your  make.conf  (hopefully).
+2015-04-02 17:02:35	stqn	victorx: you must write ABI_X86="32 64", not ABI_x86="32 64"
+2015-04-02 17:02:36	cero_	victorx: la x de ABI_x86="64 32" debe ser mayuscula
+2015-04-02 17:02:38	victorx	oh I understand that x is in lowercase and uppercase've put in is that?
+2015-04-02 17:02:51	victorx	ok
+2015-04-02 17:02:52	deviantp	ABI_x86
+2015-04-02 17:02:52	deviantp	    ^ this should be X not x
+2015-04-02 17:03:32	<--	krajo1__ (~krajo1@host146.nwt.cz) ha salido (Quit: Konversation terminated!)
+2015-04-02 17:03:46	-->	dcmwai (~dcmwai@175.139.107.157) has joined #gentoo
+2015-04-02 17:04:20	<--	Klumben (Nsaiswatch@elmo.stole-your.pw) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:04:53	<--	wyvern (uid40333@gateway/web/irccloud.com/x-xqpsbkfobtllaago) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:05:12	-->	AntiSpamMeta_ (~MetaBot@AntiSpamMeta/.) has joined #gentoo
+2015-04-02 17:05:27	<--	moss (~moss@unaffiliated/moss) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:05:28	<--	avenj (avenj@unaffiliated/avenj) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:05:28	<--	meingtsla (retrograde@unaffiliated/meingtsla) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:05:41	<--	victorx (~victorx@unaffiliated/victorx) ha salido (Quit: KVIrc 4.3.1 Aria http://www.kvirc.net/)
+2015-04-02 17:05:46	-->	DeadlyAssassin (~marcel@xdslgb105.osnanet.de) has joined #gentoo
+2015-04-02 17:06:01	<--	twitch153 (~twitch153@gentoo/developer/twitch153) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:06:01	<--	laeckerv (laeckerv@gateway/shell/yourbnc/x-gsicfimzsciwqueq) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:06:02	<--	Xe (xe@unaffiliated/xe) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:06:02	<--	s0rah (~sora_h@va157-7-152-34-f.z1d1.static.cnode.jp) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:06:02	<--	PeterSilie (~quassel@2607:ff28:0:23::f195:29e1) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:06:02	<--	MotoHoss (warphoss@charger.hosscomm.com) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:06:03	<--	wolfwood (wolfwood@2600:3c01::f03c:91ff:fedf:a2c9) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:06:03	<--	lude (~lude@unaffiliated/lude) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:06:03	<--	murph (murph@welcome.to.the.darkside.panicbnc.us) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:06:31	-->	toralf (~toralf@f050179012.adsl.alicedsl.de) has joined #gentoo
+2015-04-02 17:06:52	-->	perrier_ (~cinch@107.170.175.57) has joined #gentoo
+2015-04-02 17:07:01	-->	dhendrix_ (quassel@nat/google/x-ikzveycxsmzvwpzl) has joined #gentoo
+2015-04-02 17:07:03	-->	Ahutsona-en (~CLD@2602:306:836d:c330:6ec2:17ff:fe79:40d3) has joined #gentoo
+2015-04-02 17:07:09	-->	DogH (~doghackit@2605:e000:1100:25:3ea9:f4ff:fe29:a4d8) has joined #gentoo
+2015-04-02 17:07:27	-->	hguux___ (sid17919@gateway/web/irccloud.com/x-fsuiyvuxuwzuvtwq) has joined #gentoo
+2015-04-02 17:07:32	-->	lasconic_ (sid4376@gateway/web/irccloud.com/x-wmgpqdqcfiqhlbin) has joined #gentoo
+2015-04-02 17:07:58	-->	wyvern (uid40333@gateway/web/irccloud.com/x-uzrhigxglljuvwna) has joined #gentoo
+2015-04-02 17:08:20	-->	kensington` (kensington@gentoo/developer/kensington) has joined #gentoo
+2015-04-02 17:08:20	--	Modo #gentoo [+v kensington`] por ChanServ
+2015-04-02 17:08:20	<--	midnightmagic (~midnightm@unaffiliated/midnightmagic) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:08:20	<--	MachinaeWolf (Elite12626@gateway/shell/elitebnc/x-ktnxwcrxmeswocfz) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:08:20	<--	mgregson (ident@unaffiliated/mgregson) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:08:24	<--	Ke (jkarlson@pdpc/supporter/active/ke) ha salido (Ping timeout: 252 seconds)
+2015-04-02 17:08:33	petrvs	sshhhh
+2015-04-02 17:08:35	-->	DogHackit__ (~quassel@2605:e000:1100:25:223:6cff:fe88:9611) has joined #gentoo
+2015-04-02 17:08:38	-->	creffett1irssi (~2011creff@gentoo/developer/creffett) has joined #gentoo
+2015-04-02 17:08:39	--	Modo #gentoo [+v creffett1irssi] por ChanServ
+2015-04-02 17:08:45	<--	BCMM (~BCMM@unaffiliated/bcmm) ha salido (Ping timeout: 252 seconds)
+2015-04-02 17:08:56	-->	hasue1 (~hasues@108-236-232-243.lightspeed.knvltn.sbcglobal.net) has joined #gentoo
+2015-04-02 17:09:01	-->	elijah_ (sid21431@gateway/web/irccloud.com/x-rocqofhjyallfkeu) has joined #gentoo
+2015-04-02 17:09:23	-->	Ke (jkarlson@pdpc/supporter/active/ke) has joined #gentoo
+2015-04-02 17:09:27	<--	Rikairchy (~Telus@2607:fcd0:100:4300::3e34:746) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:28	<--	lasconic (sid4376@gateway/web/irccloud.com/x-rdelwcyvxqnuuoly) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:28	-->	lenrek_ (~lenrek@50-83-160-162.client.mchsi.com) has joined #gentoo
+2015-04-02 17:09:28	<--	hguux__ (sid17919@gateway/web/irccloud.com/x-prrpnehgzsfzvmpb) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:28	<--	kash (~kash@unaffiliated/kash) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:28	<--	ArexR (~alex@unaffiliated/arexr) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:28	<--	elijah (sid21431@gateway/web/irccloud.com/x-navksyrmvuzmcmxb) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:28	<--	Danny_D (Danny_D@gateway/shell/yourbnc/x-ylypnohoqekkmajp) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:28	<--	BenLand100 (~blandtop@2001:400:613:18::c17) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:28	<--	Dave123 (~Dave123@2604:6000:100a:25:224:1dff:fe23:6f28) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:28	<--	hparker (~hparker@gentoo/developer/hparker) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:28	<--	laudiacay (~2016crich@2001:468:cc0:1802:0:c6ff:fe26:12c8) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:28	<--	robgraves (~robgraves@unaffiliated/robgraves) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	gnos (~gnos@2602:306:ce13:6170:a1bd:7948:483e:835a) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	kensington (kensington@gentoo/developer/kensington) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	DogHackit (~doghackit@2605:e000:1100:25:3ea9:f4ff:fe29:a4d8) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	knivers (~knivey@2001:470:1f11:201::dead:c0de) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	DogHackit_ (~quassel@2605:e000:1100:25:223:6cff:fe88:9611) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	AntiSpamMeta (~MetaBot@AntiSpamMeta/.) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	Yog (~yog@2001:470:8332:0:250:56ff:feb5:c5c4) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	edwardly (~edwardly@unaffiliated/edwardly) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	dhendrix (quassel@nat/google/x-nnvvlboctwwzcfiw) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	SAL9000 (root@2400:8900::f03c:91ff:fe73:668c) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	DarkUnknown (DarkUnknow@gateway/shell/panicbnc/x-ktsjwtntorkqafrv) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	ezrios (~ezrios@192.241.253.136) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	cference (~cference@142.137.44.177) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:33	<--	joshh20 (~joshh20@v-74-91-123-17.unman-vds.internap-nyc.nfoservers.com) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:33	<--	creffett|irssi (~2011creff@gentoo/developer/creffett) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:33	<--	perrier (~cinch@107.170.175.57) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:33	<--	lenrek (~lenrek@50-83-160-162.client.mchsi.com) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:33	<--	trevorriles (~trevorril@crunchdev.com) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:33	<--	pekster (~rewt@openvpn/community/developer/pekster) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:33	<--	DrewBeer (~DrewBeer@216.152.240.203) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:33	<--	HeXiLeD (~H3X@69.196.165.41) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:33	<--	Ephexis (~IRC@unaffiliated/ephexis) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:33	<--	funfool (~funfool@funtoo/core/funfool) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:33	<--	njsg (~njsg@unaffiliated/njsg) ha salido (Remote host closed the connection)
+2015-04-02 17:09:34	-->	visi0n (~trevorril@crunchdev.com) has joined #gentoo
+2015-04-02 17:09:43	-->	njsg__ (~njsg@kekkonen.niksula.hut.fi) has joined #gentoo
+2015-04-02 17:09:48	-->	DrewBeer (~DrewBeer@216.152.240.203) has joined #gentoo
+2015-04-02 17:09:49	cero_	sweet
+2015-04-02 17:09:55	-->	laeckerv (laeckerv@gateway/shell/yourbnc/x-eynqrtnwmsjkvhqa) has joined #gentoo
+2015-04-02 17:09:56	-->	PeterSilie (~quassel@2607:ff28:0:23::f195:29e1) has joined #gentoo
+2015-04-02 17:10:02	-->	joshh20 (~joshh20@74.91.123.17) has joined #gentoo
+2015-04-02 17:10:03	-->	HeXiLeD (~H3X@69.196.165.41) has joined #gentoo
+2015-04-02 17:10:06	-->	MarioMaster100 (Elite12626@gateway/shell/elitebnc/x-uhjlgzfetytktlii) has joined #gentoo
+2015-04-02 17:10:08	-->	pekster (~rewt@openvpn/community/developer/pekster) has joined #gentoo
+2015-04-02 17:10:16	-->	edwardly (~edwardly@pool-108-26-189-78.bstnma.fios.verizon.net) has joined #gentoo
+2015-04-02 17:10:16	<--	edwardly (~edwardly@pool-108-26-189-78.bstnma.fios.verizon.net) ha salido (Changing host)
+2015-04-02 17:10:16	-->	edwardly (~edwardly@unaffiliated/edwardly) has joined #gentoo
+2015-04-02 17:10:20	-->	ezrios (~ezrios@192.241.253.136) has joined #gentoo
+2015-04-02 17:10:22	<--	Ptolemarch (~ptolemarc@50.252.93.91) ha salido
+2015-04-02 17:10:25	-->	wolfwood (wolfwood@2600:3c01::f03c:91ff:fedf:a2c9) has joined #gentoo
+2015-04-02 17:10:25	-->	Dave123 (~Dave123@2604:6000:100a:25:224:1dff:fe23:6f28) has joined #gentoo
+2015-04-02 17:10:30	-->	gnos (~gnos@2602:306:ce13:6170:a1bd:7948:483e:835a) has joined #gentoo
+2015-04-02 17:10:35	-->	cference (~cference@142.137.44.177) has joined #gentoo
+2015-04-02 17:10:35	-->	Ephexis (~IRC@unaffiliated/ephexis) has joined #gentoo
+2015-04-02 17:10:37	-->	meingtsla (retrograde@unaffiliated/meingtsla) has joined #gentoo
+2015-04-02 17:10:39	--	elijah_ es conocido ahora como elijah
+2015-04-02 17:10:45	-->	MotoHoss (warphoss@charger.hosscomm.com) has joined #gentoo
+2015-04-02 17:10:47	-->	SAL9000 (root@2400:8900::f03c:91ff:fe73:668c) has joined #gentoo
+2015-04-02 17:10:47	--	lasconic_ es conocido ahora como lasconic
+2015-04-02 17:10:51	-->	Xe (xe@unaffiliated/xe) has joined #gentoo
+2015-04-02 17:10:57	-->	moss (~moss@unaffiliated/moss) has joined #gentoo
+2015-04-02 17:10:59	-->	maffblaster (~mmarchese@67.137.21.130) has joined #gentoo
+2015-04-02 17:11:05	<--	njsg__ (~njsg@kekkonen.niksula.hut.fi) ha salido (Client Quit)
+2015-04-02 17:11:08	-->	s0rah (~sora_h@va157-7-152-34-f.z1d1.static.cnode.jp) has joined #gentoo
+2015-04-02 17:11:09	-->	twitch153 (twitch153@gentoo/developer/twitch153) has joined #gentoo
+2015-04-02 17:11:09	--	Modo #gentoo [+v twitch153] por ChanServ
+2015-04-02 17:11:17	-->	kash (~kash@2604:6880:1005:201::2) has joined #gentoo
+2015-04-02 17:11:20	-->	deper29 (~deper29@out-ab-203.wireless.telus.com) has joined #gentoo
+2015-04-02 17:11:20	-->	robgraves (~robgraves@www.spoonbomb.com) has joined #gentoo
+2015-04-02 17:11:21	-->	njsg (~njsg@unaffiliated/njsg) has joined #gentoo
+2015-04-02 17:11:21	-->	BenLand100 (~blandtop@2001:400:613:18::c17) has joined #gentoo
+2015-04-02 17:11:24	--	AntiSpamMeta_ es conocido ahora como AntiSpamMeta
+2015-04-02 17:11:29	-->	laudiacay (~2016crich@2001:468:cc0:1802:0:c6ff:fe26:12c8) has joined #gentoo
+2015-04-02 17:11:36	-->	Danny_D (Danny_D@gateway/shell/yourbnc/x-zdyppjsoadsqpuex) has joined #gentoo
+2015-04-02 17:11:43	-->	lude (~lude@dave-srv.isprime.com) has joined #gentoo
+2015-04-02 17:11:45	-->	hparker (~hparker@gentoo/developer/hparker) has joined #gentoo
+2015-04-02 17:11:46	--	Modo #gentoo [+v hparker] por ChanServ
+2015-04-02 17:11:46	--	laudiacay es conocido ahora como Guest60243
+2015-04-02 17:11:48	-->	mgregson (ident@unaffiliated/mgregson) has joined #gentoo
+2015-04-02 17:11:59	-->	midnightmagic (~midnightm@unaffiliated/midnightmagic) has joined #gentoo
+2015-04-02 17:12:00	-->	Yog (~yog@2001:470:8332:0:250:56ff:feb5:c5c4) has joined #gentoo
+2015-04-02 17:12:13	-->	ArexR (~alex@unaffiliated/arexr) has joined #gentoo
+2015-04-02 17:12:16	-->	Rikairchy (~Telus@sigma.rikairchy.net) has joined #gentoo
+2015-04-02 17:12:24	-->	knivers (~knivey@2001:470:1f11:201::dead:c0de) has joined #gentoo
+2015-04-02 17:12:34	-->	murph (murph@welcome.to.the.darkside.panicbnc.us) has joined #gentoo
+2015-04-02 17:12:49	-->	Klumben (Nsaiswatch@elmo.stole-your.pw) has joined #gentoo
+2015-04-02 17:12:58	--	murph es conocido ahora como Guest53147
+2015-04-02 17:13:24	-->	willikins (nobody@gentoo/bot/Willikins) has joined #gentoo
+2015-04-02 17:13:31	<--	palasso (~palasso@palassopoulosge.ath.forthnet.gr) ha salido (Read error: Connection reset by peer)
+2015-04-02 17:14:21	-->	Zolotkey (~zR00t@unaffiliated/zolotkey) has joined #gentoo
+2015-04-02 17:15:24	-->	astrofog (~astrofog@unaffiliated/astrofog) has joined #gentoo
+2015-04-02 17:15:38	-->	DarkUnknown (DarkUnknow@gateway/shell/panicbnc/x-yascnpwvzqohhefx) has joined #gentoo
+2015-04-02 17:15:38	<--	DarkUnknown (DarkUnknow@gateway/shell/panicbnc/x-yascnpwvzqohhefx) ha salido (Changing host)
+2015-04-02 17:15:38	-->	DarkUnknown (DarkUnknow@unaffiliated/darkunknown) has joined #gentoo
+2015-04-02 17:15:38	<--	DarkUnknown (DarkUnknow@unaffiliated/darkunknown) ha salido (Changing host)
+2015-04-02 17:15:38	-->	DarkUnknown (DarkUnknow@gateway/shell/panicbnc/x-yascnpwvzqohhefx) has joined #gentoo
+2015-04-02 17:16:37	<--	a3Dman (~3Dman@unaffiliated/a3dman) ha salido (Ping timeout: 250 seconds)
+2015-04-02 17:17:41	--	knivers es conocido ahora como knivey
+2015-04-02 17:17:50	--	creffett1irssi es conocido ahora como creffett|irssi
+2015-04-02 17:18:00	<--	qrisu (~phalrax@chello080108053216.25.11.vie.surfer.at) ha salido (Quit: WeeChat 1.1.1)
+2015-04-02 17:18:27	<--	astrofog (~astrofog@unaffiliated/astrofog) ha salido (Remote host closed the connection)
+2015-04-02 17:19:41	-->	bubu________ (~bubu@89-71-199-211.dynamic.chello.pl) has joined #gentoo
+2015-04-02 17:19:48	<--	wicope (~wicope@117.Red-88-27-63.staticIP.rima-tde.net) ha salido (Read error: Connection reset by peer)
+2015-04-02 17:20:07	-->	a3Dman (~3Dman@unaffiliated/a3dman) has joined #gentoo
+2015-04-02 17:20:17	njsg	https://bpaste.net/raw/70381fa59d59 thanks a lot. it's so much nicer that your *entire* emerge -avDuN world that took several minutes to compute dies rather than getting a failure in the middle that can be temporarily fixed with --resume --skipfirst
+2015-04-02 17:21:57	-->	Vovick (~Perdignus@99-6-101-70.lightspeed.milwwi.sbcglobal.net) has joined #gentoo
+2015-04-02 17:23:46	<--	bubu^ (~bubu@2a01:e35:2ef5:3d10:5f1a:b827:5fe:d1d6) ha salido (Remote host closed the connection)
+2015-04-02 17:23:48	<--	bubu________ (~bubu@89-71-199-211.dynamic.chello.pl) ha salido (Ping timeout: 245 seconds)
+2015-04-02 17:24:40	-->	rreno (~rreno@cpe-142-136-189-71.socal.res.rr.com) has joined #gentoo
+2015-04-02 17:25:13	<--	Zolotkey (~zR00t@unaffiliated/zolotkey) ha salido (Quit: Textual IRC Client: www.textualapp.com)
+2015-04-02 17:26:05	-->	[Gentoo] (~Gentoo@2001:470:681e::dead) has joined #gentoo
+2015-04-02 17:26:53	<--	tholin (~tholin@c-f7c4e455.04-302-6c6b701.cust.bredbandsbolaget.se) ha salido
+2015-04-02 17:26:56	--	irc: desconectado del servidor

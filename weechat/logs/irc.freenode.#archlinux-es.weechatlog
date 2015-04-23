@@ -1,0 +1,81 @@
+2015-04-02 11:47:45	-->	Yukiteru (~Yukiteru@unaffiliated/yukiteru) has joined #archlinux-es
+2015-04-02 11:47:45	--	El tema para #archlinux-es es "El canal de ArchLinux en español http://www.archlinux-es.org | Pregunta, ¡pero lee las noticias primero! | pacman -S pkgstats && pkgstats, colabora con las estadísticas | arch en dw: http://distrowatch.com/table.php?distribution=arch | Charlas de bar en #archlinux-es-offtopic | para pegar mensajes largos use bpaste.net o pastie.org"
+2015-04-02 11:47:45	--	Tema establecido por mefistofeles (~crush@unaffiliated/mefistofeles) el dom, 04 may 2014 17:40:18
+2015-04-02 11:47:45	--	Channel #archlinux-es: 42 apodos (1 op, 0 voces, 41 normales)
+2015-04-02 11:47:45	--	PvAviso(ChanServ): Bienvenidos al canal de archlinux-es
+2015-04-02 11:47:56	--	Canal creado el dom, 26 nov 2006 02:42:39
+2015-04-02 12:02:26	<--	pesca (~root@186.61.112.132) ha salido (Ping timeout: 256 seconds)
+2015-04-02 12:10:26	-->	successus_ (~successus@unaffiliated/successus) has joined #archlinux-es
+2015-04-02 12:13:17	<--	successus (~successus@unaffiliated/successus) ha salido (Ping timeout: 246 seconds)
+2015-04-02 12:22:49	<--	Skatox (~Thunderbi@190.199.130.104) ha salido (Ping timeout: 255 seconds)
+2015-04-02 12:36:32	-->	lucas-em (~lucas@77.208.174.13) has joined #archlinux-es
+2015-04-02 12:36:52	<--	m4v (~znc@ubuntu/member/m4v) ha salido (Ping timeout: 250 seconds)
+2015-04-02 12:38:17	<--	lucas-em (~lucas@77.208.174.13) ha salido (Remote host closed the connection)
+2015-04-02 12:38:56	-->	m4v (~znc@ubuntu/member/m4v) has joined #archlinux-es
+2015-04-02 13:00:59	<--	successus_ (~successus@unaffiliated/successus) ha salido (Quit: Salud o/)
+2015-04-02 13:01:05	-->	Chris_TR (~Chris_TR@162.211.64.178) has joined #archlinux-es
+2015-04-02 13:42:50	-->	lucas__ (~AndChat56@31.4.240.140) has joined #archlinux-es
+2015-04-02 13:44:31	<--	ZenWalker (~r00t@unaffiliated/zenwalker) ha salido (Remote host closed the connection)
+2015-04-02 13:54:41	<--	Israphel (~quassel@190.246.31.20) ha salido (Ping timeout: 272 seconds)
+2015-04-02 13:56:36	-->	ZenWalker (~r00t@unaffiliated/zenwalker) has joined #archlinux-es
+2015-04-02 14:17:12	<--	m4v (~znc@ubuntu/member/m4v) ha salido (Read error: Connection reset by peer)
+2015-04-02 14:20:03	-->	m4v (~znc@ubuntu/member/m4v) has joined #archlinux-es
+2015-04-02 14:20:20	-->	damicore (~damian@186.18.245.165) has joined #archlinux-es
+2015-04-02 14:20:25	damicore	holaaa
+2015-04-02 14:20:52	damicore	alguien sabe donde conseguir buenos libros sobre computación en argentina o alguna vuelta que se pueda hacer¡?
+2015-04-02 14:21:56	-->	WyRe (~WyRe@80.30.187.232) has joined #archlinux-es
+2015-04-02 14:26:40	damicore	http://sferon.dlinkddns.com/Pub/Литература/Evi%20Nemeth,%20Garth%20Snyder,%20Trent%20R.%20Hein%20-%20UNIX%20and%20Linux%20System%20Administration%20Handbook,%204th%20Edition%20-%202010.pdf
+2015-04-02 14:26:42	damicore	ese en particular jaja
+2015-04-02 15:00:35	-->	successus (~successus@unaffiliated/successus) has joined #archlinux-es
+2015-04-02 15:00:44	successus	salud!!
+2015-04-02 15:02:49	-->	frivas (~frivas@unaffiliated/frivas) has joined #archlinux-es
+2015-04-02 15:21:37	-->	luchopam (~luciano@190.120.53.112) has joined #archlinux-es
+2015-04-02 15:23:45	<--	luchopam (~luciano@190.120.53.112) ha salido (Quit: Lost terminal)
+2015-04-02 15:24:30	-->	k_Tux (~gustavo@181.167.32.117) has joined #archlinux-es
+2015-04-02 15:30:33	-->	ShideR (~ShideR@unaffiliated/shider) has joined #archlinux-es
+2015-04-02 15:31:34	<--	sL1pKn07 (~sl1pkn07@unaffiliated/sl1pkn07) ha salido (Ping timeout: 252 seconds)
+2015-04-02 15:31:36	-->	successus_ (~successus@unaffiliated/successus) has joined #archlinux-es
+2015-04-02 15:32:36	<--	successus (~successus@unaffiliated/successus) ha salido (Ping timeout: 248 seconds)
+2015-04-02 15:35:03	-->	AndChat|567216 (~AndChat56@31.4.240.140) has joined #archlinux-es
+2015-04-02 15:35:03	<--	lucas__ (~AndChat56@31.4.240.140) ha salido (Read error: Connection reset by peer)
+2015-04-02 15:36:47	-->	sL1pKn07 (~sl1pkn07@84.125.86.73.dyn.user.ono.com) has joined #archlinux-es
+2015-04-02 15:36:47	<--	sL1pKn07 (~sl1pkn07@84.125.86.73.dyn.user.ono.com) ha salido (Changing host)
+2015-04-02 15:36:47	-->	sL1pKn07 (~sl1pkn07@unaffiliated/sl1pkn07) has joined #archlinux-es
+2015-04-02 15:36:51	-->	dabor (~dabor@181.25.141.99) has joined #archlinux-es
+2015-04-02 15:41:48	<--	sL1pKn07 (~sl1pkn07@unaffiliated/sl1pkn07) ha salido (Read error: Connection reset by peer)
+2015-04-02 15:45:50	<--	k_Tux (~gustavo@181.167.32.117) ha salido (Remote host closed the connection)
+2015-04-02 15:46:06	<--	successus_ (~successus@unaffiliated/successus) ha salido (Quit: Salud o/)
+2015-04-02 15:46:19	-->	successus (~successus@unaffiliated/successus) has joined #archlinux-es
+2015-04-02 15:51:45	-->	Israphel (~quassel@190.246.31.20) has joined #archlinux-es
+2015-04-02 15:52:08	-->	sL1pKn07 (~sl1pkn07@unaffiliated/sl1pkn07) has joined #archlinux-es
+2015-04-02 16:05:24	<--	AndChat|567216 (~AndChat56@31.4.240.140) ha salido (Ping timeout: 264 seconds)
+2015-04-02 16:05:45	-->	lucas__ (~AndChat56@31.4.240.140) has joined #archlinux-es
+2015-04-02 16:21:30	-->	successus_ (~successus@unaffiliated/successus) has joined #archlinux-es
+2015-04-02 16:22:39	-->	successus__ (~successus@unaffiliated/successus) has joined #archlinux-es
+2015-04-02 16:22:55	<--	successus (~successus@unaffiliated/successus) ha salido (Ping timeout: 265 seconds)
+2015-04-02 16:26:06	<--	successus_ (~successus@unaffiliated/successus) ha salido (Ping timeout: 250 seconds)
+2015-04-02 16:28:58	-->	Mikelevel (~MoVeWoRk@unaffiliated/mikelevel) has joined #archlinux-es
+2015-04-02 16:30:28	<--	successus__ (~successus@unaffiliated/successus) ha salido (Quit: Salud o/)
+2015-04-02 16:30:42	-->	successus (~successus@unaffiliated/successus) has joined #archlinux-es
+2015-04-02 16:32:29	<--	lucas__ (~AndChat56@31.4.240.140) ha salido (Read error: Connection reset by peer)
+2015-04-02 16:34:39	<--	frivas (~frivas@unaffiliated/frivas) ha salido (Quit: logout)
+2015-04-02 17:05:28	<--	oso96_2000 (oso96_2000@fsf/member/oso962000) ha salido (Ping timeout: 256 seconds)
+2015-04-02 17:05:58	<--	Israphel (~quassel@190.246.31.20) ha salido (Ping timeout: 252 seconds)
+2015-04-02 17:06:57	-->	siel_ (~siel@unaffiliated/motley) has joined #archlinux-es
+2015-04-02 17:07:19	<--	ksha (~ksha@unaffiliated/ksha) ha salido (Quit: leaving)
+2015-04-02 17:09:28	<--	siel (~siel@unaffiliated/motley) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	edumass (~arch@unaffiliated/edumass) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:32	<--	DarkUnknown (DarkUnknow@gateway/shell/panicbnc/x-ktsjwtntorkqafrv) ha salido (Ping timeout: 265 seconds)
+2015-04-02 17:09:35	--	siel_ es conocido ahora como siel
+2015-04-02 17:10:44	-->	edumass (~arch@unaffiliated/edumass) has joined #archlinux-es
+2015-04-02 17:10:54	<--	ShideR (~ShideR@unaffiliated/shider) ha salido (Ping timeout: 245 seconds)
+2015-04-02 17:14:01	-->	oso96_2000 (oso96_2000@fsf/member/oso962000) has joined #archlinux-es
+2015-04-02 17:15:38	-->	DarkUnknown (DarkUnknow@gateway/shell/panicbnc/x-yascnpwvzqohhefx) has joined #archlinux-es
+2015-04-02 17:15:38	<--	DarkUnknown (DarkUnknow@gateway/shell/panicbnc/x-yascnpwvzqohhefx) ha salido (Changing host)
+2015-04-02 17:15:38	-->	DarkUnknown (DarkUnknow@unaffiliated/darkunknown) has joined #archlinux-es
+2015-04-02 17:15:38	<--	DarkUnknown (DarkUnknow@unaffiliated/darkunknown) ha salido (Changing host)
+2015-04-02 17:15:38	-->	DarkUnknown (DarkUnknow@gateway/shell/panicbnc/x-yascnpwvzqohhefx) has joined #archlinux-es
+2015-04-02 17:20:07	successus	salud, hasta otro rato
+2015-04-02 17:20:13	successus	o/
+2015-04-02 17:20:45	<--	successus (~successus@unaffiliated/successus) ha salido (Quit: Salud o/)
+2015-04-02 17:26:56	--	irc: desconectado del servidor

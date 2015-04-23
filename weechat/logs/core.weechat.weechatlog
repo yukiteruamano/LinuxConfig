@@ -1,0 +1,113 @@
+2015-04-02 11:07:55		Plugins cargados: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2015-04-02 11:08:06	=!=	irc: unable to create temporary server "irc.freenode.net" because the creation of temporary servers with command /connect is currently disabled
+2015-04-02 11:08:06	=!=	irc: if you want to create a standard server, use the command "/server add" (see /help server); if you really want to create a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2015-04-02 11:19:58		[core]
+2015-04-02 11:19:58		  away     color    debug    help     key      mute     proxy    repeat   set      uptime   window 
+2015-04-02 11:19:58		  bar      command  eval     history  layout   plugin   quit     save     unset    version
+2015-04-02 11:19:58		  buffer   cursor   filter   input    mouse    print    reload   secure   upgrade  wait   
+2015-04-02 11:19:58		[charset]
+2015-04-02 11:19:58		  charset
+2015-04-02 11:19:58		[perl]
+2015-04-02 11:19:58		  perl
+2015-04-02 11:19:58		[exec]
+2015-04-02 11:19:58		  exec
+2015-04-02 11:19:58		[logger]
+2015-04-02 11:19:58		  logger
+2015-04-02 11:19:58		[trigger]
+2015-04-02 11:19:58		  trigger
+2015-04-02 11:19:58		[aspell]
+2015-04-02 11:19:58		  aspell
+2015-04-02 11:19:58		[irc]
+2015-04-02 11:19:58		  admin       deop        kick        msg         query       sapart      topic       who       
+2015-04-02 11:19:58		  allchan     devoice     kickban     names       quiet       saquit      trace       whois     
+2015-04-02 11:19:58		  allpv       die         kill        nick        quote       server      unban       whowas    
+2015-04-02 11:19:58		  allserv     disconnect  links       notice      reconnect   service     unquiet   
+2015-04-02 11:19:58		  ban         halfop      list        notify      rehash      servlist    userhost  
+2015-04-02 11:19:58		  connect     ignore      lusers      op          remove      squery      users     
+2015-04-02 11:19:58		  ctcp        info        map         oper        restart     squit       version   
+2015-04-02 11:19:58		  cycle       invite      me          part        sajoin      stats       voice     
+2015-04-02 11:19:58		  dcc         ison        mode        ping        samode      summon      wallchops 
+2015-04-02 11:19:58		  dehalfop    join        motd        pong        sanick      time        wallops   
+2015-04-02 11:19:58		[python]
+2015-04-02 11:19:58		  python
+2015-04-02 11:19:58		[relay]
+2015-04-02 11:19:58		  relay
+2015-04-02 11:19:58		[script]
+2015-04-02 11:19:58		  script
+2015-04-02 11:19:58		[xfer]
+2015-04-02 11:19:58		  me  xfer
+2015-04-02 11:19:58		[alias]
+2015-04-02 11:19:58		  AAWAY    ANICK    CHAT     IG       LEAVE    N        SIGNOFF  unalias  WI     
+2015-04-02 11:19:58		  alias    BEEP     CL       J        M        Q        T        V        WII    
+2015-04-02 11:19:58		  AME      BYE      CLOSE    K        MSGBUF   REDRAW   UB       W        WW     
+2015-04-02 11:19:58		  AMSG     C        EXIT     KB       MUB      SAY      UMODE    WC     
+2015-04-02 11:20:04		[irc]  /server  list|listfull [<server>]
+2015-04-02 11:20:04		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2015-04-02 11:20:04		                copy|rename <server> <new_name>
+2015-04-02 11:20:04		                reorder <server> [<server>...]
+2015-04-02 11:20:04		                del|keep <server>
+2015-04-02 11:20:04		                deloutq|jump|raw
+2015-04-02 11:20:04		lista, añade o elimina servidores IRC
+2015-04-02 11:20:04		    list: list servers (without argument, this list is displayed)
+2015-04-02 11:20:04		listfull: list servers with detailed info for each server
+2015-04-02 11:20:04		     add: create a new server
+2015-04-02 11:20:04		  server: server name, for internal and display use
+2015-04-02 11:20:04		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2015-04-02 11:20:04		    temp: create temporary server (not saved)
+2015-04-02 11:20:04		  option: set option for server (for boolean option, value can be omitted)
+2015-04-02 11:20:04		nooption: set boolean option to 'off' (for example: -nossl)
+2015-04-02 11:20:04		    copy: duplicate a server
+2015-04-02 11:20:04		  rename: rename a server
+2015-04-02 11:20:04		 reorder: reorder list of servers
+2015-04-02 11:20:04		    keep: keep server in config file (for temporary servers only)
+2015-04-02 11:20:04		     del: delete a server
+2015-04-02 11:20:04		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2015-04-02 11:20:04		    jump: jump to server buffer
+2015-04-02 11:20:04		     raw: open buffer with raw IRC data
+2015-04-02 11:20:04		Examples:
+2015-04-02 11:20:04		  /server listfull
+2015-04-02 11:20:04		  /server add oftc irc.oftc.net/6697 -ssl -autoconnect
+2015-04-02 11:20:04		  /server add oftc6 irc6.oftc.net/6697 -ipv6 -ssl
+2015-04-02 11:20:04		  /server add freenode2 chat.eu.freenode.net/6667,chat.us.freenode.net/6667
+2015-04-02 11:20:04		  /server add freenode3 chat.freenode.net -password=mypass
+2015-04-02 11:20:04		  /server copy oftc oftcbis
+2015-04-02 11:20:04		  /server rename oftc newoftc
+2015-04-02 11:20:04		  /server reorder oftc freenode
+2015-04-02 11:20:04		  /server del freenode
+2015-04-02 11:20:04		  /server deloutq
+2015-04-02 11:21:24	=!=	irc: el servidor "freenode" ya existe, ¡no se puede crear!
+2015-04-02 11:21:41		Todos los servidores:
+2015-04-02 11:21:41		   freenode
+2015-04-02 11:22:02		irc: server freenode has been deleted
+2015-04-02 11:22:07		irc: servidor FreeNode creado
+2015-04-02 11:23:15	=!=	No es posible escribir texto en este buffer
+2015-04-02 11:43:37		Plugins cargados: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2015-04-02 11:44:23		Plugins cargados: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2015-04-02 11:47:23		Plugins cargados: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2015-04-02 17:24:22		script: descargando la lista de script...
+2015-04-02 17:24:25		script: 292 scripts para WeeChat 1.1.1
+2015-04-02 17:25:02		Nuevo atajo (contexto "mouse"):  @bar(buffers):ctrl-wheeldown => hsignal:buffers_mouse
+2015-04-02 17:25:02		Nuevo atajo (contexto "mouse"):  @bar(buffers):ctrl-wheelup => hsignal:buffers_mouse
+2015-04-02 17:25:02		Nuevo atajo (contexto "mouse"):  @item(buffers):button2* => hsignal:buffers_mouse
+2015-04-02 17:25:02		Nuevo atajo (contexto "mouse"):  @item(buffers):button1* => hsignal:buffers_mouse
+2015-04-02 17:26:56		python: scripts descargados
+2015-04-02 17:29:34		scripts en python cargados: autojoin
+2015-04-02 17:29:34		script: 292 scripts para WeeChat 1.1.1
+2015-04-02 17:29:34		Plugins cargados: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2015-04-02 17:36:19		Actualizando WeeChat con el archivo binario: "weechat"...
+2015-04-02 17:36:19		python: scripts descargados
+2015-04-02 17:36:19		scripts en python cargados: autojoin
+2015-04-02 17:36:19		script: 292 scripts para WeeChat 1.1.1
+2015-04-02 17:36:19		Plugins cargados: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2015-04-02 17:36:19		Upgrade done (0.14s)
+2015-04-02 17:36:23		Actualizando WeeChat con el archivo binario: "weechat"...
+2015-04-02 17:36:23		python: scripts descargados
+2015-04-02 17:36:23		scripts en python cargados: autojoin
+2015-04-02 17:36:23		script: 292 scripts para WeeChat 1.1.1
+2015-04-02 17:36:23		Plugins cargados: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2015-04-02 17:36:23		Upgrade done (0.14s)
+2015-04-02 17:36:26		python: scripts descargados
+2015-04-02 17:36:28		scripts en python cargados: autojoin
+2015-04-02 17:36:28		script: 292 scripts para WeeChat 1.1.1
+2015-04-02 17:36:28		Plugins cargados: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2015-04-02 17:37:20		python: scripts descargados
