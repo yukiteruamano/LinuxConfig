@@ -1,15 +1,13 @@
 --[[
                                       
-     Multicolor Awesome WM config 2.0 
-     github.com/copycat-killer        
+     Numix Awesome WM 3.5.x
                                       
 --]]
 
 
 theme                               = {}
 
-theme.confdir                       = os.getenv("HOME") .. "/.config/awesome/themes/personal"
---theme.wallpaper                     = theme.confdir .. "/wall.png"
+theme.confdir                       = os.getenv("HOME") .. "/.config/awesome/themes/numix"
 
 theme.font                          = "Terminus 8"
 theme.taglist_font					= "Terminus 8"
