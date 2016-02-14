@@ -47,12 +47,14 @@ function run_once(cmd)
 end
 
 run_once("urxvtd")
-run_once("mpd")
+run_once("musicpd /usr/home/yukiteru/.mpd/musicpd.conf")
 run_once("setxkbmap es")
 run_once("nitrogen --restore")
-run_once("parcellite")
-run_once("compton --config .config/compton/compton.conf")
+run_once("compton --config /usr/home/yukiteru/.config/compton/compton.conf")
+run_once("numlockx")
 run_once("unclutter -root")
+run_once("clipit")
+run_once("volumeicon")
 -- }}}
 
 -- {{{ Variable definitions
@@ -64,19 +66,20 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/numix/theme.lua")
 modkey     = "Mod4"
 altkey     = "Mod1"
 terminal   = "urxvtc"
-editor     = os.getenv("EDITOR") or "nano" or "vim"
+editor     = os.getenv("EDITOR") or "nano" or "gvim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- user defined
 browser         = "firefox"
-gui_editor      = "geany"
-dev_editor      = terminal .. " -e vim"
+gui_editor      = "gvim"
+dev_editor      = "gvim"
 audio_ncmpcpp   = terminal .. " -e ncmpcpp"
 graphics        = "gimp"
 mail            = "thunderbird"
-file_manager    = "spacefm"
-audio_mixer     = "pavucontrol"
+file_manager    = "thunar"
+audio_mixer     = terminal .. " -e rexima"
 irc_client      = terminal .. " -e weechat-curses"
+bt              = "transmission-daemon"
 
 local layouts = {
     awful.layout.suit.floating,
@@ -93,7 +96,7 @@ local layouts = {
 
 tags = {
     names = { "web", "irc", "term" ,"files", "dev", "others" },
-    layout = { layouts[6], layouts[7], layouts[4], layouts[4], layouts[4], layouts[1] }
+    layout = { layouts[6], layouts[7], layouts[5], layouts[4], layouts[4], layouts[1] }
 }
 for s = 1, screen.count() do
    tags[s] = awful.tag(tags.names, s, tags.layout)
@@ -104,23 +107,21 @@ end
 -- {{{ Menu
 
 myawesomemenu = {
-{"edit config", terminal .. " -e vim /home/yukiteru/.config/awesome/rc.lua"},
+{"edit config", " gvim /home/yukiteru/.config/awesome/rc.lua"},
 {"restart wm", awesome.restart },
-{"reboot", terminal .. " -e su -c 'reboot'"},
-{"shutdown", terminal .. " -e su -c 'shutdown -h now'"},
+{"reboot", terminal .. " -e 'shutdown -r now'"},
+{"shutdown", terminal .. " -e 'shutdown -h now'"},
 {"quit", awesome.quit }
 }
 mygamesmenu = {
-{" Steam", "steam"},
-{" Mupen64Plus", "mupen64plus"},
-{" Xonotic", "xonotic-glx"}
+{" PCsxr", "pcsxr"},
+{"Desmume", "desmume"}
 }
 mydevmenu = {
-{" Geany", "geany"},
-{" Vim", terminal .. " -e vim"},
-{" Meld", "meld"},
-{" Docs", "spacefm /home/yukiteru/Programacion/Docs"},
-{" Dev Directory",  "spacefm /home/yukiteru/Programacion"}
+{" gvim", "gvim"},
+{" CodeBlocks", "codeblocks"},
+{" Eric6", "eric"},
+{" Meld", "meld"}
 }
 mygraphicsmenu = {
 {" Gimp", "gimp"},
@@ -129,8 +130,7 @@ mygraphicsmenu = {
 }
 mymultimediamenu = {
 {" ncmpcpp", terminal .. " -e ncmpcpp"},
-{" Audacity", "audacity"},
-{" XFBurn", "xfburn"}
+{" EasyTag", "easytag"}
 }
 myofficemenu = {
 {" Base", "libreoffice --base"},
@@ -140,26 +140,22 @@ myofficemenu = {
 {" Math", "libreoffice --math"},
 {" Writer", "libreoffice --writer"},
 {" Zathura", "zathura",},
-{" FBReader", "fbreader",},
-{" My Books", "spacefm /mnt/DD250GB/Biblioteca"}
+{" VirtualBox", "virtualbox"}
 }
 mywebmenu = {
 {" Filezilla", "filezilla"},
 {" Firefox", "firefox"},
 {" Thunderbird", "thunderbird"},
-{" Gajim", "gajim"},
-{" Telegram", "telegram"},
 {" JDownloader", "java -jar /home/yukiteru/.jd2/JDownloader.jar"},
 {" Transmission", "transmission-daemon"},
 {" Weechat", terminal .. " -e weechat-curses"}
 }
 mysettingsmenu = {
-{" Flash Player", "flash-player-properties"},
 {" lxappearance ", "lxappearance"}
 }
 mytoolsmenu = {
-{" virt-manager", "virt-manager"},
-{" File-Roller", "file-roller"}
+{" Thunar", "thunar"},
+{" XArchiver", "xarchiver"}
 }
 mymainmenu = awful.menu({ items = {
 { " @wesome", myawesomemenu},
@@ -171,8 +167,8 @@ mymainmenu = awful.menu({ items = {
 {" tools", mytoolsmenu},
 {" web", mywebmenu},
 {" settings", mysettingsmenu},
-{" htop", terminal .. " -e htop"},
-{" lock", "slimlock"}
+{" top", terminal .. " -e top"},
+{" lock", "xscreensaver-command -lock"}
 }
 })
 
@@ -200,64 +196,7 @@ mytextclock = lain.widgets.abase({
 })
 
 -- Calendar
-lain.widgets.calendar:attach(mytextclock, { font_size = 10 })
-
--- Filesystems
-fsicon = wibox.widget.imagebox(beautiful.widget_fs)
-fswidget = lain.widgets.fs({
-    settings  = function()
-        widget:set_markup(markup("#f9f9f9", fs_now.used .. "% "))
-    end
-})
-
--- CPU
-cpuicon = wibox.widget.imagebox()
-cpuicon:set_image(beautiful.widget_cpu)
-cpuwidget = lain.widgets.cpu({
-    settings = function()
-        widget:set_markup(markup("#f9f9f9", cpu_now.usage .. "% "))
-    end
-})
-
-
--- Coretemp
-tempicon = wibox.widget.imagebox(beautiful.widget_temp)
-tempwidget = lain.widgets.temp({
-    settings = function()
-        widget:set_markup(markup("#f9f9f9", coretemp_now .. "°C "))
-    end
-})
-
--- ALSA volume
-volicon = wibox.widget.imagebox(beautiful.widget_vol)
-volumewidget = lain.widgets.alsa({
-    settings = function()
-        if volume_now.status == "off" then
-            volume_now.level = volume_now.level .. "M"
-        end
-
-        widget:set_markup(markup("#f9f9f9", volume_now.level .. "% "))
-    end
-})
-
--- Net
-netdownicon = wibox.widget.imagebox(beautiful.widget_netdown)
-netdowninfo = wibox.widget.textbox()
-netupicon = wibox.widget.imagebox(beautiful.widget_netup)
-netupinfo = lain.widgets.net({
-    settings = function()
-        widget:set_markup(markup("#f9f9f9", net_now.sent .. " "))
-        netdowninfo:set_markup(markup("#f9f9f9", net_now.received .. " "))
-    end
-})
-
--- MEM
-memicon = wibox.widget.imagebox(beautiful.widget_mem)
-memwidget = lain.widgets.mem({
-    settings = function()
-        widget:set_markup(markup("#f9f9f9", mem_now.used .. "M "))
-    end
-})
+lain.widgets.calendar:attach(mytextclock, { font_size = 9 })
 
 -- MPD
 mpdicon = wibox.widget.imagebox()
@@ -371,21 +310,7 @@ for s = 1, screen.count() do
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(mpdicon)
     right_layout:add(mpdwidget)
-    right_layout:add(netdownicon)
-    right_layout:add(netdowninfo)
-    right_layout:add(netupicon)
-    right_layout:add(netupinfo)
-    right_layout:add(volicon)
-    right_layout:add(volumewidget)
-    right_layout:add(memicon)
-    right_layout:add(memwidget)
-    right_layout:add(cpuicon)
-    right_layout:add(cpuwidget)
-    right_layout:add(fsicon)
-    right_layout:add(fswidget)
-    right_layout:add(tempicon)
-    right_layout:add(tempwidget)
-    right_layout:add(clockicon)
+	right_layout:add(clockicon)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
@@ -479,7 +404,7 @@ globalkeys = awful.util.table.join(
         function ()
             awful.client.focus.history.previous()
             if client.focus then
-                client.focus:raise()
+               client.focus:raise()
             end
         end),
     awful.key({ altkey, "Shift"   }, "l",      function () awful.tag.incmwfact( 0.05)     end),
@@ -498,33 +423,11 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "q",      awesome.quit),
 
     -- Dropdown terminal
-    -- awful.key({ modkey,	          }, "z",      function () drop(terminal) end),
+    awful.key({ modkey,	          }, "z",      function () drop(terminal) end),
 
     -- Widgets popups
     awful.key({ altkey,           }, "c",      function () lain.widgets.calendar:show(7) end),
     awful.key({ altkey,           }, "h",      function () fswidget.show(7) end),
-
-    -- ALSA volume control
-    awful.key({ altkey }, "Up",
-        function ()
-            os.execute(string.format("amixer -c %s set %s 1+", volumewidget.card, volumewidget.channel))
-            volumewidget.update()
-        end),
-    awful.key({ altkey }, "Down",
-        function ()
-            os.execute(string.format("amixer -c %s set %s 1-", volumewidget.card, volumewidget.channel))
-            volumewidget.update()
-        end),
-    awful.key({ altkey }, "m",
-        function ()
-            os.execute(string.format("amixer -c %s set %s toggle", volumewidget.card, volumewidget.channel))
-            volumewidget.update()
-        end),
-    awful.key({ altkey, "Control" }, "m",
-        function ()
-            os.execute(string.format("amixer -c %s set %s 100%%", volumewidget.card, volumewidget.channel))
-            volumewidget.update()
-        end),
 
     -- MPD control
     awful.key({ altkey, "Control" }, "Up",
@@ -553,12 +456,13 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, altkey }, "f", function () awful.util.spawn(browser) end),
     awful.key({ modkey, altkey }, "m", function () awful.util.spawn(mail) end),
     awful.key({ modkey, altkey }, "g", function () awful.util.spawn(graphics) end),
-    awful.key({ modkey, altkey }, "s", function () awful.util.spawn(file_manager) end),
+    awful.key({ modkey, altkey }, "t", function () awful.util.spawn(file_manager) end),
     awful.key({ modkey, altkey }, "n", function () awful.util.spawn(audio_ncmpcpp) end),
     awful.key({ modkey, altkey }, "v", function () awful.util.spawn(dev_editor) end),
-    awful.key({ modkey, altkey }, "p", function () awful.util.spawn(audio_mixer) end),
+    awful.key({ modkey, altkey }, "a", function () awful.util.spawn(audio_mixer) end),
     awful.key({ modkey, altkey }, "e", function () awful.util.spawn(gui_editor) end),
     awful.key({ modkey, altkey }, "i", function () awful.util.spawn(irc_client) end),
+    awful.key({ modkey, altkey }, "b", function () awful.util.spawn(bt) end),
 
     -- Prompt
     awful.key({ modkey }, "r", function () mypromptbox[mouse.screen]:run() end),
@@ -664,12 +568,8 @@ awful.rules.rules = {
         properties = { tag = tags[1][6]}
     },
 
-    { rule = { class = "Gajim" },
-        properties = { tag = tags[1][2] }
-    },
-
-    { rule = { class = "Xfburn" },
-        properties = { tag = tags[1][6] }
+    { rule = { name = "EasyTAG" },
+        properties = { tag = tags[1][4] }
     },
 
     { rule = { class = "Filezilla" },
@@ -752,7 +652,16 @@ awful.rules.rules = {
         properties = { tag = tags[1][1] }
     },
 
-    { rule = { class = "Geany", name = "Geany" },
+    { rule = { name = "GVIM" },
+        properties = { tag = tags[1][5] }
+    },
+
+    { rule = { instance = "GVIM" },
+        properties = { tag = tags[1][5] }
+    },
+
+
+    { rule = { name = "Code::Blocks" },
         properties = { tag = tags[1][5] }
     },
 
@@ -770,20 +679,12 @@ awful.rules.rules = {
         }
     },
 
-    { rule = { class = "Spacefm" },
+    { rule = { name = "Administrador de archivos" },
          properties = { tag = tags[1][4] }
     },
 
-    { rule = { name = "Gestor de archivadores" },
+    { rule = { name = "xarchiver" },
         properties = { tag = tags[1][4] }
-    },
-
-    { rule = { name = "Gestor de máquinas virtuales" },
-        properties = { tag = tags[1][6] }
-    },
-
-    { rule = { class = "Steam" },
-        properties = { tag = tags[1][6] }
     },
 
     { rule = { class = "libreoffice-impress" },
@@ -810,29 +711,12 @@ awful.rules.rules = {
         properties = { tag = tags[1][6] }
     },
 
-    { rule = { class = "Audacity" },
-        properties = { tag = tags[1][6] }
-    },
-
-    { rule = { name = "Mupen64Plus v1.5" },
-        properties = { tag = tags[1][6] }
-    },
-
     { rule = { class = "URxvt" },
-        properties = { opacity = 0.90, tag = tags[1][3] }
+        properties = { tag = tags[1][3] }
     },
 
     { rule = { class = "URxvt", name = "ncmpcpp"},
         properties = { floating = true},
-            callback = function (c)
-            current_tag = tags[mouse.screen][awful.tag.getidx()]
-            tag = current_tag
-            awful.client.movetotag(tag, c)
-        end
-    },
-
-    { rule = { class = "URxvt", name = "htop"},
-        properties = { floating = true },
             callback = function (c)
             current_tag = tags[mouse.screen][awful.tag.getidx()]
             tag = current_tag
@@ -845,10 +729,6 @@ awful.rules.rules = {
     },
 
     { rule = { class = "URxvt", name = "weechat" },
-        properties = { tag = tags[1][2] }
-    },
-
-    { rule = { class = "Telegram"},
         properties = { tag = tags[1][2] }
     },
 
