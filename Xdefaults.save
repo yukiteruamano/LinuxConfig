@@ -29,7 +29,8 @@ URxvt*color15:      #ecebec
 
 ! fonts
 ! run "fc-list" for a list of available fonts
-URxvt*font: xft:Terminus:pixelsize=12
+
+URxvt*font: xft:Terminus:pixelsize=12URxvt*font: xft:Terminus:pixelsize=12
 URxvt.letterSpace: 0
 URxvt*scrollBar: False
 URxvt*scrollTtyOutput: False
