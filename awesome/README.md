@@ -1,4 +1,4 @@
-Configuracion de awesome con tema Numix.
+Configuracion de awesome con tema Numix y Frost
 
 Dependencias:
 
