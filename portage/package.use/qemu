@@ -1,1 +1,1 @@
-app-emulation/qemu lzo python spice ssh virgl virtfs xfs
+app-emulation/qemu lzo python spice ssh virgl virtfs xfs usbredir
