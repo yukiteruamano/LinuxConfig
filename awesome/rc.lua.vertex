@@ -63,7 +63,7 @@ run_once("volumeicon")
 -- {{{ Variable definitions
 
 -- beautiful init
-beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/frost/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/vertex-awesome/theme.lua")
 
 -- common
 modkey     = "Mod4"
