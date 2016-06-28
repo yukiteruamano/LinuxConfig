@@ -1,1 +1,1 @@
-net-p2p/transmission xfs -gtk
+net-p2p/transmission xfs gtk

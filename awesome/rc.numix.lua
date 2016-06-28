@@ -1,5 +1,6 @@
 --[[
-    Theme Numix for YukiteruAmano
+    Theme Frost for YukiteruAmano
+    For Arc-Theme eye-candy in Awesome WM
 --]]
 
 -- {{{ Required libraries
@@ -10,7 +11,6 @@ awful.rules     = require("awful.rules")
 local wibox     = require("wibox")
 local beautiful = require("beautiful")
 local naughty   = require("naughty")
-local drop      = require("scratchdrop")
 local lain      = require("lain")
 
 -- }}}
@@ -47,13 +47,15 @@ function run_once(cmd)
 end
 
 run_once("urxvtd")
-run_once("musicpd /usr/home/yukiteru/.mpd/musicpd.conf")
+run_once("mpd /home/yukiteru/.mpd/mpd.conf")
 run_once("setxkbmap es")
 run_once("nitrogen --restore")
-run_once("compton --config /usr/home/yukiteru/.config/compton/compton.conf")
+run_once("compton --config /home/yukiteru/.config/compton/compton.conf")
 run_once("numlockx")
+run_once("megasync")
+run_once("xscreensaver -nosplash ")
 run_once("unclutter -root")
-run_once("clipit")
+run_once("parcellite")
 run_once("volumeicon")
 -- }}}
 
@@ -71,15 +73,14 @@ editor_cmd = terminal .. " -e " .. editor
 
 -- user defined
 browser         = "firefox"
-gui_editor      = "gvim"
 dev_editor      = "gvim"
 audio_ncmpcpp   = terminal .. " -e ncmpcpp"
 graphics        = "gimp"
 mail            = "thunderbird"
-file_manager    = "thunar"
-audio_mixer     = terminal .. " -e rexima"
+file_manager    = "spacefm"
+audio_mixer     = "pavucontrol"
 irc_client      = terminal .. " -e weechat-curses"
-bt              = "transmission-daemon"
+bt              = "transmission-gtk"
 
 local layouts = {
     awful.layout.suit.floating,
@@ -91,6 +92,14 @@ local layouts = {
     awful.layout.suit.tile.bottom,
 }
 -- }}}
+
+-- quake terminal
+local quakeconsole = {}
+for s = 1, screen.count() do
+   quakeconsole[s] = lain.util.quake({ app = terminal })
+end
+-- }}}
+
 
 -- {{{ Tags
 
@@ -109,18 +118,16 @@ end
 myawesomemenu = {
 {"edit config", " gvim /home/yukiteru/.config/awesome/rc.lua"},
 {"restart wm", awesome.restart },
-{"reboot", terminal .. " -e 'shutdown -r now'"},
-{"shutdown", terminal .. " -e 'shutdown -h now'"},
+{"reboot", terminal .. " -e 'sudo shutdown -r now'"},
+{"shutdown", terminal .. " -e 'sudo shutdown -h now'"},
 {"quit", awesome.quit }
 }
 mygamesmenu = {
 {" PCsxr", "pcsxr"},
-{"Desmume", "desmume"}
+{"Desmume", "/home/yukiteru/bin/desmume.sh"}
 }
 mydevmenu = {
 {" gvim", "gvim"},
-{" CodeBlocks", "codeblocks"},
-{" Eric6", "eric"},
 {" Meld", "meld"}
 }
 mygraphicsmenu = {
@@ -140,22 +147,22 @@ myofficemenu = {
 {" Math", "libreoffice --math"},
 {" Writer", "libreoffice --writer"},
 {" Zathura", "zathura",},
-{" VirtualBox", "virtualbox"}
+{" Virt-Manager", "virt-manager"}
 }
 mywebmenu = {
-{" Filezilla", "filezilla"},
 {" Firefox", "firefox"},
 {" Thunderbird", "thunderbird"},
-{" JDownloader", "java -jar /home/yukiteru/.jd2/JDownloader.jar"},
-{" Transmission", "transmission-daemon"},
-{" Weechat", terminal .. " -e weechat-curses"}
+{" Transmission", "transmission-gtk"},
+{" Weechat", terminal .. " -e weechat-curses"},
+{" Telegram", "telegram"}
 }
 mysettingsmenu = {
-{" lxappearance ", "lxappearance"}
+{" lxappearance ", "lxappearance"},
+{" xscreensaver", "xscreensaver"}
 }
 mytoolsmenu = {
-{" Thunar", "thunar"},
-{" XArchiver", "xarchiver"}
+{" SpaceFM", "spacefm"},
+{" File-roller", "file-roller"}
 }
 mymainmenu = awful.menu({ items = {
 { " @wesome", myawesomemenu},
@@ -167,7 +174,7 @@ mymainmenu = awful.menu({ items = {
 {" tools", mytoolsmenu},
 {" web", mywebmenu},
 {" settings", mysettingsmenu},
-{" top", terminal .. " -e top"},
+{" htop", terminal .. " -e htop"},
 {" lock", "xscreensaver-command -lock"}
 }
 })
@@ -191,7 +198,7 @@ mytextclock = lain.widgets.abase({
 
         for i=1,3 do t_output = t_output .. " " .. o_it(i) end
 
-        widget:set_markup(markup("#d64937", t_output) .. markup("#d64937", " - ") .. markup("#f9f9f9", o_it(1)) .. " ")
+        widget:set_markup(markup("#5294E2", t_output) .. markup("#5294E2", " - ") .. markup("#f9f9f9", o_it(1)) .. " ")
     end
 })
 
@@ -218,7 +225,7 @@ mpdwidget = lain.widgets.mpd({
             title  = ""
             mpdicon:set_image(nil)
         end
-        widget:set_markup(markup("#d64937", artist) .. markup("#f9f9f9", title))
+        widget:set_markup(markup("#5294E2", artist) .. markup("#f9f9f9", title))
     end
 })
 
@@ -310,7 +317,7 @@ for s = 1, screen.count() do
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(mpdicon)
     right_layout:add(mpdwidget)
-	right_layout:add(clockicon)
+    right_layout:add(clockicon)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
@@ -423,7 +430,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "q",      awesome.quit),
 
     -- Dropdown terminal
-    awful.key({ modkey,	          }, "z",      function () drop(terminal) end),
+    awful.key({ modkey,	          }, "z",      function () quakeconsole[mouse.screen]:toggle() end),
 
     -- Widgets popups
     awful.key({ altkey,           }, "c",      function () lain.widgets.calendar:show(7) end),
@@ -456,11 +463,10 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, altkey }, "f", function () awful.util.spawn(browser) end),
     awful.key({ modkey, altkey }, "m", function () awful.util.spawn(mail) end),
     awful.key({ modkey, altkey }, "g", function () awful.util.spawn(graphics) end),
-    awful.key({ modkey, altkey }, "t", function () awful.util.spawn(file_manager) end),
+    awful.key({ modkey, altkey }, "s", function () awful.util.spawn(file_manager) end),
     awful.key({ modkey, altkey }, "n", function () awful.util.spawn(audio_ncmpcpp) end),
     awful.key({ modkey, altkey }, "v", function () awful.util.spawn(dev_editor) end),
     awful.key({ modkey, altkey }, "a", function () awful.util.spawn(audio_mixer) end),
-    awful.key({ modkey, altkey }, "e", function () awful.util.spawn(gui_editor) end),
     awful.key({ modkey, altkey }, "i", function () awful.util.spawn(irc_client) end),
     awful.key({ modkey, altkey }, "b", function () awful.util.spawn(bt) end),
 
@@ -660,11 +666,6 @@ awful.rules.rules = {
         properties = { tag = tags[1][5] }
     },
 
-
-    { rule = { name = "Code::Blocks" },
-        properties = { tag = tags[1][5] }
-    },
-
     { rule = { class = "Meld" },
         properties = { tag = tags[1][5] }
     },
@@ -673,17 +674,29 @@ awful.rules.rules = {
         properties = { tag = tags[1][6] }
     },
 
+    { rule = { class = "Telegram" },
+        properties = { tag = tags[1][2] }
+    },
+
     { rule = { class = "Gimp", role = "gimp-image-window" },
         properties = { maximized_horizontal = true,
             maximized_vertical = true
         }
     },
 
-    { rule = { name = "Administrador de archivos" },
+    { rule = { instance = "SpaceFM" },
          properties = { tag = tags[1][4] }
     },
 
-    { rule = { name = "xarchiver" },
+    { rule = { name = "/home/yukiteru" },
+         properties = { tag = tags[1][4] }
+    },
+
+    { rule = { name = "Gestor de Archivadores" },
+        properties = { tag = tags[1][4] }
+    },
+
+    { rule = { class = "Gestor de Archivadores" },
         properties = { tag = tags[1][4] }
     },
 
@@ -732,10 +745,7 @@ awful.rules.rules = {
         properties = { tag = tags[1][2] }
     },
 
-    { rule = { class = "JDownloader 2 BETA", name = "JDownloader 2 BETA" },
-        properties = { tag = tags[1][1]}
-    },
-}
+R}
 
 -- }}}
 
