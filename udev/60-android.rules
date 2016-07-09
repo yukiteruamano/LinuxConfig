@@ -1,0 +1,80 @@
+#Acer
+SUBSYSTEM=="usb", ATTR{idVendor}=="0502", MODE="0664", GROUP="android"
+#ASUS
+SUBSYSTEM=="usb", ATTR{idVendor}=="0b05", MODE="0664", GROUP="android"
+#Dell
+SUBSYSTEM=="usb", ATTR{idVendor}=="413c", MODE="0664", GROUP="android"
+#Foxconn
+SUBSYSTEM=="usb", ATTR{idVendor}=="0489", MODE="0664", GROUP="android"
+#Fujitsu & Fujitsu Toshiba
+SUBSYSTEM=="usb", ATTR{idVendor}=="04c5", MODE="0664", GROUP="android"
+#Garmin-Asus
+SUBSYSTEM=="usb", ATTR{idVendor}=="091e", MODE="0664", GROUP="android"
+#Google
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0664", GROUP="android"
+#Haier
+SUBSYSTEM=="usb", ATTR{idVendor}=="201e", MODE="0664", GROUP="android"
+#Hisense
+SUBSYSTEM=="usb", ATTR{idVendor}=="109b", MODE="0664", GROUP="android"
+#HTC
+SUBSYSTEM=="usb", ATTR{idVendor}=="0bb4", MODE="0664", GROUP="android"
+#Huawei
+SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", MODE="0664", GROUP="android"
+#Intel
+SUBSYSTEM=="usb", ATTR{idVendor}=="8087", MODE="0664", GROUP="android"
+#K-Touch
+SUBSYSTEM=="usb", ATTR{idVendor}=="24e3", MODE="0664", GROUP="android"
+#KT Tech
+SUBSYSTEM=="usb", ATTR{idVendor}=="2116", MODE="0664", GROUP="android"
+#Kyocera
+SUBSYSTEM=="usb", ATTR{idVendor}=="0482", MODE="0664", GROUP="android"
+#Lenovo
+SUBSYSTEM=="usb", ATTR{idVendor}=="17ef", MODE="0664", GROUP="android"
+#LG
+SUBSYSTEM=="usb", ATTR{idVendor}=="1004", MODE="0664", GROUP="android"
+#Motorola
+SUBSYSTEM=="usb", ATTR{idVendor}=="22b8", MODE="0664", GROUP="android"
+#MTK
+SUBSYSTEM=="usb", ATTR{idVendor}=="0e8d", MODE="0664", GROUP="android"
+#NEC
+SUBSYSTEM=="usb", ATTR{idVendor}=="0409", MODE="0664", GROUP="android"
+#Nook
+SUBSYSTEM=="usb", ATTR{idVendor}=="2080", MODE="0664", GROUP="android"
+#Nvidia
+SUBSYSTEM=="usb", ATTR{idVendor}=="0955", MODE="0664", GROUP="android"
+#OTGV
+SUBSYSTEM=="usb", ATTR{idVendor}=="2257", MODE="0664", GROUP="android"
+#Pantech
+SUBSYSTEM=="usb", ATTR{idVendor}=="10a9", MODE="0664", GROUP="android"
+#Pegatron
+SUBSYSTEM=="usb", ATTR{idVendor}=="1d4d", MODE="0664", GROUP="android"
+#Philips
+SUBSYSTEM=="usb", ATTR{idVendor}=="0471", MODE="0664", GROUP="android"
+#PMC-Sierra
+SUBSYSTEM=="usb", ATTR{idVendor}=="04da", MODE="0664", GROUP="android"
+#Qualcomm
+SUBSYSTEM=="usb", ATTR{idVendor}=="05c6", MODE="0664", GROUP="android"
+#SK Telesys
+SUBSYSTEM=="usb", ATTR{idVendor}=="1f53", MODE="0664", GROUP="android"
+#Samsung
+SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", MODE="0664", GROUP="android"
+#Sharp
+SUBSYSTEM=="usb", ATTR{idVendor}=="04dd", MODE="0664", GROUP="android"
+#Sony
+SUBSYSTEM=="usb", ATTR{idVendor}=="054c", MODE="0664", GROUP="android"
+#Sony Ericsson
+SUBSYSTEM=="usb", ATTR{idVendor}=="0fce", MODE="0664", GROUP="android"
+#Teleepoch
+SUBSYSTEM=="usb", ATTR{idVendor}=="2340", MODE="0664", GROUP="android"
+#Toshiba
+SUBSYSTEM=="usb", ATTR{idVendor}=="0930", MODE="0664", GROUP="android"
+#Wileyfox
+SUBSYSTEM=="usb", ATTR{idVendor}=="2970", MODE="0664", GROUP="android"
+#YU
+SUBSYSTEM=="usb", ATTR{idVendor}=="1ebf", MODE="0664", GROUP="android"
+#ZTE
+SUBSYSTEM=="usb", ATTR{idVendor}=="19d2", MODE="0664", GROUP="android"
+#ZUK
+SUBSYSTEM=="usb", ATTR{idVendor}=="2b4c", MODE="0664", GROUP="android"
+#intel
+SUBSYSTEM=="usb", ATTR{idVendor}=="8087", MODE="0664", GROUP="android"
