@@ -1,0 +1,9 @@
+[devfsrules_common=7]
+add path 'da[0-9]\*'	mode 660 group operator
+add path 'acd[0-9]\*'	mode 660 group operator
+add path 'cd[0-9]\*'	mode 660 group operator
+add path 'pass[4-9]\*'	mode 660 group operator
+add path 'xpt[0-9]\*'	mode 660 group operator
+add path 'ugen[0-9]\*'	mode 660 group operator
+add path 'usbctl'	mode 660 group operator
+add path 'usb/\*'	mode 660 group operator
