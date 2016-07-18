@@ -47,23 +47,20 @@ function run_once(cmd)
 end
 
 run_once("urxvtd")
-run_once("mpd /home/yukiteru/.mpd/mpd.conf")
+run_once("musicpd /usr/home/yukiteru/.mpdconf")
 run_once("setxkbmap es")
 run_once("nitrogen --restore")
-run_once("compton --config /home/yukiteru/.config/compton/compton.conf")
+run_once("compton --config /usr/home/yukiteru/.config/compton/compton.conf")
 run_once("numlockx")
-run_once("megasync")
+run_once("xrandr -s 1280x1024")
 run_once("xscreensaver -nosplash ")
 run_once("unclutter -root")
-run_once("parcellite")
-run_once("volumeicon")
 -- }}}
 
 -- {{{ Variable definitions
 
 -- beautiful init
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/numix/theme.lua")
-
 -- common
 modkey     = "Mod4"
 altkey     = "Mod1"
@@ -77,8 +74,8 @@ dev_editor      = "gvim"
 audio_ncmpcpp   = terminal .. " -e ncmpcpp"
 graphics        = "gimp"
 mail            = "thunderbird"
-file_manager    = "spacefm"
-audio_mixer     = "pavucontrol"
+file_manager    = "nautilus --no-desktop"
+audio_mixer     = terminal .. " -e rexima"
 irc_client      = terminal .. " -e weechat-curses"
 bt              = "transmission-gtk"
 
@@ -116,19 +113,20 @@ end
 -- {{{ Menu
 
 myawesomemenu = {
-{"edit config", " gvim /home/yukiteru/.config/awesome/rc.lua"},
+{"edit config", " gvim /usr/home/yukiteru/.config/awesome/rc.lua"},
 {"restart wm", awesome.restart },
-{"reboot", terminal .. " -e 'sudo shutdown -r now'"},
-{"shutdown", terminal .. " -e 'sudo shutdown -h now'"},
+--{"reboot", terminal .. " -e 'sudo shutdown -r now'"},
+--{"shutdown", terminal .. " -e 'sudo shutdown -h now'"},
 {"quit", awesome.quit }
 }
 mygamesmenu = {
 {" PCsxr", "pcsxr"},
-{"Desmume", "/home/yukiteru/bin/desmume.sh"}
+{"Desmume", "desmume"}
 }
 mydevmenu = {
 {" gvim", "gvim"},
-{" Meld", "meld"}
+{" Meld", "meld"},
+{" CodeLite", "codelite"}
 }
 mygraphicsmenu = {
 {" Gimp", "gimp"},
@@ -146,26 +144,24 @@ myofficemenu = {
 {" Impress", "libreoffice --impress"},
 {" Math", "libreoffice --math"},
 {" Writer", "libreoffice --writer"},
-{" Zathura", "zathura",},
-{" Virt-Manager", "virt-manager"}
+{" Evince", "evince",}
 }
 mywebmenu = {
 {" Firefox", "firefox"},
 {" Thunderbird", "thunderbird"},
 {" Transmission", "transmission-gtk"},
-{" Weechat", terminal .. " -e weechat-curses"},
-{" Telegram", "telegram"}
+{" Weechat", terminal .. " -e weechat-curses"}
 }
 mysettingsmenu = {
 {" lxappearance ", "lxappearance"},
 {" xscreensaver", "xscreensaver"}
 }
 mytoolsmenu = {
-{" SpaceFM", "spacefm"},
+{" Nautilus", "nautilus --no-desktop"},
 {" File-roller", "file-roller"}
 }
 mymainmenu = awful.menu({ items = {
-{ " @wesome", myawesomemenu},
+{ "@wesome", myawesomemenu},
 {" development", mydevmenu},
 {" games", mygamesmenu},
 {" graphics", mygraphicsmenu},
@@ -344,7 +340,7 @@ root.buttons(awful.util.table.join(
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
     -- Take a screenshot
-    awful.key({ altkey }, "p", function() os.execute("scrot -e 'mv $f /home/yukiteru/Imágenes/Screenfetch/'") end),
+    awful.key({ altkey }, "p", function() os.execute("scrot -e 'mv $f /usr/home/yukiteru/Imágenes/Screenshots/'") end),
 
     -- Tag browsing
     awful.key({ modkey }, "Left",   awful.tag.viewprev       ),
@@ -461,12 +457,12 @@ globalkeys = awful.util.table.join(
     -- Copy to clipboard
     awful.key({ modkey }, "c", function () os.execute("xsel -p -o | xsel -i -b") end),
     awful.key({ modkey, altkey }, "f", function () awful.util.spawn(browser) end),
-    awful.key({ modkey, altkey }, "m", function () awful.util.spawn(mail) end),
+    awful.key({ modkey, altkey }, "t", function () awful.util.spawn(mail) end),
     awful.key({ modkey, altkey }, "g", function () awful.util.spawn(graphics) end),
-    awful.key({ modkey, altkey }, "s", function () awful.util.spawn(file_manager) end),
-    awful.key({ modkey, altkey }, "n", function () awful.util.spawn(audio_ncmpcpp) end),
+    awful.key({ modkey, altkey }, "n", function () awful.util.spawn(file_manager) end),
+    awful.key({ modkey, altkey }, "a", function () awful.util.spawn(audio_ncmpcpp) end),
     awful.key({ modkey, altkey }, "v", function () awful.util.spawn(dev_editor) end),
-    awful.key({ modkey, altkey }, "a", function () awful.util.spawn(audio_mixer) end),
+    awful.key({ modkey, altkey }, "m", function () awful.util.spawn(audio_mixer) end),
     awful.key({ modkey, altkey }, "i", function () awful.util.spawn(irc_client) end),
     awful.key({ modkey, altkey }, "b", function () awful.util.spawn(bt) end),
 
@@ -674,30 +670,10 @@ awful.rules.rules = {
         properties = { tag = tags[1][6] }
     },
 
-    { rule = { class = "Telegram" },
-        properties = { tag = tags[1][2] }
-    },
-
     { rule = { class = "Gimp", role = "gimp-image-window" },
         properties = { maximized_horizontal = true,
             maximized_vertical = true
         }
-    },
-
-    { rule = { instance = "SpaceFM" },
-         properties = { tag = tags[1][4] }
-    },
-
-    { rule = { name = "/home/yukiteru" },
-         properties = { tag = tags[1][4] }
-    },
-
-    { rule = { name = "Gestor de Archivadores" },
-        properties = { tag = tags[1][4] }
-    },
-
-    { rule = { class = "Gestor de Archivadores" },
-        properties = { tag = tags[1][4] }
     },
 
     { rule = { class = "libreoffice-impress" },
@@ -729,6 +705,15 @@ awful.rules.rules = {
     },
 
     { rule = { class = "URxvt", name = "ncmpcpp"},
+        properties = { floating = true},
+            callback = function (c)
+            current_tag = tags[mouse.screen][awful.tag.getidx()]
+            tag = current_tag
+            awful.client.movetotag(tag, c)
+        end
+    },
+
+    { rule = { class = "URxvt", name = "rexima"},
         properties = { floating = true},
             callback = function (c)
             current_tag = tags[mouse.screen][awful.tag.getidx()]
