@@ -1,3 +1,0 @@
-media-video/ffmpeg aacplus amr gsm libass openssl opus speex vpx webp
-virtual/ffmpeg gsm opus speex threads
-
