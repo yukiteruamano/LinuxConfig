@@ -1,0 +1,4 @@
+app-emulation/libvirt-glib introspection
+net-misc/spice-gtk introspection usbredir gtk3
+net-libs/gtk-vnc introspection
+
