@@ -1,0 +1,11 @@
+Package: firefox
+Pin: release a=unstable
+Pin-Priority: 900
+
+Package: firefox-l10n-*
+Pin: release a=unstable
+Pin-Priority: 900
+
+Package: *
+Pin: release a=unstable
+Pin-Priority: -100
