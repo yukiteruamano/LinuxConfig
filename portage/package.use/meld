@@ -1,5 +1,0 @@
->=x11-libs/gtk+-3.20.9 introspection
->=x11-libs/gdk-pixbuf-2.36.2 introspection
->=dev-libs/atk-2.20.0 introspection
->=x11-libs/gtksourceview-3.20.4 introspection
-

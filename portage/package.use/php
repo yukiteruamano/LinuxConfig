@@ -1,2 +1,0 @@
-dev-lang/php apache2 cgi curl fpm ftp gd imap intl mysql pdo threads zip
-app-eselect/eselect-php fpm apache2
