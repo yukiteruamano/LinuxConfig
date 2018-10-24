@@ -1,11 +1,14 @@
+# Firefox desde SID con Pin-Priority: 900
 Package: firefox
 Pin: release a=unstable
 Pin-Priority: 900
 
+# Firefox-l10n desde SID con Pin-Priority: 900
 Package: firefox-l10n-*
 Pin: release a=unstable
 Pin-Priority: 900
 
+# El resto de paquetes desde unstable con Pin-Priority: -100
 Package: *
 Pin: release a=unstable
 Pin-Priority: -100

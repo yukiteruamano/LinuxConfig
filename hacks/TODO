@@ -1,0 +1,22 @@
+# TODO para volfread-hacks
+
+1) Hacer que el script sea completamente configurable de /etc/volfread-hacks/config
+	IO_SCHED=value
+	CPU_GOVERNOR_SCALING=value
+	CPU_GOVERNOR_MODULE=value
+
+2) Hacer que el script de instalacion reconozca los CPU y de una lista de los governors y scaling driver que soporta.
+	Enfasis en intel_pstate, schedutil y acpi_cpufreq
+
+3) Crear los /etc/modules y blacklists necesarios para su correcta implementación
+
+4) Unir la configuracion con soporte para sysctl.
+
+5) Repositorio propio para mejorar el soporte cross-distro 
+
+6) Hacer que el valor IO_SCHED se configure para todos los dispositivos desde boot-time usando la opcion elevator=bfq de la linea de comandos del kernel
+	ADVERTENCIA: Se debe tener cuidado de agregar los modulos IO_SCHED en el initramfs para asegurar la estabilidad del boot.
+
+7) Incluir seguridad con apparmor-profiles.
+
+8) Logging de todas las acciones y verificacion de las opciones en cada boot.
