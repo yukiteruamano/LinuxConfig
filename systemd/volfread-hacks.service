@@ -1,10 +1,8 @@
 [Unit]
 Description=Volfread hacks service
-After=firehol.service
 
 [Service]
 ExecStart=/usr/local/bin/volfread-hacks.sh
 
 [Install]
-WantedBy=multi-user.target
-
+WantedBy=default.target
