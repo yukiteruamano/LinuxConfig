@@ -21,6 +21,8 @@ ProtectSystem=yes
 NoNewPrivileges=yes
 ProtectKernelTunables=yes
 ProtectControlGroups=yes
+NoNewPrivileges=true
+ProtectSystem=strict
 # AF_NETLINK is required by libsmbclient, or it will exit() .. *sigh*
 RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX AF_NETLINK
 RestrictNamespaces=yes
@@ -31,4 +33,4 @@ RestrictNamespaces=yes
 # permitted")
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
