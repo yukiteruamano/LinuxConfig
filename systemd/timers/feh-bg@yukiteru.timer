@@ -1,5 +1,5 @@
 [Unit]
-Description=Run command stily.sh hourly
+Description=Change bg with feh hourly
 
 [Timer]
 OnCalendar=hourly
