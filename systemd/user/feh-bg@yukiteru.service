@@ -1,5 +1,5 @@
 [Unit]
-Description=Stylish change wallpaper
+Description=Feh change wallpaper
 
 [Service]
 Type=oneshot
