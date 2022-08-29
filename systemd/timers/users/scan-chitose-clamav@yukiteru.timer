@@ -1,0 +1,11 @@
+[Unit]
+Description=Scan chitose weekly
+
+[Timer]
+#OnCalendar=weekly
+OnCalendar=Fri *-*-* 22:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+

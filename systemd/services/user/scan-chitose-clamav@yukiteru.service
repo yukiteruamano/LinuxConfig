@@ -1,0 +1,20 @@
+[Unit]
+Description=Clamscan scan chitose weekly
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/clamscan-chitose.sh 
+
+# disallow writing to /usr, /bin, /sbin, ...
+# more paranoid security settings
+ProtectSystem=yes
+NoNewPrivileges=yes
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+NoNewPrivileges=true
+ProtectSystem=strict
+RestrictNamespaces=yes
+
+[Install]
+WantedBy=default.target
+
