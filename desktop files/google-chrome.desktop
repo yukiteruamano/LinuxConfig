@@ -105,7 +105,10 @@ Comment[vi]=Truy cập Internet
 Comment[zh_CN]=访问互联网
 Comment[zh_HK]=連線到網際網路
 Comment[zh_TW]=連線到網際網路
-Exec=/usr/bin/google-chrome-stable --use-gl=desktop --enable-features=VaapiVideoDecoder %U
+# For X11 or Xwayland
+Exec=/usr/bin/google-chrome-stable --use-gl=desktop --enable-features=VaapiVideoDecoder,VaapiVideoEncoder 
+# For Wayland
+# Exec=/usr/bin/google-chrome-stable --ozone-platform-hint=auto --enable-features=VaapiVideoDecoder,VaapiVideoEncoder,UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland
 StartupNotify=true
 Terminal=false
 Icon=google-chrome
@@ -165,7 +168,10 @@ Name[uk]=Нове вікно
 Name[vi]=Cửa sổ Mới
 Name[zh_CN]=新建窗口
 Name[zh_TW]=開新視窗
-Exec=/usr/bin/google-chrome-stable --use-gl=desktop --enable-features=VaapiVideoDecoder
+# For X11 or Xwayland
+Exec=/usr/bin/google-chrome-stable --use-gl=desktop --enable-features=VaapiVideoDecoder,VaapiVideoEncoder 
+# For Wayland
+# Exec=/usr/bin/google-chrome-stable --ozone-platform-hint=auto --enable-features=VaapiVideoDecoder,VaapiVideoEncoder,UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland
 
 [Desktop Action new-private-window]
 Name=New Incognito Window
@@ -217,5 +223,8 @@ Name[uk]=Нове вікно в режимі анонімного перегля
 Name[vi]=Cửa sổ ẩn danh mới
 Name[zh_CN]=新建隐身窗口
 Name[zh_TW]=新增無痕式視窗
-Exec=/usr/bin/google-chrome-stable --use-gl=desktop --enable-features=VaapiVideoDecoder --incognito
+# For X11 or Xwayland
+Exec=/usr/bin/google-chrome-stable --use-gl=desktop --enable-features=VaapiVideoDecoder,VaapiVideoEncoder --incognito
+# For Wayland
+# Exec=/usr/bin/google-chrome-stable --ozone-platform-hint=auto --enable-features=VaapiVideoDecoder,VaapiVideoEncoder,UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --incognito
 MimeType=x-scheme-handler/unknown;x-scheme-handler/about;application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/http;x-scheme-handler/https;

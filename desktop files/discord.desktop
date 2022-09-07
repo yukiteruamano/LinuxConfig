@@ -3,7 +3,10 @@ Name=Discord
 StartupWMClass=discord
 Comment=All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.
 GenericName=Internet Messenger
+# For X11 or Xwayland
 Exec=/usr/bin/Discord
+# For Wayland
+# Exec=/usr/bin/Discord --ozone-platform-hint=auto --enable-features=VaapiVideoDecoder,VaapiVideoEncoder,UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland
 Icon=/usr/lib64/discord/discord.png
 Type=Application
 Categories=Network;InstantMessaging;
