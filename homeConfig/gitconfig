@@ -1,0 +1,24 @@
+[user]
+	name = 
+	email = 
+	signingkey = 
+[core]
+	editor = nano
+[init]
+	defaultBranch = master
+
+# Add the following to your .gitconfig file.
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+
+# Add the following to your .gitconfig file.
+[merge]
+	tool = meld
+[mergetool "meld"]
+	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+[commit]
+	gpgsign = true
