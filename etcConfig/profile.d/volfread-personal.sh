@@ -1,0 +1,14 @@
+# ENV for the X11 session
+export EDITOR="vim"
+export PAGER="less"
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export GOPATH="${HOME}/.golang"
+export MOZ_ACCELERATED=1
+export MOZ_WEBRENDER=1
+export MOZ_ENABLE_WAYLAND=1
+export FREETYPE_PROPERTIES="cff:no-stem-darkening=0.0 autofitter:no-stem-darkening=0.0"
+export QT_QPA_PLATFORM="wayland"
+export XDG_SESSION_TYPE="wayland"
+export XDG_SESSION_DESKTOP="sway"
+export XDG_CURRENT_DESKTOP="sway"
+export SDL_VIDEODRIVER="wayland"

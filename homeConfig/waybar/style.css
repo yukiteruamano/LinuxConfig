@@ -1,0 +1,110 @@
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 10pt;
+  font-weight: bold;
+  border-radius: 0px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+@keyframes blink_red {
+  to {
+    background-color: rgb(242, 143, 173);
+    color: rgb(26, 24, 38);
+  }
+}
+.warning, .critical, .urgent {
+  animation-name: blink_red;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 15;
+  animation-direction: alternate;
+}
+window#waybar {
+  background-color: transparent;
+}
+window > box {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  background-color: rgb(30, 30, 46);
+}
+#workspaces {
+  padding-left: 0px;
+  padding-right: 4px;
+}
+#workspaces button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+#workspaces button.focused {
+  background-color: rgb(181, 232, 224);
+  color: rgb(26, 24, 38);
+}
+#workspaces button.urgent {
+  color: rgb(217, 224, 238);
+}
+#workspaces button:hover {
+  background-color: rgb(248, 189, 150);
+  color: rgb(26, 24, 38);
+}
+tooltip {
+  background: rgb(48, 45, 65);
+}
+tooltip label {
+  color: rgb(217, 224, 238);
+}
+#custom-launcher {
+  padding-left: 8px;
+  padding-right: 6px;
+  color: #c0caf5;
+}
+#mode, #clock, #memory, #temperature, #cpu, #mpd, #idle_inhibitor, #pulseaudio, #network, #language {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#language {
+  color: #ABE9B3;
+}
+#memory {
+  color: #ABE9B3;
+}
+#cpu {
+  color: #ABE9B3;
+}
+#clock {
+  color: rgb(217, 224, 238);
+}
+#idle_inhibitor {
+  color: rgb(221, 182, 242);
+}
+#temperature {
+  color: rgb(150, 205, 251);
+}
+#pulseaudio {
+  color: rgb(150, 205, 251);
+}
+#network {
+ color: rgb(150, 205, 251);
+}
+#network.disconnected {
+  color: rgb(255, 255, 255);
+}
+#network.wg {
+  color: #ABE9B3;
+}
+#tray {
+  padding-right: 8px;
+  padding-left: 10px;
+}
+#mpd.paused {
+  color: #414868;
+  font-style: italic;
+}
+#mpd.stopped {
+  background: transparent;
+}
+#mpd {
+  color: #c0caf5;
+}

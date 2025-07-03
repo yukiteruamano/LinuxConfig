@@ -26,7 +26,17 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Personal exports
-QT_QPA_PLATFORMTHEME='qt5ct';                       		export QT_QPA_PLATFORMTHEME
-
-. "$HOME/.cargo/env"
+# ENV for the X11 session
+export EDITOR="vim"
+export PAGER="less"
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export GOPATH="${HOME}/.golang"
+export MOZ_ACCELERATED=1
+export MOZ_WEBRENDER=1
+export FREETYPE_PROPERTIES="cff:no-stem-darkening=0.0 autofitter:no-stem-darkening=0.0"
+export QT_QPA_PLATFORM="wayland"
+export XDG_SESSION_TYPE="wayland"
+export XDG_SESSION_DESKTOP="sway"
+export XDG_CURRENT_DESKTOP="sway"
+export SDL_VIDEODRIVER="wayland"
+export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library"

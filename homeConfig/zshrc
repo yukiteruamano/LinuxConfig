@@ -1,16 +1,20 @@
 # If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # GOPATH
 export GOPATH=$HOME/.golang
 
-# PATH from system
-export PATH=$HOME/.config/emacs/bin/:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+# Rust src path
+export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library"
 
-# Path to your oh-my-zsh installation.
+# PATH from system
+export PATH=$GOPATH/bin:$HOME/.config/emacs/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH
+
+# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
+# load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="bira"
@@ -75,22 +79,36 @@ ZSH_THEME="bira"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux fzf)
+plugins=(git tmux)
 
 # Tmux autostart
 ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_CONFIG=$HOME/.config/tmux/tmux.conf
+ZSH_TMUX_CONFIG=$HOME/.tmux.conf
 
-# Cargamos todo oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 #####################################################################
 # Personal configs
 #####################################################################
 
-# PIPENV
-export PIPENV_VENV_IN_PROJECT=1
-eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Exports personales
+export EDITOR="vim"
+export PAGER="less"
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export MOZ_ACCELERATED=1
+export MOZ_WEBRENDER=1
+export FREETYPE_PROPERTIES="cff:no-stem-darkening=0.0 autofitter:no-stem-darkening=0.0"
+export QT_QPA_PLATFORM="wayland"
+export XDG_SESSION_TYPE="wayland"
+export XDG_SESSION_DESKTOP="sway"
+export XDG_CURRENT_DESKTOP="sway"
+export SDL_VIDEODRIVER="wayland"
+
+# GPG
+export GPG_TTY=`tty`
 
 # Direnv
 eval "$(direnv hook zsh)"
@@ -110,10 +128,3 @@ keychain ~/.ssh/id_ed25519
 
 # Clean PATH duplication
 typeset -U path
-
-# QT
-QT_QPA_PLATFORMTHEME='qt5ct';                                   export QT_QPA_PLATFORMTHEME
-EDITOR='nano';							export EDITOR
-PAGER='less';							export PAGER
-
-

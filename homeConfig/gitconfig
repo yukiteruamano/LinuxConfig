@@ -1,9 +1,9 @@
 [user]
-	name = 
+	name = Jose Maldonado aka Yukiteru
 	email = 
 	signingkey = 
 [core]
-	editor = nano
+	editor = vim
 [init]
 	defaultBranch = master
 
