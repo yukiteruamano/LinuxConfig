@@ -40,3 +40,4 @@ export XDG_SESSION_DESKTOP="sway"
 export XDG_CURRENT_DESKTOP="sway"
 export SDL_VIDEODRIVER="wayland"
 export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library"
+export MOZ_ENABLE_WAYLAND=1

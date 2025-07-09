@@ -29,8 +29,11 @@ bindsym $mod+comma workspace prev
 #-----------------------------#
 
 # systemd enviroment
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+#exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+#exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+
+# seatd and elogind
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --all
 
 # Borders and gaps
 default_border pixel 3
@@ -80,21 +83,30 @@ smart_borders on
 #-----------#
 # Autostart #
 #-----------#
-    exec_always --no-startup-id "$HOME/.config/waybar/launch_waybar.sh &"
+    #exec /usr/libexec/xdg-desktop-portal-gtk -r
+    #exec /usr/libexec/xdg-desktop-portal-wlr -r
+    #exec /usr/libexec/flatpak-portal -r
+    #exec "sh -c 'sleep 5;exec /usr/libexec/xdg-desktop-portal -r'"
+
+    exec_always --no-startup-id "bash $HOME/.config/waybar/launch_waybar.sh"
     exec_always --no-startup-id "mpd $HOME/.config/mpd/mpd.conf"
-    exec_always --no-startup-id "nm-applet"
+    exec_always --no-startup-id "pipewire"
+    exec_always --no-startup-id "pipewire-pulse"
+    exec_always --no-startup-id "nwg-look -a"
+    exec_always --no-startup-id "xsettingsd -c $HOME/.config/xsettingsd/xsettingsd.conf"
+    exec_always --no-startup-id "mako"
 
 #----------------#
 # set gtk+ theme #
 #----------------#
-    set $gnome-schema org.gnome.desktop.interface
-    exec_always {
-        gsettings set $gnome-schema gtk-theme 'Colloid-Dark-Catppuccin'
-        gsettings set $gnome-schema icon-theme 'Colloid-Catppuccin-Dark'
-        gsettings set $gnome-schema cursor-theme 'Adwaita'
-        gsettings set $gnome-schema color-scheme 'prefer-dark'
-        gsettings set $gnome-schema font-name 'Fira Code 10'
-    }
+    #set $gnome-schema org.gnome.desktop.interface
+    #exec_always {
+    #    gsettings set $gnome-schema gtk-theme 'Colloid-Dark-Catppuccin'
+    #    gsettings set $gnome-schema icon-theme 'Colloid-Catppuccin-Dark'
+    #    gsettings set $gnome-schema cursor-theme 'Adwaita'
+    #    gsettings set $gnome-schema color-scheme 'prefer-dark'
+    #    gsettings set $gnome-schema font-name 'Fira Code 10'
+    #}
 
 #----------------------------------------#
 # window colours: border background text #
@@ -132,7 +144,7 @@ smart_borders on
     ### Output configuration
     #
     # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-    #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+    # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     #
     # Example configuration:
     #
@@ -140,10 +152,10 @@ smart_borders on
     #
     # You can get the names of your outputs by running: swaymsg -t get_outputs
     # exec_always --no-startup-id swaybg -i ~/.config/sway/wallpaper/02.png 
-    exec_always --no-startup-id swaybg -i ~/Imágenes/Wallpapers/007-wallpaper.png -m fill
+    exec_always --no-startup-id swaybg -i $HOME/.lock.png -m fill
 
     # Resolution
-    output DP-1 resolution 3440x1440@60Hz subpixel rgb adaptive_sync off 
+    output * resolution 3440x1440@60Hz subpixel rgb adaptive_sync off 
     
 #--------------------#
 # Idle configuration #
@@ -190,10 +202,10 @@ smart_borders on
 
     # Work quick access
     bindsym $mod+Shift+F5 exec "thunar"
-    bindsym $mod+Shift+F6 exec "bash $HOME/.local/bin/launch-google-chrome"
+    bindsym $mod+Shift+F6 exec "bash $HOME/.local/bin/launch-chromium"
     bindsym $mod+Shift+F7 exec "thunderbird"
     bindsym $mod+Shift+F8 exec "firefox"
-    bindsym $mod+Shift+t exec "flatpak run org.telegram.desktop"
+    bindsym $mod+Shift+t exec "telegram-desktop"
     bindsym $mod+Shift+p exec "pavucontrol"
 
     # Audio quick access
