@@ -80,7 +80,7 @@
 
 (after! flycheck
   ;; Flycheck for Clang
-  (setq-default flycheck-c/c++-clang-executable "/usr/local/bin/clang")
+  (setq-default flycheck-c/c++-clang-executable "/usr/bin/clang")
 )
 
 ;; =========================================================================
@@ -140,7 +140,7 @@
 ;; LSP MODE
 ;; Clangd LSP
 (after! lsp-clangd
-  (setq lsp-clangd-binary-path "/usr/local/bin/clangd")
+  (setq lsp-clangd-binary-path "/usr/bin/clangd")
   (setq lsp-clients-clangd-args
         '("-j=4"
           "--background-index"
@@ -155,9 +155,9 @@
 ;; =========================================================================
 
 ;; Python3 configuration
-(setq python-shell-interpreter "/usr/local/bin/python3.11")
-(setq flycheck-python-pycompile-executable "/usr/local/bin/python3.11")
-(setq python-shell-exec-path "/usr/local/bin/python3.11")
+(setq python-shell-interpreter "/usr/bin/python")
+(setq flycheck-python-pycompile-executable "/usr/lbin/python")
+(setq python-shell-exec-path "/usr/bin/python")
 
 ;; Python MS Stubs (Sync for Git)
 (setq lsp-pyright-use-library-code-for-types t) 

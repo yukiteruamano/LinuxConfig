@@ -4,7 +4,7 @@ if [ "$is_waybar_ServerExist" = "0" ]; then
 	echo "waybar_server not found" > /dev/null 2>&1
 #	exit;
 elif [ "$is_waybar_ServerExist" = "1" ]; then
-  killall waybar
+   pkill waybar
 fi
 
 SDIR="$HOME/.config/waybar"
