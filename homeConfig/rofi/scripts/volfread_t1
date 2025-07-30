@@ -63,9 +63,9 @@ run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
-			systemctl poweroff
+			loginctl poweroff
 		elif [[ $1 == '--reboot' ]]; then
-			systemctl reboot
+			loginctl reboot
 		elif [[ $1 == '--logout' ]]; then
 			swaymsg exit
 		fi
@@ -84,10 +84,10 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $novpn)
-		nmcli connection down VPN-Personal
+		doas wg-quick down wg0
         ;;
     $wireguard)
-		nmcli connection up VPN-Personal 
+		doas wg-quick up wg0
 	;;
     $lock)
 		swaylock -t -i /home/yukiteru/.lock.png --color=000000

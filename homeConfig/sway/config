@@ -178,14 +178,14 @@ bindsym $mod+Shift+Print	exec --no-startup-id grimshot copy area
 
 ## Work quick access
 bindsym $mod+Shift+F5		exec "thunar"
-bindsym $mod+Shift+F6		exec "bash $HOME/.local/bin/launch-chromium"
+bindsym $mod+Shift+F6		exec "chromium"
 bindsym $mod+Shift+F7		exec "thunderbird"
 bindsym $mod+Shift+F8		exec "firefox"
 bindsym $mod+Shift+t		exec "telegram-desktop"
 bindsym $mod+Shift+p		exec "pavucontrol"
 
 ## Audio quick access
-bindsym $mod+Shift+F9		exec "alacritty -e ncmpcpp"
+bindsym $mod+Shift+F9		exec "alacritty --class=ncmpcpp -e ncmpcpp"
 bindsym $mod+Shift+F1		exec "mpc stop"
 bindsym $mod+Shift+F2		exec "mpc prev"
 bindsym $mod+Shift+F3		exec "mpc play"

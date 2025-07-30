@@ -1,30 +1,13 @@
-# /etc/fstab: static file system information.
-#
-# Use 'blkid' to print the universally unique identifier for a
-# device; this may be used with UUID= as a more robust way to name devices
-# that works even if disks are added and removed. See fstab(5).
-#
-# systemd generates mount units based on this file, see systemd.mount(5).
-# Please run 'systemctl daemon-reload' after making changes here.
-#
-# <file system> <mount point>   <type>  <options>       <dump>  <pass>
-# / was on /dev/nvme0n1p2 during installation
-UUID=6a4f8e2f-bc57-4c31-828a-eccb8dfa6ae4 /               xfs     defaults        0       0
-# /boot/efi was on /dev/nvme0n1p1 during installation
-UUID=25C9-512A  /boot/efi       vfat    umask=0077      0       1
-# /home was on /dev/nvme0n1p6 during installation
-UUID=c95b6a71-bd42-4f16-af22-af1e3c206512 /home           xfs     defaults        0       0
-# /tmp was on /dev/nvme0n1p5 during installation
-UUID=cdc740ff-65b4-4329-b1ba-fd27724042da /tmp            xfs     defaults        0       0
-# /var was on /dev/nvme0n1p3 during installation
-UUID=4bd54995-cbe4-4b6b-902c-d02f065f47c2 /var            xfs     defaults        0       0
-# swap was on /dev/nvme0n1p4 during installation
-UUID=2658ef13-a652-40d1-b465-440bb9cf25fc none            swap    sw              0       0
+UUID=f3801b70-eeab-4c51-bbcb-0b79fe4eee54 / xfs defaults 0 0
+UUID=294132a1-a8f2-488b-afc2-fbd2fbaba90f none swap defaults 0 0
+UUID=99F7-F138 /boot/efi vfat defaults 0 2
+UUID=68bff526-41c6-4395-b2c3-7fc182ff3704 /home xfs defaults 0 0
+tmpfs /tmp tmpfs defaults,nosuid,nodev 0 0
 
 # NFS
 truenas.home.arpa:/mnt/zpool-data/NFS	/mnt/NFS	nfs	defaults	0	0
 
 # Discos
 UUID=0ebf7007-1839-48ea-bc13-27b0eaac913b	/mnt/DATA	xfs	defaults	0	1
-UUID=e048e210-5633-435e-9a54-be8a76a7ad37	/mnt/VM		xfs	defaults	0	1
+UUID=a774310e-ef04-4572-8d5a-35025dfbbcd3	/mnt/VM		xfs	defaults	0	1
 UUID=10c14f94-9fc9-4a42-977a-923cf5cc9487	/mnt/WORK	xfs	defaults	0	1
