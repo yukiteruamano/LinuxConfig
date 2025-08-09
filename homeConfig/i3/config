@@ -1,0 +1,261 @@
+# i3 config file (v4)
+
+# Setting color for theme
+
+set $rosewater #f4dbd6
+set $flamingo #f0c6c6
+set $pink #f5bde6
+set $mauve #c6a0f6
+set $red #ed8796
+set $maroon #ee99a0
+set $peach #f5a97f
+set $yellow #eed49f
+set $green #a6da95
+set $teal #8bd5ca
+set $sky #91d7e3
+set $sapphire #7dc4e4
+set $blue #8aadf4
+set $lavender #b7bdf8
+set $text #cad3f5
+set $subtext1 #b8c0e0
+set $subtext0 #a5adcb
+set $overlay2 #939ab7
+set $overlay1 #8087a2
+set $overlay0 #6e738d
+set $surface2 #5b6078
+set $surface1 #494d64
+set $surface0 #363a4f
+set $base #24273a
+set $mantle #1e2030
+set $crust #181926
+
+# I prefer to use the Win key as the mod key.
+set $mod Mod4
+
+# Default font for i3.
+font pango:Fira Code 9
+
+# Use Mouse+$mod to drag floating windows to their wanted position.
+floating_modifier $mod
+
+# Disable focus following the mouse.
+focus_follows_mouse no
+
+# Kill focused window.
+bindsym $mod+Shift+q kill
+
+# Chance focus.
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Alternatively use arrow keys.
+bindsym $mod+Left	focus left
+bindsym $mod+Down	focus down
+bindsym $mod+Up		focus up
+bindsym $mod+Right	focus right
+
+# Move focused window.
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Alternatively use arrow keys.
+bindsym $mod+Shift+Left		move left
+bindsym $mod+Shift+Down		move down
+bindsym $mod+Shift+Up		move up
+bindsym $mod+Shift+Right	move right
+
+# Split in horizontal orientation.
+bindsym $mod+t split h
+
+# Split in vertical orientation.
+bindsym $mod+v split v
+
+# Enter fullscreen mode for the focused container.
+bindsym $mod+f fullscreen toggle
+
+# Change container layout (stacked, tabbed, toggle split).
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle tiling / floating.
+bindsym $mod+Shift+space floating toggle
+
+# Change focus between tiling / floating windows.
+bindsym $mod+space focus mode_toggle
+
+# Focus the parent container.
+#bindsym $mod+a focus parent
+
+# Focus the child container.
+#bindsym $mod+d focus child
+
+# Workspace definition
+workspace 1 output DP-1
+workspace 2 output DP-1
+workspace 3 output DP-1
+workspace 4 output DP-1
+workspace 5 output DP-1
+workspace 6 output DP-1
+workspace 7 output DP-1
+workspace 8 output DP-1
+workspace 9 output DP-1
+workspace 10 output DP-1
+
+# Switch to workspace.
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# Move focused container to workspace.
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# Disable title bars.
+for_window [class="^.*"] border pixel 0
+
+# Key combination for dmenu.
+bindsym $mod+d exec "bash $HOME/.config/rofi/launchers/type-1/launcher.sh"
+
+# Key combination for some of my favorite applications.
+bindsym $mod+Return exec "alacritty"
+
+# Work quick access
+bindsym $mod+Shift+F5 exec "thunar"
+bindsym $mod+Shift+F6 exec "chromium"
+bindsym $mod+Shift+F7 exec "thunderbird"
+bindsym $mod+Shift+F8 exec "firefox"
+bindsym $mod+Shift+g exec "gimp"
+bindsym $mod+Shift+t exec "telegram-desktop"
+
+# Audio quick access
+bindsym $mod+Shift+F9 exec "alacritty -e ncmpcpp"
+bindsym $mod+Shift+F1 exec "mpc stop"
+bindsym $mod+Shift+F2 exec "mpc prev"
+bindsym $mod+Shift+F3 exec "mpc play"
+bindsym $mod+Shift+F4 exec "mpc next"
+bindsym $mod+Shift+F10 exec "mixer vol=-0.1"
+bindsym $mod+Shift+F11 exec "mixer vol=+0.1"
+bindsym $mod+Shift+F12 exec "pavucontrol"
+
+# Map the print key to gnome-screenshot.
+bindsym $mod+Shift+Print exec "flameshot gui'"
+
+# Some applications needs to be floating. mpv is one of them.
+for_window [class="mpv"] floating enable
+
+# Let's try to get most pop-up windows floating.
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+
+# Screen lock. See 'man i3lock' for information about usage.
+bindsym $mod+Control+l exec "i3lock -t -i $HOME/.lock.png --color=000000"
+
+# Jump to the latest "urgent" window.
+bindsym $mod+u [urgent=latest] focus
+
+# Reload the configuration file.
+bindsym $mod+Shift+r reload
+
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3).
+bindsym $mod+Shift+e restart
+
+# Exit i3 (logs you out of your X session).
+bindsym $mod+Shift+Escape exec "bash $HOME/.config/rofi/scripts/volfread_t1"
+
+# Shutdown and reboot pc
+bindsym $mod+Control+F1		exec "i3-nagbar -t warning -m 'Reboot system?' -b 'Yes, reboot!' 'shutdown -r now'"
+bindsym $mod+Control+Escape	exec "i3-nagbar -t warning -m 'Shutdown system?' -b 'Yes, shutdown!' 'shutdown -p now'"
+
+# Resize window (you can also use the mouse for that).
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode.
+        bindsym h resize shrink	width	10 px or 10 ppt
+        bindsym j resize grow	height	10 px or 10 ppt
+        bindsym k resize shrink height	10 px or 10 ppt
+        bindsym l resize grow	width	10 px or 10 ppt
+
+        # Same bindings, but for the arrow keys.
+        bindsym Left resize	shrink	width 10 px or 10 ppt
+        bindsym Down resize	grow	height 10 px or 10 ppt
+        bindsym Up resize	shrink	height 10 px or 10 ppt
+        bindsym Right resize	grow	width 10 px or 10 ppt
+
+        # Back to normal: Enter or Escape.
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# Resize windows.
+bindsym $mod+r mode "resize"
+
+# Mocha theme
+# target                 title     bg    text   indicator  border
+client.focused           $pink     $base $text  $rosewater $blue
+client.focused_inactive  $mauve    $base $text  $rosewater $mauve
+client.unfocused         $mauve    $base $text  $rosewater $mauve
+client.urgent            $peach    $base $peach $overlay0  $blue
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
+
+## Autostart applicatons ##
+
+# Xsettingsd
+exec --no-startup-id "xsettingsd -c $HOME/.config/xsettingsd/xsettingsd.conf"
+
+# Picom
+exec --no-startup-id "picom --config $HOME/.config/picom/config"
+
+# MPD Music
+exec --no-startup-id "mpd $HOME/.config/mpd/mpd.conf"
+
+# Unclutter
+exec --no-startup-id "unclutter -root"
+
+# Dunst
+exec --no-startup-id "dunst -conf $HOME/.config/dunst/dunstrc"
+
+# Numlockx
+exec --no-startup-id "numlockx"
+
+# Keyboard in spanish
+exec --no-startup-id "setxkbmap -layout us -variant intl"
+
+# Polybar
+exec --no-startup-id "bash $HOME/.config/polybar/launch.sh"
+
+# Parcellite
+exec --no-startup-id "parcellite"
+
+# Parcellite
+exec --no-startup-id "flameshot"
+
+# Polkit
+exec --no-startup-id "/usr/libexec/polkit-gnome-authentication-agent-1"
+
+# Wallpapers
+exec --no-startup-id "nitrogen --restore"
+
