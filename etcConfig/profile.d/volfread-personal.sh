@@ -1,4 +1,3 @@
-# ENV for the X11 session
 export EDITOR="vim"
 export PAGER="less"
 export QT_QPA_PLATFORMTHEME="qt6ct"
@@ -12,4 +11,7 @@ export XDG_SESSION_TYPE="wayland"
 export XDG_SESSION_DESKTOP="sway"
 export XDG_CURRENT_DESKTOP="sway"
 export SDL_VIDEODRIVER="wayland"
-export RUST_SRC_PATH="/usr/lib/rustlib/src/rust/library"
+export RUST_SRC_PATH="/usr/src/rustc-1.85.0/library"
+export XCURSOR_SIZE=24
+export XCURSOR_THEME="breeze_cursors"
+export _JAVA_AWT_WM_NONREPARENTING=1

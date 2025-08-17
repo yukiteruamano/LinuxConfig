@@ -1,5 +1,5 @@
 window {
-	background-image: url("/usr/share/nwg-hello/nwg.jpg"); background-size: auto 100%
+	background-image: url("/usr/share/nwg-hello/nwg.jpg"); background-size: 100% 100%
 }
 
 #form-wrapper {
@@ -14,7 +14,8 @@ entry {
 }
 
 button {
-	background: rgba(255, 255, 255, 0.1) none;
+	background: none;
+	background-color: rgba(255, 255, 255, 0.1);
 	border: 1px solid #eee;
 	border-radius: 18px;
 	padding: 12px

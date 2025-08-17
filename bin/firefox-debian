@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ssh -Y yukiteru@debian12-warp.home.arpa firefox-esr

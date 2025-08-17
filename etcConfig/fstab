@@ -1,13 +1,7 @@
-UUID=f3801b70-eeab-4c51-bbcb-0b79fe4eee54 / xfs defaults 0 0
-UUID=294132a1-a8f2-488b-afc2-fbd2fbaba90f none swap defaults 0 0
-UUID=99F7-F138 /boot/efi vfat defaults 0 2
-UUID=68bff526-41c6-4395-b2c3-7fc182ff3704 /home xfs defaults 0 0
-tmpfs /tmp tmpfs defaults,nosuid,nodev 0 0
+# Personal
+UUID=a774310e-ef04-4572-8d5a-35025dfbbcd3	/mnt/VM		xfs	defaults	1 2
+UUID=0ebf7007-1839-48ea-bc13-27b0eaac913b	/mnt/DATA	xfs	defaults	1 2
+UUID=10c14f94-9fc9-4a42-977a-923cf5cc9487	/mnt/WORK	xfs	defaults	1 2
 
 # NFS
-truenas.home.arpa:/mnt/zpool-data/NFS	/mnt/NFS	nfs	defaults	0	0
-
-# Discos
-UUID=0ebf7007-1839-48ea-bc13-27b0eaac913b	/mnt/DATA	xfs	defaults	0	1
-UUID=a774310e-ef04-4572-8d5a-35025dfbbcd3	/mnt/VM		xfs	defaults	0	1
-UUID=10c14f94-9fc9-4a42-977a-923cf5cc9487	/mnt/WORK	xfs	defaults	0	1
+truenas.home.arpa:/mnt/zpool-data/NFS		/mnt/NFS	nfs	defaults	0 0

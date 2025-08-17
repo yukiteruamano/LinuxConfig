@@ -1,5 +1,5 @@
 * {
-  font-family: "JetBrainsMono Nerd Font";
+  font-family: "FiraCode Nerd Font";
   font-size: 10pt;
   font-weight: bold;
   border-radius: 0px;
@@ -56,9 +56,11 @@ tooltip label {
   color: rgb(217, 224, 238);
 }
 #custom-launcher {
-  padding-left: 8px;
+  padding-left: 6px;
   padding-right: 6px;
-  color: #c0caf5;
+  font-size: 16pt;
+  font-weight: bold;
+  color: #ed8796;
 }
 #mode, #clock, #memory, #temperature, #cpu, #mpd, #idle_inhibitor, #pulseaudio, #network, #language {
   padding-left: 10px;

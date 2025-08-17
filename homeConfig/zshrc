@@ -1,12 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# GOPATH
-export GOPATH=$HOME/.golang
-
-# Rust src path
-export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library"
-
 # PATH from system
 export PATH=$GOPATH/bin:$HOME/.config/emacs/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH
 
@@ -93,20 +87,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# Exports personales
-export EDITOR="vim"
-export PAGER="less"
-export QT_QPA_PLATFORMTHEME="qt5ct"
-export MOZ_ACCELERATED=1
-export MOZ_WEBRENDER=1
-export FREETYPE_PROPERTIES="cff:no-stem-darkening=0.0 autofitter:no-stem-darkening=0.0"
-export QT_QPA_PLATFORM="wayland"
-export XDG_SESSION_TYPE="wayland"
-export XDG_SESSION_DESKTOP="sway"
-export XDG_CURRENT_DESKTOP="sway"
-export SDL_VIDEODRIVER="wayland"
-export MOZ_ENABLE_WAYLAND=1
 
 # GPG
 export GPG_TTY=`tty`

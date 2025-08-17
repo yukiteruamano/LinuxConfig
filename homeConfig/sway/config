@@ -32,11 +32,11 @@ bindsym $mod+comma	workspace prev
 #-----------------------------#
 
 ## systemd enviroment
-#exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-#exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 
 ## seatd and elogind
-exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --all
+# exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --all
 
 ## Borders and gaps
 default_border	pixel 3
@@ -79,6 +79,7 @@ exec_always --no-startup-id "pipewire-pulse"
 exec_always --no-startup-id "nwg-look -a"
 exec_always --no-startup-id "xsettingsd -c $HOME/.config/xsettingsd/xsettingsd.conf"
 exec_always --no-startup-id "mako"
+exec_always --no-startup-id "sleep 2; firewall-applet"
 
 #----------------#
 # set gtk+ theme #
@@ -123,7 +124,7 @@ set $right	l
 #----------------------------------#
 
 ## Config default terminal 
-set $term alacritty
+set $term kitty
 
 #-----------#
 # WallPaper #
@@ -180,12 +181,12 @@ bindsym $mod+Shift+Print	exec --no-startup-id grimshot copy area
 bindsym $mod+Shift+F5		exec "thunar"
 bindsym $mod+Shift+F6		exec "chromium"
 bindsym $mod+Shift+F7		exec "thunderbird"
-bindsym $mod+Shift+F8		exec "firefox"
-bindsym $mod+Shift+t		exec "telegram-desktop"
+bindsym $mod+Shift+F8		exec "firefox-esr"
+bindsym $mod+Shift+t		exec "flatpak run org.telegram.desktop"
 bindsym $mod+Shift+p		exec "pavucontrol"
 
 ## Audio quick access
-bindsym $mod+Shift+F9		exec "alacritty --class=ncmpcpp -e ncmpcpp"
+bindsym $mod+Shift+F9		exec "kitty --class=ncmpcpp -e ncmpcpp"
 bindsym $mod+Shift+F1		exec "mpc stop"
 bindsym $mod+Shift+F2		exec "mpc prev"
 bindsym $mod+Shift+F3		exec "mpc play"
